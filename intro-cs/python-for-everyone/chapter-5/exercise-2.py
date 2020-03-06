@@ -1,22 +1,20 @@
+largest = None
+smallest = None
 scores = []
-
 while True:
     try:
-        user_response = input("Enter number: ")
-
-        if user_response == "done":
+        num = input("Enter a number: ")
+        if num == "done" : 
             break
-
         else:
-
-            scores.append(float(user_response))
-
+        	scores.append(int(num))
+            
     except ValueError:
         print("Invalid input")
+        
+largest = max(scores)
 
-max_num = max(scores)
-
-min_num = min(scores)
-
-
-print("{} {}".format(min_num, max_num))
+smallest = min(scores)
+    
+print("Maximum is", largest)
+print("Minimum is", smallest)
