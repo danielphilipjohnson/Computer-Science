@@ -1,7 +1,6 @@
 score = float(input("Please enter score between 0.0 and 1.0 "))
 
 if score >= 0.0 and score <= 1.0:
-    print("good range")
     if score >= 0.9:
         print("A")
     elif score >= 0.8:

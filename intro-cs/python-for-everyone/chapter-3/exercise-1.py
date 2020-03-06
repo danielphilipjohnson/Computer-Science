@@ -1,7 +1,14 @@
 hours = float(input("Enter Hours: "))
 rate_of_pay = float(input("Enter Rate: "))
+
 if hours > 40:
-	print("Pay: ", hours * (rate_of_pay * 1.5))
+	pay = 40 * rate_of_pay
+	overtime_hours = hours - 40
+	overtime = rate_of_pay * 1.5 * overtime_hours
+    
+	print(pay + overtime)
+    
 else:
-	print("Pay: ", hours * rate_of_pay)
-#40 * (2 * 1.5)
+	pay = hours * rate_of_pay
+    
+	print(pay)
