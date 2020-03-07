@@ -9,7 +9,7 @@ count_of_from = 0
 for line in file:
     # ﬁnd line that starts with “From”
     #print(line.startswith(line))
-    if line.startswith("From"):
+    if "From " in line:
         # split the line into words
         words = line.split()
         # who sent the message
