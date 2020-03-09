@@ -17,4 +17,4 @@ for line in fh:
         # count the number of From
         count =  count + 1
 print("There were {} lines in the file with From as the first word"
-.format(count_of_from ))
+.format(count ))
