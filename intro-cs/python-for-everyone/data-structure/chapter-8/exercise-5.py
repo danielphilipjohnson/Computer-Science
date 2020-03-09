@@ -1,14 +1,11 @@
-#filepath = input("Enter a file name: ")
-#file = open(filepath)
-file = open("mbox-short.txt")
+fname = input("Enter file name: ")
+if len(fname) < 1 : fname = "mbox-short.txt"
 
-words_found =[]
+fh = open(fname)
 
-count_of_from = 0
+count = 0
 
-for line in file:
-    # ﬁnd line that starts with “From”
-    #print(line.startswith(line))
+for line in fh:
     if "From " in line:
         # split the line into words
         words = line.split()
@@ -18,7 +15,6 @@ for line in file:
         # print out the sender
         print(message_sender)
         # count the number of From
-        count_of_from =  count_of_from + 1
-  
+        count =  count + 1
 print("There were {} lines in the file with From as the first word"
 .format(count_of_from ))

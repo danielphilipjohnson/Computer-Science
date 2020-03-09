@@ -1,23 +1,19 @@
-import math
-#filepath = input("Enter a file name: ")
-#file = open(filepath)
-file_text = open("mbox-short.txt")
+# Use the file name mbox-short.txt as the file name
+# without sum
+fname = input("Enter file name: ")
+fh = open(fname)
+count_len = 0
+confidence_total = 0
+for line in fh:
+    if not line.startswith("X-DSPAM-Confidence:") : continue
+    colon_loc = line.find(":")
+    confidence_score = float(line[colon_loc+1:])
+    count_len = count_len + 1
+    # compute total
+    confidence_total = confidence_total + confidence_score
 
 
-confidence_scores = []
-for line in file_text:
-    if "X-DSPAM-Confidence:" in line:
-        colon_loc = line.find(":")
-        
-        #print(line[colon_loc+1:])
-
-        confidence_score = float(line[colon_loc+1:])
-        
-        confidence_scores.append(confidence_score)
-
-# compute total
-confidence_total = sum(confidence_scores)
 # avg spam confidence
-avg = confidence_total / len(confidence_scores)
+avg = confidence_total / count_len
 print("Average spam confidence:", avg)
-file_text.close()
+fh.close()

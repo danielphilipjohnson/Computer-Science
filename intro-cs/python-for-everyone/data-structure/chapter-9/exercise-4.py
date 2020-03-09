@@ -1,10 +1,11 @@
-#filepath = input("Enter a file name: ")
-#file = open(filepath)
-file = open("mbox.txt")
-
+name = input("Enter file:")
+if len(name) < 1 : name = "mbox-short.txt"
+fh = open(name)
 email_histogram = {}
 
-for line in file:
+
+
+for line in fh:
     # ﬁnd line that starts with “From”
     if line.startswith("From "):
         words = line.split()
@@ -16,21 +17,21 @@ for line in file:
         else:
             email_histogram[message_sender] = email_histogram[message_sender] + 1
 
- 
+            
 highest_count = 0
 lowest_count = float("inf")
-most_messages = {}
+
+mst_message = tuple
+lst_message = tuple
 least_messages = {}
+
 for email in email_histogram:
     if email_histogram[email] > highest_count:
-        most_messages.clear()
         highest_count = email_histogram[email]
-        most_messages[email] = highest_count
+        mst_message = (email, highest_count)
 
     if email_histogram[email] < lowest_count:
-        least_messages.clear()
         lowest_count = email_histogram[email]
-        least_messages[email] = lowest_count
+        lst_message = (email, lowest_count)
 
-print(most_messages)
-print(least_messages)
+print(mst_message[0], mst_message[1])

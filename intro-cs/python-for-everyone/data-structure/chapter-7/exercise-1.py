@@ -1,8 +1,6 @@
-filepath = input("Enter a file name: ")
-file = open(filepath)
-#file = open("mbox-short.txt")
-line = file.read()
-print(line.upper())
+fname = input("Enter file name: ")
+fh = open(fname)
+line = fh.read()
+print(line.upper().strip())
 
-file.close()
-
+fh.close()

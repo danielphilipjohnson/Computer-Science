@@ -1,10 +1,11 @@
-#filepath = input("Enter a file name: ")
-#file = open(filepath)
-file = open("mbox.txt")
+name = input("Enter file:")
+if len(name) < 1 : name = "mbox-short.txt"
+
+fh = open(name)
 
 email_histogram = {}
 
-for line in file:
+for line in fh:
     # ﬁnd line that starts with “From”
     if line.startswith("From "):
         words = line.split()
