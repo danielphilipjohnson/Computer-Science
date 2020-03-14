@@ -1,0 +1,3 @@
+[submodule "Devops/repos/Devops/repos/projecta"]
+	path = Devops/repos/Devops/repos/projecta
+	url = git@github.com:danielphilipjohnson/Computer-Science.git
