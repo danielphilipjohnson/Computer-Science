@@ -1,7 +1,7 @@
 # Exercise 1 Our First Database
 
 In this assignment, you will use the SQLite browser to make a database, insert some data and then run query.
-
+- Solution: in schemas folder
 
 ### Create ages table
 ```
@@ -33,6 +33,7 @@ INSERT INTO Ages (name, age) VALUES ('kariss', 18);
 # Exercise 2
 - Counting Email in a Database
 - Count messages from organizations
+- Solution: exercise-2.py  
 
 ## Read data from mbox.txt and extract email organization
 ```
