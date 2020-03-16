@@ -21,6 +21,11 @@ CREATE TABLE Album (
     title   TEXT UNIQUE
 );
 
+CREATE TABLE Genre (
+    id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    name    TEXT UNIQUE
+);
+
 CREATE TABLE Track (
     id  INTEGER NOT NULL PRIMARY KEY 
         AUTOINCREMENT UNIQUE,
@@ -59,11 +64,12 @@ for entry in all:
     count = lookup(entry, 'Play Count')
     rating = lookup(entry, 'Rating')
     length = lookup(entry, 'Total Time')
+    genre = lookup(entry, 'Genre')
 
-    if name is None or artist is None or album is None : 
+    if name is None or artist is None or album is None or genre is None: 
         continue
 
-    print(name, artist, album, count, rating, length)
+    print(name, artist, album, count, rating, length, genre)
 """
     cur.execute('''INSERT OR IGNORE INTO Artist (name) 
         VALUES ( ? )''', ( artist, ) )
