@@ -32,6 +32,7 @@ CREATE TABLE Track (
         AUTOINCREMENT UNIQUE,
     title TEXT  UNIQUE,
     album_id  INTEGER,
+    genre_id  INTEGER,
     len INTEGER, rating INTEGER, count INTEGER
 );
 ''')
@@ -89,9 +90,9 @@ for entry in all:
 
 
     cur.execute('''INSERT OR REPLACE INTO Track
-        (title, album_id, len, rating, count) 
-        VALUES ( ?, ?, ?, ?, ? )''', 
-        ( name, album_id, length, rating, count ) )
+        (title, album_id, len, rating, count, genre_id) 
+        VALUES ( ?, ?, ?, ?, ?, ? )''', 
+        ( name, album_id, length, rating, count, genre_id ) )
     
 
 
