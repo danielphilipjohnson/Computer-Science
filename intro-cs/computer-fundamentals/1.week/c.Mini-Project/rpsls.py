@@ -79,11 +79,11 @@ def rpsls(player_choice):
         print("Computer Wins")
 
 # test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
-#rpsls("rock")
-#rpsls("Spock")
-#rpsls("paper")
-#rpsls("lizard")
-#rpsls("scissors")
+rpsls("rock")
+rpsls("Spock")
+rpsls("paper")
+rpsls("lizard")
+rpsls("scissors")
 
 # always remember to check your completed program against the grading rubric
 
