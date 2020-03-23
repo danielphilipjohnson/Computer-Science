@@ -69,13 +69,13 @@ def rpsls(player_choice):
     print("Computer choose: " , comp_choice)
 
     # compute difference of comp_number and player_number modulo five
-    difference = (comp_number - player_number) % 5
+    difference = (player_number - comp_number) % 5
     # use if/elif/else to determine winner, print winner message
     if player_number == comp_number:
         print("draw")
-    elif(difference == 1 or 2):
+    elif(difference == 1) or (difference == 2):
         print("Player Wins")
-    elif(difference == 3 or 4):
+    elif(difference == 3) or (difference == 4):
         print("Computer Wins")
 
 # test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
