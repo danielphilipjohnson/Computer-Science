@@ -21,7 +21,6 @@ def new_game():
     game_range = 100
     guesses_remaining = num_of_guesses(100)
     secret_number = random.randrange(0,100)
-    
     print "New game. Range is from [0 to 100)"
     print_num_guesses()
 
@@ -43,7 +42,8 @@ def range100():
     guesses_remaining = num_of_guesses(100)
     
     secret_number = random.randrange(0,100)
-    
+    print secret_number
+
     print "New game. Range is from [0 to 100)"
     
     print_num_guesses()
@@ -67,7 +67,12 @@ def range1000():
     
     print_num_guesses()   
     
-
+def restart_game(game_range):
+    if game_range == 100:
+        range100()
+    elif game_range == 1000:
+        range1000()
+    
 def num_of_guesses(range):
         
     rem_guess = int(math.ceil(math.log(range, 2)))
@@ -82,6 +87,7 @@ def input_guess(guess):
     global game_range
     
     
+
     guess_int = int(guess)
 
     # Case user has enough guesses left
@@ -96,23 +102,28 @@ def input_guess(guess):
         # Correct Case
         if guess_int == secret_number:
             
-        	print "Correct!\n"
-                
+            print "Correct!\n"
+            
+            restart_game(game_range) 
+            
         # Case: user guessed too high indicate go lower
         elif guess_int > secret_number:
             
-        	print "Lower!\n"
+            print "Lower!\n"
 
         # Case: user guessed too low indicate go higher
         elif guess_int < secret_number:
             
-        	print "Higher!\n"
+            print "Higher!\n"
                 
     elif guesses_remaining > 0:
 
         if guess_int == secret_number:
-        	print "Correct!\n"
-                
+            
+            print "Correct!\n"
+            
+            restart_game(game_range)   
+            
         else:
             
             guesses_remaining = guesses_remaining - 1
@@ -121,13 +132,12 @@ def input_guess(guess):
             
             print "Number of remaining guesses is " +  str(guesses_remaining)
             
-            print "You ran out of guesses.  The number was " + str(secret_number) + "\n"
+            print "You ran out of guesses. The number was " + str(secret_number) + "\n"
             
+            restart_game(game_range)
     else:
-        if game_range == 100:
-            range100()
-        elif game_range == 1000:
-            range1000()
+        
+        restart_game(game_range)
             
 
         
