@@ -80,7 +80,7 @@ img {
 
 
 table {
-    font: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     width: 80%;
     margin: 0 auto;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
