@@ -1,5 +1,5 @@
 # Fundamentals of Computing Specialization
-
+### Offered by Rice University
 Prepare for Advanced Computer Science Courses. Learn how to program and think like a Computer Scientist
 
 
