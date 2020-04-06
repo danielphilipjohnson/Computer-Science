@@ -17,3 +17,5 @@
 find csv files to read and log files
 read some text files
 
+https://manybooks.net/search-book?field_genre%5B17%5D=17
+http://www.gutenberg.org/wiki/Gutenberg:Offline_Catalogs
