@@ -35,6 +35,3 @@ function unDo() {
    oldImage.innerHTML = "Hover over an image below to display here";
 
 }
-
-
-// document.getElementById("second").innerHTML = "What does the Fox say?";
