@@ -1,9 +1,8 @@
-
 $overlay-color: #222527;
 $overlay-mobile-color: #0b0c0c;
 
 .v-header {
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -18,7 +17,7 @@ $overlay-mobile-color: #0b0c0c;
     width: 100vw;
     z-index: 1;
     background: $overlay-color;
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 .header-content {
@@ -35,7 +34,7 @@ $overlay-mobile-color: #0b0c0c;
         display: block;
         padding-bottom: 2rem;
     }
-   
+
 }
 
 
@@ -50,22 +49,26 @@ $overlay-mobile-color: #0b0c0c;
     overflow: hidden;
 }
 
-@media (max-aspect-ratio: 16/9){
+@media(max-aspect-ratio: 16 / 9) {
     .fullscreen-video-wrap {
         width: auto;
         height: 100%;
     }
 }
 
-@media(max-width: 767px){
+@media(max-width: 767px) {
     .fullscreen-video-wrap {
         display: none;
     }
     body {
-        background: url('../assets/terminal.png');
+        background: url('../assets/poster.jpg');
         background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* Full height */
+        height: 100%;
     }
-    .header-overlay { 
+    .header-overlay {
         background: $overlay-mobile-color;
         opacity: 0.65;
     }

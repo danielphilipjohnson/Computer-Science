@@ -9,6 +9,8 @@ body {
     overflow-x: hidden;
 
 }
-
+body, html {
+    height: 100%;
+}
 @import "header.scss";
 @import "nav.scss";
