@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
 body
 {
     font-family: 'Oswald', sans-serif;
@@ -52,10 +53,6 @@ html
 .header-content
 {
     z-index: 2;
-
-    width: 100%;
-
-    text-align: center;
 }
 
 .header-content h1
@@ -71,8 +68,6 @@ html
     font-size: 1.5rem;
 
     display: block;
-
-    padding-bottom: 2rem;
 }
 
 .fullscreen-video-wrap
@@ -146,5 +141,566 @@ html
     .nav-item
     {
         padding: 0 1.5rem 0 0;
+    }
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html
+{
+    overflow: hidden;
+}
+
+.container
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .box
+{
+    /*width: 250px;*/
+    /*height: 250px;*/
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+            flex-direction: column; 
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+}
+
+.container .box .title
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 50px;
+    margin: 0 0 .5rem; 
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .box .title .block
+{
+    position: absolute;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex; 
+
+    width: 0;
+    height: inherit;
+
+    -webkit-animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+         -o-animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+            animation: mainBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+
+    background: #ffb510;
+}
+
+.container .box .title h1
+{
+    font-family: 'Poppins';
+    font-size: 1.9rem;
+
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin-bottom: 1.25rem; 
+
+    -webkit-animation: mainFadeIn 2s forwards;
+         -o-animation: mainFadeIn 2s forwards;
+            animation: mainFadeIn 2s forwards;
+    -webkit-animation-delay: 1.6s;
+         -o-animation-delay: 1.6s;
+            animation-delay: 1.6s;
+
+    opacity: 0;
+    color: #fff;
+
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+            align-items: baseline;
+}
+
+.container .box .title h1 span
+{
+    position: absolute;
+    right: -12px; 
+    bottom: 13px;
+
+    width: 0;
+    height: 0;
+    margin-top: -10px;
+    margin-left: 5px;
+
+    -webkit-animation: load .6s cubic-bezier(.74, .06, .4, .92) forwards;
+         -o-animation: popIn .8s cubic-bezier(.74, .06, .4, .92) forwards;
+            animation: popIn .8s cubic-bezier(.74, .06, .4, .92) forwards;
+    -webkit-animation-delay: 2s;
+         -o-animation-delay: 2s;
+            animation-delay: 2s;
+
+    border-radius: 50%;
+    background: #ffb510;
+}
+
+.container .box .role
+{
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 30px;
+    margin-top: -10px; 
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.container .box .role .block
+{
+    position: absolute;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex; 
+
+    width: 0;
+    height: inherit;
+
+    -webkit-animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+         -o-animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+            animation: secBlock 2s cubic-bezier(.74, .06, .4, .92) forwards;
+    -webkit-animation-delay: 2s;
+         -o-animation-delay: 2s;
+            animation-delay: 2s;
+
+    background: #e91e63;
+}
+
+.container .box .role p
+{
+    font-family: 'Lato';
+    font-size: .9rem;
+    font-weight: 900;
+
+    -webkit-animation: secFadeIn 2s forwards;
+         -o-animation: secFadeIn 2s forwards;
+            animation: secFadeIn 2s forwards;
+    -webkit-animation-delay: 3.2s;
+         -o-animation-delay: 3.2s;
+            animation-delay: 3.2s;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+
+    opacity: 0;
+    color: #fff;
+}
+
+@-webkit-keyframes mainBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@-o-keyframes mainBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@keyframes mainBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@-webkit-keyframes secBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@-o-keyframes secBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@keyframes secBlock
+{
+    0%
+    {
+        left: 0; 
+
+        width: 0;
+    }
+    50%
+    {
+        left: 0; 
+
+        width: 100%;
+    }
+    100%
+    {
+        left: 100%; 
+
+        width: 0;
+    }
+}
+
+@-webkit-keyframes mainFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes mainFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes mainFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes popIn
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+
+        opacity: 0; 
+        border: 0 solid #ddd;
+        background: #e9d856;
+    }
+    50%
+    {
+        bottom: 45px; 
+
+        width: 10px;
+        height: 10px;
+
+        opacity: 1;
+        background: #e9d856;
+    }
+    65%
+    {
+        bottom: 0;
+
+        width: 7px;
+        width: 15px; 
+        height: 7px;
+    }
+    80%
+    {
+        bottom: 20px; 
+
+        width: 10px;
+        height: 10px;
+    }
+    100%
+    {
+        bottom: 13px; 
+
+        width: 7px;
+        height: 7px;
+
+        border: 0 solid #222;
+        background: #e9d856;
+    }
+}
+
+@-o-keyframes popIn
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+
+        opacity: 0; 
+        border: 0 solid #ddd;
+        background: #e9d856;
+    }
+    50%
+    {
+        bottom: 45px; 
+
+        width: 10px;
+        height: 10px;
+
+        opacity: 1;
+        background: #e9d856;
+    }
+    65%
+    {
+        bottom: 0;
+
+        width: 7px;
+        width: 15px; 
+        height: 7px;
+    }
+    80%
+    {
+        bottom: 20px; 
+
+        width: 10px;
+        height: 10px;
+    }
+    100%
+    {
+        bottom: 13px; 
+
+        width: 7px;
+        height: 7px;
+
+        border: 0 solid #222;
+        background: #e9d856;
+    }
+}
+
+@keyframes popIn
+{
+    0%
+    {
+        width: 0;
+        height: 0;
+
+        opacity: 0; 
+        border: 0 solid #ddd;
+        background: #e9d856;
+    }
+    50%
+    {
+        bottom: 45px; 
+
+        width: 10px;
+        height: 10px;
+
+        opacity: 1;
+        background: #e9d856;
+    }
+    65%
+    {
+        bottom: 0;
+
+        width: 7px;
+        width: 15px; 
+        height: 7px;
+    }
+    80%
+    {
+        bottom: 20px; 
+
+        width: 10px;
+        height: 10px;
+    }
+    100%
+    {
+        bottom: 13px; 
+
+        width: 7px;
+        height: 7px;
+
+        border: 0 solid #222;
+        background: #e9d856;
+    }
+}
+
+@-webkit-keyframes secFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: .5;
+    }
+}
+
+@-o-keyframes secFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: .5;
+    }
+}
+
+@keyframes secFadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: .5;
+    }
+}
+
+@media (min-width: 767px)
+{
+    .container .box .title h1
+    {
+        font-size: 2.5rem;
+    }
+    .container .box .role p
+    {
+        font-size: 1.1rem;
     }
 }
