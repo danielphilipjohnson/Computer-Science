@@ -1,6 +1,6 @@
 
 $overlay-color: #222527;
-$overlay-mobile-color: #6c7174;
+$overlay-mobile-color: #0b0c0c;
 
 .v-header {
     height: 100vh;
@@ -28,7 +28,7 @@ $overlay-mobile-color: #6c7174;
     h1 {
         font-weight: 700;
         font-size: 3rem;
-        margin-bottom: 0;
+        margin-bottom: 1.25rem;
     }
     p {
         font-size: 1.5rem;
@@ -67,6 +67,6 @@ $overlay-mobile-color: #6c7174;
     }
     .header-overlay { 
         background: $overlay-mobile-color;
-        opacity: 0.55;
+        opacity: 0.65;
     }
 }
