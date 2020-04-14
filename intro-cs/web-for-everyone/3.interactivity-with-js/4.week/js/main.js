@@ -6,15 +6,22 @@ function billingFunction() {
 
     */
     var isChecked = document.getElementById("same").checked;
-
+    var billingName = document.getElementById("billingName");
+    var billingZip = document.getElementById("billingZip");
+    
     if(isChecked) {
 
         shippingName = document.getElementById("shippingName").value;
         shippingZip = document.getElementById("shippingZip").value;
 
-        document.getElementById("billingName").value = shippingName;
-        document.getElementById("billingZip").value = shippingZip;
+        billingName.value = shippingName;
+        billingZip.value = shippingZip;
        
-    };
+    }
+    else {
+        billingName.value = "";
+        billingZip.value = "";
+
+    }
        
 }

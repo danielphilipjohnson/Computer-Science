@@ -1,0 +1,55 @@
+http://exill.tn/demo/kitzu/template/video.html#0
+
+
+Main Features:
+
+    HTML5 & CSS3 (Valid Markup)
+    Built with Bootstrap v4
+    Unique, Modern, Clean and 100% Fully Responsive and Easy to customize
+    Fast load time
+    A Working Portfolio Gallery
+    Video Background Variant
+    Good User Experience and User Interface
+    Preloader
+    Filterable Portfolio Gallery
+    Resume Page
+    Blog Page
+    Portfolio items Lightbox
+    700+ Icons
+    24 Color Options
+    2 variants:
+        Image Background
+        Video Background
+    SEO & Speed Optimized
+    Well Documented
+    A working Ajax Contact form
+    Friendly Code
+    Customer Support
+    Retina Ready
+    Web & Mobile Browser Compatibility (Chrome, Firefox, IE11, Safari, Opera, Edge and more…)
+    Google web fonts:
+        Poppins
+    And much more…
+
+Blog
+https://preview.themeforest.net/item/qudos-multipurpose-elementor-wordpress-theme/full_screen_preview/22595558?_ga=2.24845183.497359993.1586198822-604639273.1586198581
+
+
+https://preview.themeforest.net/item/qudos-multipurpose-elementor-wordpress-theme/full_screen_preview/22595558?_ga=2.24845183.497359993.1586198822-604639273.1586198581
+
+
+
+http://preview.themeforest.net/item/margo-agency-freelancer-portfolio-template/full_screen_preview/26296186?_ga=2.107716101.665388599.1586198902-604639273.1586198581
+
+
+
+Tooling
+
+There are lots of tools available to help you design for color-blind people:
+
+    Check My Colours: if you have an existing website, you can just enter a URL and receive feedback of what needs to be improved.
+    WebAim’s color contrast checker: provide two colors to see if they pass accessibility guidelines.
+    I Want To See Like The Color Blind: apply color blindness filters to your web page right within Chrome.
+    Color Oracle: a color blindness simulator for Windows, Mac and Linux, showing you what people with common color vision impairments will see
+
+    
