@@ -1,38 +1,4 @@
 body
 {
-    position: 9px;
-    top: 80px;
-    right: 80px;
-    bottom: 80px;
-    left: 80px;
-
-    float: left;
-
-    -webkit-transition: ease-in;
-         -o-transition: ease-in;
-            transition: ease-in; 
-
     color: black;
-    background: red;
-    background-clip: 10px;
-}
-
-::-webkit-input-placeholder
-{
-    color: gray;
-}
-
-::-moz-placeholder
-{
-    color: gray;
-}
-
-:-ms-input-placeholder
-{
-    color: gray;
-}
-
-::placeholder
-{
-    color: gray;
 }
