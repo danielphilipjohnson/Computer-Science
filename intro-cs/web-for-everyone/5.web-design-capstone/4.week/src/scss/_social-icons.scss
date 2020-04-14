@@ -1,0 +1,23 @@
+.social-icon-container {
+    z-index: 100;
+    position: fixed;
+    bottom: 2px;
+    right: 24px;
+    list-style: none;
+    li {
+        margin: 0 0 0.75rem 0;
+    }
+}
+
+.fa.fa-fixed {
+    
+    color: #fff;
+    font-size: 1.5rem;
+   
+}
+
+@media(min-width: 767px) {
+    .social-icon-container {
+        margin-right: 1.25rem;
+    }
+}
