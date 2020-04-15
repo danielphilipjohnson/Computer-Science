@@ -1,8 +1,7 @@
-doctype html
-html(lang="en")
-  include includes/head.pug
-  body
-include includes/navbar.pug
-include includes/header.pug
-include includes/social-icons.pug
-include includes/scripts.pug
+extends layout.pug
+
+
+block content
+  include includes/navbar.pug
+  include includes/header.pug
+  include includes/social-icons.pug
