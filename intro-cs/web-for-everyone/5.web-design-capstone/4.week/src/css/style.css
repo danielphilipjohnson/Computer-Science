@@ -92,7 +92,7 @@ html
     {
         display: none;
     }
-    body
+    body#full-video
     {
         background: url('../assets/img/poster.jpg');
         background-repeat: no-repeat;
