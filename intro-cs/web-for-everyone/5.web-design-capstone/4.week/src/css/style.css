@@ -1,15 +1,21 @@
 body
 {
     font-family: 'Poppins', sans-serif;
+
+    color: #fff;
+    background-color: black;
     /*color: #333;*/
 }
 
-body,
+body#full-video,
 html
 {
-    overflow: hidden; 
-
     height: 100%;
+}
+
+.container
+{
+    padding: 0 2rem;
 }
 
 .v-header
@@ -118,7 +124,8 @@ html
     position: fixed;
     z-index: 5;
 
-    width: 100%; 
+    width: 100%;
+    margin: 0 auto; 
     padding: .75rem 1rem;
 }
 
@@ -144,6 +151,13 @@ html
     {
         width: 2rem;
         height: 2rem;
+    }
+    .navbar
+    {
+        margin: -3rem auto; 
+        /* DEBUG */
+
+        background-color: green;
     }
 }
 
@@ -728,4 +742,141 @@ html
     {
         margin-right: 1.25rem;
     }
+}
+
+/* helper */
+.highlight-text
+{
+    padding: 0 0 1rem; 
+
+    color: #04a70c;
+}
+
+.bt-highlight
+{
+    padding: 1rem 2rem;
+
+    color: #fff;
+    border-radius: 30px; 
+    background-color: #04a70c;
+}
+
+/* Sections */
+.profile
+{
+    padding-top: 3.3rem;
+}
+
+.profile-social
+{
+    list-style-type: none;
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.profile-pic
+{
+    width: 150px;
+    height: 150px;
+
+    border-radius: 50%;
+}
+
+.title
+{
+    font-weight: bolder;
+}
+
+.section-splitter
+{
+    margin: 1rem 4rem 2rem;
+    padding: .15rem;
+
+    background-color: #128a18;
+}
+
+.who-am-i
+{
+    padding: 3rem 0 0;
+}
+
+.who-am-i .about-me
+{
+    font-weight: bolder;
+
+    padding: 0 0 1rem;
+}
+
+.who-am-i hr
+{
+    margin: 2rem 0 0;
+    padding: .0025rem;
+
+    background-color: grey;
+}
+
+.profile-stats
+{
+    margin: 1rem 0 0;
+}
+
+.profile-stats ul
+{
+    padding: 0; 
+
+    list-style: none;
+}
+
+.profile-stats ul li
+{
+    padding: 0 0 1rem 0;
+}
+
+.profile-stats .stat
+{
+    padding: 0 0 0 .75rem;
+}
+
+.social-links
+{
+    padding-bottom: 4rem;
+}
+
+.social-links a
+{
+    margin-bottom: 1rem;
+}
+
+.social-links ul
+{
+    position: fixed; 
+    bottom: 0rem;
+    left: 0;
+
+    margin: 0;
+
+    color: #eee;
+    background: rgba(0, 0, 0, .8);
+}
+
+.social-links ul li.social-icon
+{
+    margin: 0 1.55rem; 
+    padding: .75rem 0;
+}
+
+body
+{
+    /*background-color: honeydew;*/
+    background-color: #000;
+}
+
+.navbar-collapse
+{
+    color: #eee; 
+    /* DEBUG */
+    background: rgba(0, 0, 0, .8);
 }

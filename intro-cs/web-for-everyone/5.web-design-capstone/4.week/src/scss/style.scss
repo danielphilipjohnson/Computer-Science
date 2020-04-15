@@ -1,6 +1,13 @@
 
-@import "defaults.scss";
-@import "header.scss";
-@import "nav.scss";
-@import "text_animation.scss";
-@import "social-icons.scss";
+@import "defaults";
+@import "header";
+@import "nav";
+@import "text_animation";
+@import "social-icons";
+@import "pages/about";
+.navbar-collapse {
+
+/* DEBUG */
+    background: rgba(0, 0, 0, 0.8);
+        color: #eee;
+}
