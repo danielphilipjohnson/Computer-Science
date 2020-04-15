@@ -17,7 +17,7 @@ $overlay-mobile-color: #0b0c0c;
     width: 100vw;
     z-index: 1;
     background: $overlay-color;
-    opacity: 0.75;
+    opacity: .75;
 }
 
 .header-content {
@@ -57,16 +57,17 @@ $overlay-mobile-color: #0b0c0c;
     .fullscreen-video-wrap {
         display: none;
     }
+
     body {
-        background: url('../assets/poster.jpg');
+        background: url('../assets/img/poster.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        /* Full height */
-        height: 100%;
+  
     }
+    
     .header-overlay {
         background: $overlay-mobile-color;
-        opacity: 0.65;
+        opacity: .65;
     }
 }

@@ -1,21 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300, 400|Poppins:300, 400, 800 &display=swap');
 body
 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
-
-    overflow-x: hidden; 
-
-    margin: 0;
-
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    /*color: #333;*/
 }
 
 body,
 html
 {
+    overflow: hidden; 
+
     height: 100%;
 }
 
@@ -101,12 +94,9 @@ html
     }
     body
     {
-        /* Full height */
-        height: 100%; 
-
-        background: url('../assets/poster.jpg');
+        background: url('../assets/img/poster.jpg');
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center; 
         -webkit-background-size: cover;
                 background-size: cover;
     }
@@ -119,8 +109,8 @@ html
 
 .logo
 {
-    width: 35px;
-    height: 35px;
+    width: 1.75rem;
+    height: 1.75rem;
 }
 
 .navbar
@@ -152,18 +142,12 @@ html
     }
     .logo
     {
-        width: 50px;
-        height: 50px;
+        width: 2rem;
+        height: 2rem;
     }
 }
 
-body,
-html
-{
-    overflow: hidden;
-}
-
-.container
+.animation-container
 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -182,7 +166,7 @@ html
             align-items: center;
 }
 
-.container .box
+.animation-container .box
 {
     position: relative;
 
@@ -202,7 +186,7 @@ html
         -ms-flex-direction: column;
 }
 
-.container .box .title
+.animation-container .box .title
 {
     position: relative;
 
@@ -212,7 +196,7 @@ html
     display:         flex;
 
     width: 100%;
-    height: 50px;
+    height: 2rem;
     margin: 0 0 .5rem; 
 
     -webkit-box-align: center;
@@ -221,9 +205,10 @@ html
             align-items: center;
 }
 
-.container .box .title .block
+.animation-container .box .title .block
 {
     position: absolute;
+    bottom: 8px;
 
     display: -webkit-box;
     display: -webkit-flex;
@@ -240,7 +225,7 @@ html
     background: #ffb510;
 }
 
-.container .box .title h1
+.animation-container .box .title h1
 {
     font-family: 'Poppins';
     font-size: 1.9rem;
@@ -252,7 +237,7 @@ html
     display: -ms-flexbox;
     display:         flex;
 
-    margin-bottom: 1.25rem; 
+    margin-bottom: 1.25rem;
 
     -webkit-animation: mainFadeIn 2s forwards;
          -o-animation: mainFadeIn 2s forwards;
@@ -268,31 +253,30 @@ html
     -webkit-align-items: baseline;
     -ms-flex-align: baseline;
             align-items: baseline;
+    /*
+                span {
+                    
+                    width: 0;
+                    height: 0;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                    background: #ffb510;
+                    -webkit-animation: load 0.6s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                    animation: popIn 0.8s cubic-bezier(0.74, 0.6, 0.4, 0.92) forwards;
+                    animation-delay: 2s;
+                  
+                    margin-left: 5px;
+                    margin-top: -10px;
+                    position: absolute;
+                    bottom: 7px;
+                    right: -12px;
+
+                }
+                */
 }
 
-.container .box .title h1 span
-{
-    position: absolute;
-    right: -12px; 
-    bottom: 13px;
-
-    width: 0;
-    height: 0;
-    margin-top: -10px;
-    margin-left: 5px;
-
-    -webkit-animation: load .6s cubic-bezier(.74, .06, .4, .92) forwards;
-         -o-animation: popIn .8s cubic-bezier(.74, .06, .4, .92) forwards;
-            animation: popIn .8s cubic-bezier(.74, .06, .4, .92) forwards;
-    -webkit-animation-delay: 2s;
-         -o-animation-delay: 2s;
-            animation-delay: 2s;
-
-    border-radius: 50%;
-    background: #ffb510;
-}
-
-.container .box .role
+.animation-container .box .role
 {
     position: relative;
 
@@ -311,7 +295,7 @@ html
             align-items: center;
 }
 
-.container .box .role .block
+.animation-container .box .role .block
 {
     position: absolute;
 
@@ -333,7 +317,7 @@ html
     background: #e91e63;
 }
 
-.container .box .role p
+.animation-container .box .role p
 {
     font-family: 'Lato';
     font-size: .9rem;
@@ -533,10 +517,10 @@ html
     }
     50%
     {
-        bottom: 45px; 
+        bottom: 5px; 
 
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
 
         opacity: 1;
         background: #e9d856;
@@ -581,10 +565,10 @@ html
     }
     50%
     {
-        bottom: 45px; 
+        bottom: 5px; 
 
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
 
         opacity: 1;
         background: #e9d856;
@@ -629,10 +613,10 @@ html
     }
     50%
     {
-        bottom: 45px; 
+        bottom: 5px; 
 
-        width: 10px;
-        height: 10px;
+        width: 15px;
+        height: 15px;
 
         opacity: 1;
         background: #e9d856;
@@ -720,15 +704,15 @@ html
 {
     position: fixed;
     z-index: 100;
-    right: 24px;
-    bottom: 2px;
+    right: 1.75rem;
+    bottom: .5rem;
 
     list-style: none;
 }
 
 .social-icon-container li
 {
-    margin: 0 0 .75rem 0;
+    margin: 0 0 .75rem;
 }
 
 .fa.fa-fixed
