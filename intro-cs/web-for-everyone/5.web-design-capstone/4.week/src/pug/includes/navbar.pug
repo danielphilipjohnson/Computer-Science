@@ -1,7 +1,7 @@
 - var classes = ['foo', 'bar', 'baz']
 - var implemented = false
 
-nav.navbar.navbar-expand-lg.navbar-dark
+nav.navbar.fixed.navbar-expand-lg.navbar-dark
   a.navbar-brand(href='/')
     img.logo(
       src="assets/img/logo.png"
@@ -17,7 +17,7 @@ nav.navbar.navbar-expand-lg.navbar-dark
     )
     span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav.d-flex
+    ul.navbar-nav
       if implemented
         li.nav-item.active
           a.nav-link(href='#') About 

@@ -1,13 +1,20 @@
-
 @import "defaults";
+@import "variables";
 @import "header";
 @import "nav";
 @import "text_animation";
-@import "social-icons";
-@import "pages/about";
+
+@import "utilties/utilites";
+
+
+/* components */
+@import "profile";
+
+@import "lists";
 .navbar-collapse {
 
-/* DEBUG */
+/* DEBUG 
     background: rgba(0, 0, 0, 0.8);
+    */
         color: #eee;
 }

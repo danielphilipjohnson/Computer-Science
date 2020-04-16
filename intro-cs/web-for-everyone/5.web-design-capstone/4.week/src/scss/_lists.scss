@@ -1,0 +1,48 @@
+@import "mixins/flex";
+
+/* need to refactor */
+.social-container {
+    padding-bottom: 4rem;
+    .download {
+        @include flex-justify-center;
+        a{
+
+            margin-bottom: 1rem;
+        } 
+    }
+}
+
+
+@media (min-width: $media-md) {
+    .download {
+        @include justify-content
+    }
+}
+
+
+
+
+
+/* fr social bar */
+.nav-social-fr {
+
+    z-index: 100;
+    position: fixed;
+    bottom: .5rem;
+    right: 1.75rem;
+    list-style: none;
+
+    li {
+        margin: 0 0 .75rem;
+      
+        
+    }
+
+}
+
+
+@media(min-width: $media-md) {
+    .nav-social-fr {
+        margin-right: 1.25rem;
+    }
+}

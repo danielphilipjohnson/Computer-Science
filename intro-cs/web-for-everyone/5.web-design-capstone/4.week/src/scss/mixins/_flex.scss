@@ -1,0 +1,36 @@
+/* FIX important fields*/
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin flex-justify-right {
+  display: flex;
+  justify-content: right;
+}
+@mixin flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  @mixin flex-justify-center {
+    display: flex;
+    justify-content: center;
+
+  }
+
+@mixin justify-content
+    {
+        -webkit-box-pack: start !important;
+        -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+        justify-content: flex-start !important;
+    }

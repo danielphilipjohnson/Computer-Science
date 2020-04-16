@@ -18,6 +18,23 @@ html
     padding: 0 2rem;
 }
 
+.fa.lg
+{
+    font-size: 1.5rem; 
+
+    color: #fff;
+}
+
+/*
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$text: grey;
+*/
+/* COLOR */
+/* can we use $font-weight-bold */
+/* PROFILE */
+/* grid breakpoints */
+/* HOME PAGE */
 .v-header
 {
     display: -webkit-box;
@@ -113,25 +130,30 @@ html
     }
 }
 
-.logo
+/* FIX important fields*/
+.navbar.fixed
+{
+    position: fixed;
+    z-index: 5;
+
+    width: 100%; 
+    padding: .75rem 1rem;
+}
+
+.navbar.fixed img.logo
 {
     width: 1.75rem;
     height: 1.75rem;
 }
 
-.navbar
-{
-    position: fixed;
-    z-index: 5;
-
-    width: 100%;
-    margin: 0 auto; 
-    padding: .75rem 1rem;
-}
-
 .navbar-nav
 {
     font-size: 1.25rem; 
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
 
     width: 100%;
 
@@ -139,6 +161,34 @@ html
     -webkit-justify-content: right;
     -ms-flex-pack: right;
             justify-content: right;
+}
+
+.nav.social
+{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    margin: 0;
+
+    color: #eee;
+    background: rgba(0, 0, 0, .8);
+
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.nav.social li.social-icon
+{
+    margin: 0 1.55rem; 
+    padding: .75rem 0;
 }
 
 @media (min-width: 767px)
@@ -154,10 +204,19 @@ html
     }
     .navbar
     {
-        margin: -3rem auto; 
-        /* DEBUG */
-
+        /* DEBUG 
         background-color: green;
+        */
+        /*margin: $reset-fixed-nav auto;*/
+    }
+    .nav.social
+    {
+        /*background-color: green;*/
+        position: relative;
+    }
+    .nav.social li.social-icon
+    {
+        margin: 0;
     }
 }
 
@@ -700,10 +759,6 @@ html
 
 @media (min-width: 767px)
 {
-    .container
-    {
-        margin-top: 3rem;
-    }
     .container .box .title h1
     {
         font-size: 2.5rem;
@@ -714,37 +769,8 @@ html
     }
 }
 
-.social-icon-container
-{
-    position: fixed;
-    z-index: 100;
-    right: 1.75rem;
-    bottom: .5rem;
-
-    list-style: none;
-}
-
-.social-icon-container li
-{
-    margin: 0 0 .75rem;
-}
-
-.fa.fa-fixed
-{
-    font-size: 1.5rem; 
-
-    color: #fff;
-}
-
-@media (min-width: 767px)
-{
-    .social-icon-container
-    {
-        margin-right: 1.25rem;
-    }
-}
-
 /* helper */
+/* need to remove dependency */
 .highlight-text
 {
     padding: 0 0 1rem; 
@@ -761,56 +787,64 @@ html
     background-color: #04a70c;
 }
 
-/* Sections */
+/* components */
+/* ABOUT PAGE */
 .profile
 {
-    padding-top: 3.3rem;
+    padding-top: 3rem;
 }
 
-.profile-social
+.profile .aboutme
 {
-    list-style-type: none;
+    padding-top: 3rem;
 
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-            justify-content: space-between;
+    text-align: center;
 }
 
-.profile-pic
+.profile .aboutme .mute-text
 {
-    width: 150px;
-    height: 150px;
-
-    border-radius: 50%;
+    color: #6c757d;
 }
 
-.title
+.profile .aboutme .title
 {
     font-weight: bolder;
 }
 
-.section-splitter
+.profile .aboutme .section-splitter
 {
     margin: 1rem 4rem 2rem;
     padding: .15rem;
 
-    background-color: #128a18;
+    background-color: #04a70c;
 }
 
-.who-am-i
+.profile .aboutme img.profile-pic
+{
+    width: 150px;
+    max-width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    padding: .25rem;
+
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.profile .who-am-i
 {
     padding: 3rem 0 0;
 }
 
-.who-am-i .about-me
+.profile .who-am-i .about-me
 {
     font-weight: bolder;
 
     padding: 0 0 1rem;
 }
 
-.who-am-i hr
+.profile .who-am-i hr
 {
     margin: 2rem 0 0;
     padding: .0025rem;
@@ -818,65 +852,92 @@ html
     background-color: grey;
 }
 
-.profile-stats
+.profile .stats
 {
     margin: 1rem 0 0;
 }
 
-.profile-stats ul
+.profile .stats ul
 {
     padding: 0; 
 
     list-style: none;
 }
 
-.profile-stats ul li
+.profile .stats ul li
 {
-    padding: 0 0 1rem 0;
+    padding: 0 0 1rem;
 }
 
-.profile-stats .stat
+.profile .stats .stat
 {
     padding: 0 0 0 .75rem;
 }
 
-.social-links
+/* FIX important fields*/
+/* need to refactor */
+.social-container
 {
     padding-bottom: 4rem;
 }
 
-.social-links a
+.social-container .download
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.social-container .download a
 {
     margin-bottom: 1rem;
 }
 
-.social-links ul
+@media (min-width: 768px)
 {
-    position: fixed; 
-    bottom: 0rem;
-    left: 0;
-
-    margin: 0;
-
-    color: #eee;
-    background: rgba(0, 0, 0, .8);
+    .download
+    {
+        -webkit-box-pack: start !important;
+        -webkit-justify-content: flex-start !important;
+        -ms-flex-pack: start !important;
+                justify-content: flex-start !important;
+    }
 }
 
-.social-links ul li.social-icon
+/* fr social bar */
+.nav-social-fr
 {
-    margin: 0 1.55rem; 
-    padding: .75rem 0;
+    position: fixed;
+    z-index: 100;
+    right: 1.75rem;
+    bottom: .5rem;
+
+    list-style: none;
 }
 
-body
+.nav-social-fr li
 {
-    /*background-color: honeydew;*/
-    background-color: #000;
+    margin: 0 0 .75rem;
+}
+
+@media (min-width: 768px)
+{
+    .nav-social-fr
+    {
+        margin-right: 1.25rem;
+    }
 }
 
 .navbar-collapse
 {
-    color: #eee; 
-    /* DEBUG */
-    background: rgba(0, 0, 0, .8);
+    /* DEBUG 
+    background: rgba(0, 0, 0, 0.8);
+    */
+    color: #eee;
 }

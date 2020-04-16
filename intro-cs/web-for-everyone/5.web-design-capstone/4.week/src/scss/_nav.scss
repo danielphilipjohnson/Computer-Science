@@ -1,24 +1,40 @@
-.logo {
-    width: 1.75rem;
-    height: 1.75rem;
-}
+@import "mixins/flex";
 
-.navbar {
+.navbar.fixed {
     z-index: 5;
     padding: 0.75rem 1rem;
     position: fixed;
     width: 100%;
-    margin: 0 auto;
 
+    img.logo {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
 }
 
 .navbar-nav {
-
-    justify-content: right;
+    @include flex-justify-right;
     width: 100%;
     font-size: 1.25rem;
-
 }
+
+
+.nav.social {
+    @include flex-justify-between;
+    background: rgba(0, 0, 0, 0.8);
+    color: #eee;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    li.social-icon {
+        padding: 0.75rem 0;
+        margin: 0 1.55rem;
+    }
+}
+
+
+
 
 @media(min-width: 767px) {
     .nav-item {
@@ -29,15 +45,17 @@
         height: 2rem;
     }
     .navbar {
-        /* DEBUG */
-        background-color:green ;
-        margin: -3rem auto;
-    }
     
-}
-
-@media(max-width: 767px) {
-
-   
-
+        /* DEBUG 
+        background-color: green;
+        */
+        /*margin: $reset-fixed-nav auto;*/
+    }
+    .nav.social {
+        /*background-color: green;*/
+        position: relative;
+        li.social-icon {
+            margin: 0;
+        }
+    }
 }
