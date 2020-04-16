@@ -3,7 +3,6 @@ process.env.NODE_ENV = 'development';
 const path = require('path');
 
 
-
 const {
     src,
     dest,
@@ -48,8 +47,6 @@ const eslint = require("gulp-eslint");
 
 const imagemin = require('gulp-imagemin');
 const jsdoc = require('gulp-jsdoc3');
-
-
 //const mocha = require('gulp-mocha');
 
 
@@ -234,16 +231,18 @@ function optimizeImages() {
 function watchProject() {
     browserSync.init({ server: { baseDir: "src/" } });
     // Run Style
+
     watch(
-        ["node_modules/bootstrap/scss/bootstrap.scss", "src/scss/*.scss"],
-        developmentCSS
-    );
+        ["node_modules/bootstrap/scss/bootstrap.scss", "src/scss/**/*.scss"],        
+        developmentCSS)
+  
+ 
     watch("src/pug/**/*.pug", developmentBuildHTML);
     watch("src/pug/**/*.pug", developmentHtmlValidate);
     watch("src/pug/**/*.pug").on("change", browserSync.reload);
-    watch(["src/js/modules/**/*.js"], developmentConcatJS);
-    watch(["src/js/modules/**/*.js"], developmentJSValidate);
-    watch("src/js/modules/*.js").on("change", browserSync.reload);
+    //watch(["src/js/modules/**/*.js"], developmentConcatJS);
+    //watch(["src/js/modules/**/*.js"], developmentJSValidate);
+    //watch("src/js/modules/*.js").on("change", browserSync.reload);
 }
 
 /* TESTING */
@@ -253,10 +252,6 @@ function karmaTest(done) {
         singleRun: false
     }, done).start();
 }
-
-
-
-
 
 
 
@@ -307,6 +302,6 @@ if (process.env.NODE_ENV === 'production') {
     exports.developmentConcatJS = developmentConcatJS;
     exports.developmentCSS = developmentCSS;
     exports.watch = watchProject;
-
+        exports.buildPug = developmentBuildHTML;
 
 }

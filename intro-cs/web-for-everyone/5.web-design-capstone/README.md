@@ -71,3 +71,4 @@ https://codepen.io/EricPorter/pen/JjPmOOb
 
 
 //https://aaron-russell.co.uk/blog/9-ways-to-improve-your-page-speed/
+https://preview.themeforest.net/item/docs-responsive-documentation-manual-jekyll-theme/full_screen_preview/21131076?_ga=2.234382238.1087221016.1587061919-604639273.1586198581
