@@ -14,6 +14,11 @@ body#full-video, html {
     padding: 0 2rem;
 }
 
+main {
+    padding-top: $push-away-from-nav;
+}
+
+
 .fa.lg {
     color: #fff;
     font-size: 1.5rem;

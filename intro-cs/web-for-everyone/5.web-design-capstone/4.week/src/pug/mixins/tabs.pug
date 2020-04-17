@@ -1,0 +1,34 @@
+include cards.pug
+
+
+mixin tabs(firstItem, items)
+    ul.nav.nav-tabs(id="nav-tab" role="tablist")
+        li.nav-item
+            a.nav-link.active(
+                id= firstItem.tabname.toLowerCase() +"-tab" 
+                data-toggle="tab" 
+                href="#"+ firstItem.tabname.toLowerCase()
+                role="tab" 
+                aria-controls=firstItem.tabname.toLowerCase() 
+                aria-selected="true")= firstItem.tabname
+
+        each item in items
+            li.nav-item
+                a.nav-link(
+                    id= item.tabname.toLowerCase() +"-tab" 
+                    data-toggle="tab" 
+                    href="#"+ item.tabname.toLowerCase()
+                    role="tab" 
+                    aria-controls=item.tabname.toLowerCase()
+                    aria-selected="true")= item.tabname
+
+    #myTabContent.tab-content
+        .tab-pane.fade.show.active(
+            id=firstItem.tabname.toLowerCase(), 
+            role='tabpanel' 
+            aria-labelledby=firstItem.tabname.toLowerCase()+'-tab') 
+                    +createCardColumn(firstItem.cards)
+
+        each item in items
+            .tab-pane.fade(id=item.tabname.toLowerCase(), role='tabpanel' aria-labelledby=item.tabname.toLowerCase()+'-tab') 
+                +createCardColumn(item.cards)

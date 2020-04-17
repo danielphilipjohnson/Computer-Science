@@ -1,38 +1,5 @@
 /* ABOUT PAGE */
-.profile {
-    padding-top: $push-away-from-nav;
 
-    .aboutme {
-        
-        padding-top: $push-away-from-nav;
-
-        text-align: center;
-
-        .mute-text {
-            color: #6c757d;
-        }
-
-        .title {
-            font-weight: $font-weight-bolder;
-        }
-
-        .section-splitter {
-            padding: 0.15rem;
-            margin: 1rem 4rem 2rem;
-            background-color: $primary-color;
-        }
-
-        img.profile-pic {
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            margin: 0 auto;
-            max-width: 100%;
-            padding: 0.25rem;
-            border: $profile-pic-border;
-            background-color: white;
-        }
-    }
 
 
     .who-am-i {
@@ -52,7 +19,7 @@
     .stats {
         margin: 1rem 0 0;
         ul {
-            
+
             list-style: none;
             padding: 0;
             li {
@@ -64,4 +31,5 @@
 
         }
     }
-}
+
+

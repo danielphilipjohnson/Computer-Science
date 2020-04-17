@@ -1,3 +1,12 @@
+/*
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$text: grey;
+*/
+/* COLOR */
+/* can we use $font-weight-bold */
+/* PROFILE */
+/* grid breakpoints */
 body
 {
     font-family: 'Poppins', sans-serif;
@@ -18,6 +27,11 @@ html
     padding: 0 2rem;
 }
 
+main
+{
+    padding-top: 3rem;
+}
+
 .fa.lg
 {
     font-size: 1.5rem; 
@@ -25,15 +39,6 @@ html
     color: #fff;
 }
 
-/*
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$text: grey;
-*/
-/* COLOR */
-/* can we use $font-weight-bold */
-/* PROFILE */
-/* grid breakpoints */
 /* HOME PAGE */
 .v-header
 {
@@ -769,6 +774,44 @@ $text: grey;
     }
 }
 
+section.heading
+{
+    padding-top: 3rem;
+
+    text-align: center;
+}
+
+section.heading .addtional-text
+{
+    color: #6c757d;
+}
+
+section.heading .title
+{
+    font-weight: bolder;
+}
+
+section.heading .section-splitter
+{
+    margin: 1rem 4rem 2rem;
+    padding: .15rem;
+
+    background-color: #04a70c;
+}
+
+section.heading img.profile-pic
+{
+    width: 150px;
+    max-width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    padding: .25rem;
+
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    background-color: white;
+}
+
 /* helper */
 /* need to remove dependency */
 .highlight-text
@@ -789,62 +832,19 @@ $text: grey;
 
 /* components */
 /* ABOUT PAGE */
-.profile
-{
-    padding-top: 3rem;
-}
-
-.profile .aboutme
-{
-    padding-top: 3rem;
-
-    text-align: center;
-}
-
-.profile .aboutme .mute-text
-{
-    color: #6c757d;
-}
-
-.profile .aboutme .title
-{
-    font-weight: bolder;
-}
-
-.profile .aboutme .section-splitter
-{
-    margin: 1rem 4rem 2rem;
-    padding: .15rem;
-
-    background-color: #04a70c;
-}
-
-.profile .aboutme img.profile-pic
-{
-    width: 150px;
-    max-width: 100%;
-    height: 150px;
-    margin: 0 auto;
-    padding: .25rem;
-
-    border: 1px solid #dee2e6;
-    border-radius: 50%;
-    background-color: white;
-}
-
-.profile .who-am-i
+.who-am-i
 {
     padding: 3rem 0 0;
 }
 
-.profile .who-am-i .about-me
+.who-am-i .about-me
 {
     font-weight: bolder;
 
     padding: 0 0 1rem;
 }
 
-.profile .who-am-i hr
+.who-am-i hr
 {
     margin: 2rem 0 0;
     padding: .0025rem;
@@ -852,24 +852,24 @@ $text: grey;
     background-color: grey;
 }
 
-.profile .stats
+.stats
 {
     margin: 1rem 0 0;
 }
 
-.profile .stats ul
+.stats ul
 {
     padding: 0; 
 
     list-style: none;
 }
 
-.profile .stats ul li
+.stats ul li
 {
     padding: 0 0 1rem;
 }
 
-.profile .stats .stat
+.stats .stat
 {
     padding: 0 0 0 .75rem;
 }

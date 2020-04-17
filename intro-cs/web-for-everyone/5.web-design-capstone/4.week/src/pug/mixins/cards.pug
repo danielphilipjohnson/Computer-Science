@@ -1,0 +1,18 @@
+mixin createCardColumn(images)
+
+    .card-columns
+        for image in images
+            if image.type == "image"
+                .card.bg-primary
+                    img.card-img-top(src=image.src alt=image.alt)
+                    .card-body
+                        h5.card-title= image.title
+                        p.card-text=image.text
+            else if image.type == "text"
+                .card.bg-primary.text-white.text-center.p-3
+                    blockquote.blockquote.mb-0
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.
+                    footer.blockquote-footer
+                        small
+                        | Someone famous in 
+                        cite(title='Source Title') Source Title

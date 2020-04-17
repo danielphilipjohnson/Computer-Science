@@ -1,9 +1,11 @@
-@import "defaults";
+
 @import "variables";
+@import "defaults";
+
 @import "header";
 @import "nav";
 @import "text_animation";
-
+@import "components/section-header";
 @import "utilties/utilites";
 
 

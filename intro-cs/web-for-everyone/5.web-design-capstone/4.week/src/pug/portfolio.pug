@@ -1,11 +1,133 @@
 extends layout.pug
+include includes/subhead.pug
+include mixins/tabs.pug
+
 
 block content
 
+    // Data to pass to tabs
+    - 
+        var firstItem = {
+            "tabname": "All", 
+            "cards":[
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title for first item", 
+                    "text": "TEXT"
+                },
+                
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"text",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"text",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/200/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                }
+            ]
+        }
+
+    - 
+        var items = [{
+            "tabname": "Brand", 
+            "cards":[
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Brand Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"text",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"text",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/200/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    }
+                ]
+            },
+            {"tabname": "Design", cards:[] },
+            {"tabname": "Photos", cards:[] }
+        ]
+        
     body
         include includes/navbar.pug
-        include includes/subhead.pug
-
-        +subhead("Showcasing some of my best work", "Portfolio", false)
+        
+        main.container.profile
+            +subhead("Showcasing some of my best work", "Portfolio", false)
+            +tabs(firstItem, items)
+        
         .jumbotron.container.bg-primary
             h1.display-4 Portfolio
