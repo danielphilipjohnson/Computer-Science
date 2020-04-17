@@ -6,7 +6,8 @@ block content
         include includes/navbar.pug
 
         main.container.profile
-            include about-components/aboutme.pug
+            include includes/subhead.pug
+            +subhead("Get to know me", "About Me", true)
             include about-components/whoami.pug
 
             section.stats
