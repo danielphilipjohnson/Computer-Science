@@ -1,0 +1,41 @@
+.nav-tabs {
+    
+    margin: 4rem 0 2rem 0;
+
+    justify-content: center;
+    font-size: 1.25rem;
+    border-bottom: none;
+
+
+    .nav-link.active {
+        background-color: transparent;
+        border: 0px none;
+        border-bottom: 2px $primary-color solid;
+        color: #fff;
+    }
+    .nav-link {
+        color: $addtional-text;
+        
+    }
+}
+
+.card-columns {
+    .card {
+        background: none;
+    }
+    .card-body {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+}
+
+
+@media(max-width: 767px) {
+
+    .card-columns {
+        column-count: 1;
+    }
+}

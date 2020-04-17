@@ -1,8 +1,11 @@
 extends layout.pug
 
+include mixins/navbar.pug
 
 block content
   body#full-video
-    include includes/navbar.pug
+  
+    
+    +NavbarFixed(navSetting)
     include includes/header.pug
     include includes/social-icons.pug

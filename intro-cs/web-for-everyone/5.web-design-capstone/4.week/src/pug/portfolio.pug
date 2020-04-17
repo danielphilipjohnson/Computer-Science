@@ -1,5 +1,6 @@
 extends layout.pug
 include includes/subhead.pug
+include mixins/navbar.pug
 include mixins/tabs.pug
 
 
@@ -11,7 +12,7 @@ block content
             "tabname": "All", 
             "cards":[
                 {
-                    "src":"http://placekitten.com/200/300",
+                    "src":"http://placekitten.com/300/300",
                     "type":"image",
                     "alt":"Kitten",
                     "title": "Title for first item", 
@@ -19,42 +20,42 @@ block content
                 },
                 
                 {
-                    "src":"http://placekitten.com/200/300",
+                    "src":"http://placekitten.com/300/300",
                     "type":"image",
                     "alt":"Kitten",
                     "title": "Title", 
                     "text": "TEXT"
                 },
                 {
-                    "src":"http://placekitten.com/200/300",
-                    "type":"text",
-                    "alt":"Kitten",
-                    "title": "Title", 
-                    "text": "TEXT"
-                },
-                {
-                    "src":"http://placekitten.com/200/300",
+                    "src":"http://placekitten.com/300/300",
                     "type":"image",
                     "alt":"Kitten",
                     "title": "Title", 
                     "text": "TEXT"
                 },
                 {
-                    "src":"http://placekitten.com/200/300",
-                    "type":"text",
-                    "alt":"Kitten",
-                    "title": "Title", 
-                    "text": "TEXT"
-                },
-                {
-                    "src":"http://placekitten.com/200/300",
+                    "src":"http://placekitten.com/300/300",
                     "type":"image",
                     "alt":"Kitten",
                     "title": "Title", 
                     "text": "TEXT"
                 },
                 {
-                    "src":"http://placekitten.com/200/300",
+                    "src":"http://placekitten.com/300/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/300/300",
+                    "type":"image",
+                    "alt":"Kitten",
+                    "title": "Title", 
+                    "text": "TEXT"
+                },
+                {
+                    "src":"http://placekitten.com/300/300",
                     "type":"image",
                     "alt":"Kitten",
                     "title": "Title", 
@@ -68,36 +69,36 @@ block content
             "tabname": "Brand", 
             "cards":[
                     {
-                        "src":"http://placekitten.com/200/300",
+                        "src":"http://placekitten.com/300/300",
                         "type":"image",
                         "alt":"Kitten",
                         "title": "Brand Title", 
                         "text": "TEXT"
                     },
                     {
-                        "src":"http://placekitten.com/200/300",
+                        "src":"http://placekitten.com/300/300",
                         "type":"image",
                         "alt":"Kitten",
                         "title": "Title", 
                         "text": "TEXT"
                     },
                     {
-                        "src":"http://placekitten.com/200/300",
-                        "type":"text",
-                        "alt":"Kitten",
-                        "title": "Title", 
-                        "text": "TEXT"
-                    },
-                    {
-                        "src":"http://placekitten.com/200/300",
+                        "src":"http://placekitten.com/300/300",
                         "type":"image",
                         "alt":"Kitten",
                         "title": "Title", 
                         "text": "TEXT"
                     },
                     {
-                        "src":"http://placekitten.com/200/300",
-                        "type":"text",
+                        "src":"http://placekitten.com/300/300",
+                        "type":"image",
+                        "alt":"Kitten",
+                        "title": "Title", 
+                        "text": "TEXT"
+                    },
+                    {
+                        "src":"http://placekitten.com/300/300",
+                        "type":"image",
                         "alt":"Kitten",
                         "title": "Title", 
                         "text": "TEXT"
@@ -123,11 +124,9 @@ block content
         ]
         
     body
-        include includes/navbar.pug
         
+        +NavbarFixed(navSetting)
         main.container.profile
             +subhead("Showcasing some of my best work", "Portfolio", false)
             +tabs(firstItem, items)
         
-        .jumbotron.container.bg-primary
-            h1.display-4 Portfolio

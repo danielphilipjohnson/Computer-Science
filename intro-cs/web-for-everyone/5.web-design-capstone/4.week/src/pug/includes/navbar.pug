@@ -1,38 +1,18 @@
-- var classes = ['foo', 'bar', 'baz']
-- var implemented = false
-
-nav.navbar.fixed.navbar-expand-lg.navbar-dark
-  a.navbar-brand(href='/')
-    img.logo(
-      src="assets/img/logo.png"
-      alt="Logo"
-    )
-  button.navbar-toggler(
-      type='button' 
-      data-toggle='collapse' 
-      data-target='#navbarSupportedContent' 
-      aria-controls='navbarSupportedContent' 
-      aria-expanded='false' 
-      aria-label='Toggle navigation'
-    )
-    span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    ul.navbar-nav
-      if implemented
-        li.nav-item.active
-          a.nav-link(href='#') About 
-        li.nav-item
-          a.nav-link(href='#') Resume
-        li.nav-item
-          a.nav-link(href='#') Portfolio
-        li.nav-item
-          a.nav-link(href='#') Blog
-        li.nav-item
-          a.nav-link(href='#') Contact
-      else
-        li.nav-item.active
-          a.nav-link(href='about.html') About 
-        li.nav-item
-          a.nav-link(href='portfolio.html') Portfolio
-        li.nav-item
-          a.nav-link(href='#') Blog
+- 
+  var navSetting = {   
+    "logo":{
+      "src":"assets/img/logo.png",
+      "alt":"Logo"
+    },
+   "links":[{
+         "name":"About",
+         "href":"about.html"
+      
+      },{
+          "name":"Portfolio",
+          "href":"portfolio.html"
+      },{
+          "name":"Blog",
+          "href":"blog.html"
+    }]
+  }
