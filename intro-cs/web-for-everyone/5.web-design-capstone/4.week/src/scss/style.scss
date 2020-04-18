@@ -1,18 +1,41 @@
 
 @import "variables";
+@import "utilties/utilites";
 @import "defaults";
 
-@import "header";
-@import "nav";
-@import "text_animation";
-@import "components/section-header";
-@import "utilties/utilites";
-@import "pages/blog";
-@import "card";
-/* components */
-@import "profile";
 
-@import "lists";
+
+@import "text_animation";
+
+@import "components/header";
+@import "components/section-header";
+@import "components/navbar";
+@import "components/nav-tabs";
+@import "components/nav-social";
+
+
+
+
+@import "components/card-column";
+
+@import "components/social-container";
+
+/* Pages */
+
+// ABOUT
+
+@import "pages/about-components/profile.scss";
+
+
+// BLOG
+@import "pages/blog-components/card-collection.scss";
+@import "pages/blog-components/card-blog-full-image.scss";
+@import "pages/blog-components/card-blog.scss";
+@import "pages/blog-components/card-blog-half-image.scss";
+/* components */
+
+
+
 .navbar-collapse {
 
 /* DEBUG 

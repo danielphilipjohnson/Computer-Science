@@ -1,7 +1,13 @@
 mixin subhead(subtext, heading, displayPhoto)
+    
     section.heading
-            h5.addtional-text= subtext 
-            h1.title= heading
-            hr.section-splitter 
-            if displayPhoto
-                img.profile-pic(src="/assets/profile.jpg" alt="Profile Pic")
+            p.text-muted.htmlcode.body
+                | &lt; body &gt;
+            .inner-text
+                h5.addtional-text= subtext 
+        
+                span.htmlcode.htag
+                    | &lt; h1 &gt;
+                    h1.title= heading
+                    span.htmlcode.htag
+                        | &lt; &#x2F; h1 &gt;

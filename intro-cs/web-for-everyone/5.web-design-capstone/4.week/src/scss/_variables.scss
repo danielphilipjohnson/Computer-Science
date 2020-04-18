@@ -1,6 +1,4 @@
 /*
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
 $text: grey;
 */
 
@@ -13,11 +11,10 @@ $addtional-text: #6c757d;
 
 
 $font-weight-bolder: bolder;
-/* can we use $font-weight-bold */
 
 
 /* PROFILE */
-$push-away-from-nav: 3rem;
+$push-away-from-nav: 5.5rem;
 $profile-pic-border: 1px solid #dee2e6;
 
 
@@ -27,3 +24,10 @@ $media-xs: 0;
 $media-sm: 480px;
 $media-md: 768px;
 $media-lg: 1024px;
+
+
+
+
+/* BLOG CARD */
+
+$push-blog-card-away: 0.75rem;

@@ -1,6 +1,5 @@
 /* HOME PAGE */
-
-
+@import "mixins/full-image-background";
 $overlay-color: #222527;
 $overlay-mobile-color: #0b0c0c;
 
@@ -45,7 +44,9 @@ $overlay-mobile-color: #0b0c0c;
     right: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100vh; background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -63,9 +64,8 @@ $overlay-mobile-color: #0b0c0c;
 
     body#full-video {
         background: url('../assets/img/poster.jpg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include full-image-background;
+       
   
     }
     

@@ -1,0 +1,20 @@
+.card.blog.image {
+    margin-bottom: $push-blog-card-away;
+    
+    .card-img-top {
+        border-radius: 0;
+        height: 250px;
+    }
+    
+    .card-body {
+        margin-bottom: 0;
+    }
+
+    p.card-text {
+        position: absolute;
+        padding:1.25rem 1rem;
+        top: 220px;
+        left: 0;
+        color: #fff;
+    }
+}

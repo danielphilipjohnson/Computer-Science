@@ -6,6 +6,7 @@ block content
         +NavbarFixed(navSetting)
 
         main.container.profile
+            
             include includes/subhead.pug
             +subhead("Get to know me", "About Me", true)
             
@@ -18,3 +19,5 @@ block content
                 .row.social-container
                     include about-components/download-btn.pug
                     include about-components/navsocial.pug
+                p.text-muted.htmlcode.body
+                    | &lt; body &gt;

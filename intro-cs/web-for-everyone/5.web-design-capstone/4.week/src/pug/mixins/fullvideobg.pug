@@ -1,0 +1,18 @@
+mixin fullVideoBackground(setting, isDevelopment)
+    header.v-header.container
+        .fullscreen-video-wrap
+            if isDevelopment
+                video(autoplay loop muted)
+                    source(src=setting.src, type=setting.type)
+
+        .header-overlay
+        
+        .container.animation-container
+            .box.header-content
+                .title
+                    span.block
+                    h1=setting.name
+                    span
+                .role
+                    .block
+                    p=setting.role

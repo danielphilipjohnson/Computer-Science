@@ -1,0 +1,18 @@
+.card-columns {
+    .card {
+        background: none;
+    }
+    .card-body {
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+}
+
+@media(max-width: 767px) {
+
+    .card-columns {
+        column-count: 1;
+    }
+}

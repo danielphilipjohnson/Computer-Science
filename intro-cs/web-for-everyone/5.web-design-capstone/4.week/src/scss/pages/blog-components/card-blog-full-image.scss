@@ -1,0 +1,21 @@
+@import "mixins/full-image-background";
+
+
+.card.blog.full-image {
+    .image {
+        @include full-image-background;
+        margin-bottom: $push-blog-card-away; 
+    }
+    .card-body {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.65);
+        margin-bottom: 0;
+        
+        .media-body {
+            color: #fff;
+        }
+    }
+    .read-more {
+        color: #fff;
+    }
+}

@@ -1,11 +1,37 @@
 extends layout.pug
 
 include mixins/navbar.pug
-
+include mixins/fullvideobg.pug
+include mixins/social-icons.pug
 block content
+  - 
+    var videoSetting = {
+        "src": "./assets/bg.mp4",
+        "type": "video/mp4",
+        "name": "Daniel Johnson",
+        "role": "I'm a Developer"
+    }
+  - 
+    var socials = [
+        {
+            "href": "https://twitter.com/undreamtmayhem", 
+            "socialPlatform": "twitter"
+            },{
+            "href": "https://www.facebook.com/UndreamtMayhem", 
+            "socialPlatform": "facebook"
+            },{
+            "href": "https://www.linkedin.com/in/daniel-johnson-1b3b1415a/", 
+            "socialPlatform": "linkedin"
+            },{
+            "href": "https://github.com/danielphilipjohnson/", 
+            "socialPlatform": "github"
+            },{
+            "href": "https://www.instagram.com/danielphilipjohnson/", 
+            "socialPlatform": "instagram"
+        }
+    ]
+
   body#full-video
-  
-    
     +NavbarFixed(navSetting)
-    include includes/header.pug
-    include includes/social-icons.pug
+    +fullVideoBackground(videoSetting, true)
+    +socialIcons(socials)
