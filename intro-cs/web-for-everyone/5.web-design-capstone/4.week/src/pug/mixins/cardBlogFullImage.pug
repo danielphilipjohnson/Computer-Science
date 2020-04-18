@@ -1,0 +1,21 @@
+mixin cardBlogFullImage(blogs)
+    each blog in blogs
+        
+        .card.col-md-6.col-lg-4.blog.full-image
+            .image(style="background-image:url('http://placekitten.com/200/200')")
+                .card-body.image
+                    .media
+                        img.thumbnail.mr-3(src=blog.profileThumbnail alt=blog.alt)
+                        .media-body
+                            p Posted by 
+                                span.title=blog.author
+                            small.text-muted=blog.created
+                    ul.topics
+                        each keyword in blog.keywords
+                            li.text-muted=keyword
+                
+                    h5.card-title=blog.title
+                    p.card-text.text-muted=blog.text
+                    a.read-more(href=blog.link) Read More  
+                        i.fa.fa-arrow-right(aria-hidden="true") 
+

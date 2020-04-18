@@ -1,61 +1,45 @@
 extends layout.pug
 include includes/subhead.pug
 include mixins/navbar.pug
-
-
+include mixins/cardBlog.pug
+include mixins/cardBlogFullImage.pug
+include mixins/cardBlogHalfImage.pug
 
 block content
+   
+    
+
+
 
     body
+        - 
+        
+            var blogCards = 
+            [{
+                "profileThumbnail": "/assets/profile.jpg",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "dd/mm/yryr",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["Badge","Badge1","Badge2"],
+                "link": "#",
+                "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+            },{
+                "profileThumbnail": "/assets/profile.jpg",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "dd/mm/yryr",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["Badge","Badge1","Badge2"],
+                "link": "#",
+                "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+            }]
+            
         +NavbarFixed(navSetting)
+
         main.container.profile
             +subhead("Checkout my latest blog posts", "Blogs", false)
-            .card-deck
-                include mixins/cardBlog.pug
-                // implement the cards
-                .card.blog.image
-                    .card-body
-                        .media
-                            img.thumbnail.mr-3(src='/assets/profile.jpg' alt='Generic placeholder image')
-                            .media-body
-                                p Posted by 
-                                    span.title Daniel Johnson
-                                small.text-muted dd/mm/yryr
-                        ul.topics
-                            li.text-muted Badge
-                            li.text-muted Badge
-                            li.text-muted Badge
-                        h5.card-title “Be the change that you wish to see in the world.”
-                        p.card-text
-                            | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                 
-                    img.card-img-top(src='http://placekitten.com/200/200' alt='Card image cap')
-
-
-                .card.blog
-                    .card-body
-                        .media
-                            img.thumbnail.mr-3(src='/assets/profile.jpg' alt='Generic placeholder image')
-                            .media-body
-                                p Posted by 
-                                    span.title Daniel Johnson
-                                small.text-muted dd/mm/yryr
-                        ul.topics
-                            li.text-muted Badge
-                            li.text-muted Badge
-                            li.text-muted Badge
-                        h5.card-title “Be the change that you wish to see in the world.”
-                        p.card-text.text-muted
-                            | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                        a.read-more(href="#") 
-                            | Read More  
-                            i(class="fa fa-arrow-right"  aria-hidden="true") 
-                 
-                .card
-                    img.card-img-top(src='http://placekitten.com/300/300' alt='Card image cap')
-                    .card-body
-                        h5.card-title Card title
-                        p.card-text
-                            | This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
-                        p.card-text
-                            small.text-muted Last updated 3 mins ago
+            .cards.d-flex
+                +cardTextBlog(blogCards)
+                +cardBlogFullImage(blogCards)
+                +CardBlogHalfImage(blogCards)
