@@ -11,6 +11,7 @@ block content
         main.container.profile
             +subhead("Checkout my latest blog posts", "Blogs", false)
             .card-deck
+                include mixins/cardBlog.pug
                 // implement the cards
                 .card.blog.image
                     .card-body
@@ -44,8 +45,11 @@ block content
                             li.text-muted Badge
                             li.text-muted Badge
                         h5.card-title “Be the change that you wish to see in the world.”
-                        p.card-text
+                        p.card-text.text-muted
                             | This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+                        a.read-more(href="#") 
+                            | Read More  
+                            i(class="fa fa-arrow-right"  aria-hidden="true") 
                  
                 .card
                     img.card-img-top(src='http://placekitten.com/300/300' alt='Card image cap')

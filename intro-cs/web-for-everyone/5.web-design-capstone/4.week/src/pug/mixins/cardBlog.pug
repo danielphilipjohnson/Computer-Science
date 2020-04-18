@@ -1,0 +1,45 @@
+- 
+    var blogCards = 
+        [{
+            "profileThumbnail": "/assets/profile.jpg",
+            "alt": "profile pic",
+            "author": "Daniel Johnson",
+            "created": "dd/mm/yryr",
+            "title": "Be the change that you wish to see in the world.",
+            "keywords": ["Badge","Badge1","Badge2"],
+            "link": "#",
+            "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+        },{
+            "profileThumbnail": "/assets/profile.jpg",
+            "alt": "profile pic",
+            "author": "Daniel Johnson",
+            "created": "dd/mm/yryr",
+            "title": "Be the change that you wish to see in the world.",
+            "keywords": ["Badge","Badge1","Badge2"],
+            "link": "#",
+            "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+        }]
+    
+
+
+
+mixin cardTextBlog(blogs)
+    each blog in blogs
+        .card.blog
+            .card-body
+                .media
+                    img.thumbnail.mr-3(src=blog.profileThumbnail alt=blog.alt)
+                    .media-body
+                        p Posted by 
+                            span.title=blog.author
+                        small.text-muted=blog.created
+                ul.topics
+                    each keyword in blog.keywords
+                        li.text-muted=keyword
+               
+                h5.card-title= blog.title
+                p.card-text.text-muted=blog.text
+                a.read-more(href=blog.link) Read More  
+                    i(class="fa fa-arrow-right"  aria-hidden="true") 
+                    
++cardTextBlog(blogCards)

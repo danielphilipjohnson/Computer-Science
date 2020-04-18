@@ -878,15 +878,42 @@ img.thumbnail
     margin: 0;
 }
 
+.card.blog .topics
+{
+    margin: 0 0 1rem; 
+    padding: 2rem 0 0;
+
+    list-style: none;
+}
+
+.card.blog .topics li
+{
+    font-size: .8rem; 
+
+    display: inline;
+
+    padding: 0 1rem 0 0;
+}
+
 .card.blog p.card-text
 {
-    position: absolute;
-    top: 220px;
-    left: 0;
+    font-size: .85rem;
 
-    padding: 0 1rem;
+    padding: 1rem 0 4rem 0;
+}
 
-    color: #fff;
+.card.blog a.read-more
+{
+    font-size: .85rem; 
+
+    text-decoration: none;
+
+    color: #000;
+}
+
+.card.blog a.read-more i.fa
+{
+    padding-left: .75rem;
 }
 
 .card.blog.image .card-img-top
@@ -896,21 +923,15 @@ img.thumbnail
     border-radius: 0;
 }
 
-.topics
+.card.blog.image p.card-text
 {
-    margin: 0 0 1rem; 
-    padding: 2rem 0 0;
+    position: absolute;
+    top: 220px;
+    left: 0;
 
-    list-style: none;
-}
+    padding: 0 1rem;
 
-.topics li
-{
-    font-size: .8rem; 
-
-    display: inline;
-
-    padding: 0 1rem 0 0;
+    color: #fff;
 }
 
 .nav-tabs
