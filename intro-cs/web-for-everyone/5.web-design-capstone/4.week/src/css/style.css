@@ -830,6 +830,89 @@ section.heading img.profile-pic
     background-color: #04a70c;
 }
 
+/* blog page */
+img.thumbnail
+{
+    width: 64px;
+    height: 64px; 
+
+    border-radius: 50%;
+}
+
+.media-body
+{
+    color: #000;
+}
+
+.media-body p
+{
+    margin: 0;
+}
+
+.media-body .title
+{
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+/* BLOG CARD */
+.card.blog
+{
+    border: 0;
+    border-radius: 0; 
+    background-color: rgba(209, 209, 209, .966);
+}
+
+.card.blog .card-body
+{
+    padding: 2rem 1rem .75rem;
+
+    color: #000;
+}
+
+.card.blog .card-body .card-title
+{
+    font-size: 1rem;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+.card.blog p.card-text
+{
+    position: absolute;
+    top: 220px;
+    left: 0;
+
+    padding: 0 1rem;
+
+    color: #fff;
+}
+
+.card.blog.image .card-img-top
+{
+    height: 250px; 
+
+    border-radius: 0;
+}
+
+.topics
+{
+    margin: 0 0 1rem; 
+    padding: 2rem 0 0;
+
+    list-style: none;
+}
+
+.topics li
+{
+    font-size: .8rem; 
+
+    display: inline;
+
+    padding: 0 1rem 0 0;
+}
+
 .nav-tabs
 {
     font-size: 1.25rem;
