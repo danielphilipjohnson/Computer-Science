@@ -17,8 +17,8 @@
 /* blog page */
 img.thumbnail {
     border-radius: 50%;
-    width: 64px;
-    height: 64px;
+    width: 40px;
+    height: 40px;
 }
 
 .media-body {
@@ -26,9 +26,10 @@ img.thumbnail {
     color: #000;
     p {
         margin: 0;
+        line-height: 12px;
     }
     .title {
-        font-size: 1.25rem;
+        font-size: 14px;
         font-weight: 900;
     }
 }

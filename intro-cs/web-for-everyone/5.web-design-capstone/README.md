@@ -2,7 +2,7 @@
 
 I hope that people will be more concerned with their learning than their grade on this assignment. But I understand that people want to make sure they receive full credit so I will provide the grading rubric that will be used. Feel free to structure your page around it.
 
-- Does the site validate? 10pts
+- Does the site validate? 10pts YES
 - Is the site responsive? 20pts
 - Is the site well-styled? 10pts
 - Are the images incorporated effectively? 5pts
@@ -43,6 +43,48 @@ You need to add four elements to your site that are unique – something beyond 
 - Use a sticky footer to create a consistent look across different browser heights (we usually only consider widths…)
 - Add a third viewport layout (e.g. a table view that is different than mobile or large-screen) 
 
+## talk about features
+
+### 1. Responsive images with source set
+  node app.js
+  creates image widths : [400, 600, 800, 1600] for every photo
+  
+  /src/assets/processed-images
+
+  whoami.pug
+  -----------------------------------------------------------------------------------------
+  source(media="(max-width: 600px)" srcset="/assets/img/processed-images/profile1_400w.webp")
+  source(media="(max-width: 700px)" srcset="/assets/img/processed-images/profile1_600w.webp")
+  source(media="(max-width: 800px)" srcset="/assets/img/processed-images/profile1_800w.webp")
+
+### 2. broken images are filled in
+- uses jquery to replace broken images
+
+### 3. Scrolling feature
+- Pages for blog and portfolio fetch more cards when scrolling
+ to the bottom
+
+### 4. Animated Progress bar
+- https://kimmobrunfeldt.github.io/progressbar.js/
+
+
+
+
+
+
+
+
+
+## 5. Animate pages 
+- home page custom animation 
+- animation libraries
+- https://wowjs.uk/   and  https://michalsnik.github.io/aos/
+
+### 6. Scroll typing on home page 
+- https://github.com/mattboldt/typed.js
+
+
+
 
 Again, these are just suggestions, please feel free to let your own creativity be your guide.
 
@@ -55,20 +97,3 @@ Here is a list of suggestions from previous students.
     Images/Icons: https://thenounproject.com/, http://fontawesome.io/ (this is covered in a later lecture)
     Creative Commons: https://creativecommons.org/
     Fonts: https://www.fontsquirrel.com/, http://www.dafont.com/
-
-https://templatemo.com/
-https://webflow.com/templates
-
-https://themeforest.net/search/portfolio
-
-https://templatemo.com/
-https://www.templatemonster.com/
-
-https://freefrontend.com/css-text-animations/
-
-https://codepen.io/EricPorter/pen/JjPmOOb
-
-
-
-//https://aaron-russell.co.uk/blog/9-ways-to-improve-your-page-speed/
-https://preview.themeforest.net/item/docs-responsive-documentation-manual-jekyll-theme/full_screen_preview/21131076?_ga=2.234382238.1087221016.1587061919-604639273.1586198581

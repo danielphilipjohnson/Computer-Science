@@ -1,8 +1,8 @@
 mixin NavbarFixed(navSetting)
   
-  - var counter = 0
+
   nav.navbar.fixed.navbar-expand-lg.navbar-dark
-    a.navbar-brand(href='/')
+    a.navbar-brand.wow.slideInLeft(href='/' )
       img.logo(
         src=navSetting.logo.src
         alt=navSetting.logo.alt
@@ -20,10 +20,9 @@ mixin NavbarFixed(navSetting)
     
       ul.navbar-nav
         each link in navSetting.links
-            if counter == 0
-                li.nav-item.active
-                    a.nav-link(href=link.src)=link.name 
-                    - counter+= 1 
-            else
-                li.nav-item
-                    a.nav-link(href=link.src)=link.name 
+          if link.active == true
+            li.nav-item.active
+                  a.nav-link(href=link.href)=link.name 
+          else
+              li.nav-item
+                  a.nav-link(href=link.href)=link.name 

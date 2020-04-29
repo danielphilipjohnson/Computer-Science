@@ -1,45 +1,116 @@
 extends layout.pug
 include includes/subhead.pug
 include mixins/navbar.pug
-include mixins/cardBlog.pug
-include mixins/cardBlogFullImage.pug
-include mixins/cardBlogHalfImage.pug
 
+
+include mixins/cardBlogs.pug
 block content
    
     
+    - 
+            var navSetting = {   
+                "logo":{
+                "src":"assets/img/logo.png",
+                "alt":"Logo"
+                },
+                "links":[{
+                        "name":"About",
+                        "href":"about.html",
+                        
+                    
+                    },{
+                        "name":"Portfolio",
+                        "href":"portfolio.html"
+                    },{
+                        "name":"Blog",
+                        "href":"blog.html",
+                        "active": true
+                    }]
+     }
 
-
-
-    body
-        - 
-        
+    - 
             var blogCards = 
             [{
-                "profileThumbnail": "/assets/profile.jpg",
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
                 "alt": "profile pic",
                 "author": "Daniel Johnson",
-                "created": "dd/mm/yryr",
+                "created": "APRIL 29, 2020",
                 "title": "Be the change that you wish to see in the world.",
-                "keywords": ["Badge","Badge1","Badge2"],
+                "keywords": ["fab fa-markdown","fab fa-sass","fab fa-gulp"],
                 "link": "#",
+                "type": "text",
+                "text": "Kitsch jean shorts mustache, squid chicharrones butcher organic cliche cardigan chartreuse hell of. Franzen kale chips DIY cardigan everyday carry raw denim try-hard. Ramps dreamcatcher adaptogen, photo booth typewriter cloud bread pickled flannel taiyaki shaman YOLO selvage hell of farm-to-table. Selfies mustache echo park air plant. Plaid messenger bag forage cardigan chicharrones kombucha glossier selfies hexagon chia williamsburg. Scenester everyday carry viral, artisan flexitarian small batch truffaut. Letterpress messenger bag enamel pin twee knausgaard schlitz pickled."
+            },{
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "APRIL 29, 2020",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["fab fa-markdown","fab fa-less","fab fa-grunt"],
+                "link": "#",
+                "type": "text",
                 "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
             },{
-                "profileThumbnail": "/assets/profile.jpg",
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
                 "alt": "profile pic",
                 "author": "Daniel Johnson",
-                "created": "dd/mm/yryr",
+                "created": "APRIL 29, 2020",
                 "title": "Be the change that you wish to see in the world.",
-                "keywords": ["Badge","Badge1","Badge2"],
+                "keywords": ["fab fa-html5","fab fa-css3","fab fa-js"],
                 "link": "#",
+                "image": "/assets/img/processed-images/photo4_400w.png",
+                "type": "half-image",
+                "text": "Kitsch jean shorts mustache, squid chicharrones butcher organic cliche cardigan chartreuse hell of. Franzen kale chips DIY cardigan everyday carry raw denim try-hard. Ramps dreamcatcher adaptogen, photo booth typewriter cloud bread pickled flannel taiyaki shaman YOLO selvage hell of farm-to-table. Selfies mustache echo park air plant. Plaid messenger bag forage cardigan chicharrones kombucha glossier selfies hexagon chia williamsburg. Scenester everyday carry viral, artisan flexitarian small batch truffaut. Letterpress messenger bag enamel pin twee knausgaard schlitz pickled."
+            },{
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "APRIL 29, 2020",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["fab fa-markdown","fab fa-less","fab fa-node-js"],
+                "link": "#",
+                "image": "/assets/img/processed-images/photo5_400w.png",
+                "type": "half-image",
                 "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            }]
+            },{
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "APRIL 29, 2020",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["fab fa-html5","fab fa-sass","fab fa-react"],
+                "link": "#",
+                "image": "/assets/img/processed-images/photo4_400w.png",
+                "type": "full-image",
+                "text": "Kitsch jean shorts mustache, squid chicharrones butcher organic cliche cardigan chartreuse hell of. Franzen kale chips DIY cardigan everyday carry raw denim try-hard. Ramps dreamcatcher adaptogen, photo booth typewriter cloud bread pickled flannel taiyaki shaman YOLO selvage hell of farm-to-table. Selfies mustache echo park air plant. Plaid messenger bag forage cardigan chicharrones kombucha glossier selfies hexagon chia williamsburg. Scenester everyday carry viral, artisan flexitarian small batch truffaut. Letterpress messenger bag enamel pin twee knausgaard schlitz pickled."
+            },{
+                "profileThumbnail": "/assets/img/processed-images/profile1_400w.png",
+                "alt": "profile pic",
+                "author": "Daniel Johnson",
+                "created": "APRIL 29, 2020",
+                "title": "Be the change that you wish to see in the world.",
+                "keywords": ["fab fa-html5","fab fa-css3","fab fa-angular"],
+                "link": "#",
+                "image": "/assets/img/processed-images/photo5_400w.png",
+                "type": "full-image",
+                "text": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+            }
             
+            
+            
+            ]
+    
+
+    body
+        
         +NavbarFixed(navSetting)
 
         main.container.profile
+
             +subhead("Checkout my latest blog posts", "Blogs", false)
-            .cards.d-flex
-                +cardTextBlog(blogCards)
-                +cardBlogFullImage(blogCards)
-                +CardBlogHalfImage(blogCards)
+            
+            .card-columns#blogs
+                
+                +cardBlogs(blogCards)
+        include includes/scripts.pug
+        include includes/footer.pug

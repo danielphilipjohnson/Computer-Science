@@ -11,6 +11,7 @@ block content
         "name": "Daniel Johnson",
         "role": "I'm a Developer"
     }
+
   - 
     var socials = [
         {
@@ -30,8 +31,28 @@ block content
             "socialPlatform": "instagram"
         }
     ]
+  - 
+      var navSetting = {   
+          "logo":{
+            "src":"assets/img/logo.png",
+            "alt":"Logo"
+          },
+          "links":[{
+                  "name":"About",
+                  "href":"about.html",
 
-  body#full-video
+              
+              },{
+                  "name":"Portfolio",
+                  "href":"portfolio.html"
+              },{
+                  "name":"Blog",
+                  "href":"blog.html"
+              }]
+      }
+  body#full-video(style="overflow-y:hidden;-webkit-overflow:hidden")
+    
     +NavbarFixed(navSetting)
     +fullVideoBackground(videoSetting, true)
     +socialIcons(socials)
+    include includes/scripts.pug

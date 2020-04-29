@@ -2,10 +2,10 @@
 section.heading  {
 
     padding-top: $push-away-from-nav;
-
-    /*text-align: center;*/
+    padding-bottom: 2rem;
     .inner-text {
         text-align: center;
+        padding-top: 0.5rem;
     
     }
 
@@ -17,7 +17,8 @@ section.heading  {
     .title {
         font-weight: $font-weight-bolder;
         text-align: center;
-        margin: 0 0.75rem;
+        margin: 0 0.55rem;
+        font-size: 2rem;
     }
 
     .section-splitter {
@@ -30,40 +31,58 @@ section.heading  {
 }
 
 
+
+/* HTML SYNTAX */
+
+
 .htmlcode {
     font-style: italic;
     
     font-family: 'Indie Flower', cursive;
     margin: 0;
 }
-.htmlcode.body {
+.htmlcode.body, .htmlcode.html {
     font-size: 1.55rem;
 }
 .htag {
 
     color: rgb(7, 114, 202);
     text-align: center;
-    font-size: 1.55rem;
-    h1 {
+    font-size: 1.35rem;
+    .title {
         color: #fff;
         display: inline;
         font-family: 'Poppins', sans-serif;
     }
 }
 .htmlcode.htag {
-    border-bottom: 0.35rem solid #04a70c;
-
+    /*border-bottom: 0.35rem solid #04a70c;*/
+    padding-bottom: 0.25rem;
 }
 
 
 img.profile-pic {
     display: block;
-    //height: 150px;
-    //width: 150px;
-    //border-radius: 50%;
     margin: 1rem auto;
     max-width: 100%;
-    padding: 0 1rem 0 0;
-    //border: $profile-pic-border;
-    //background-color: white;
+    padding: 0;
+
+}
+
+.bottom-border  {
+    background-color: #04a70c;
+        width: 40%;
+    height: .25rem;
+    display: block;
+    margin: 0.25rem auto;
+    position: relative;
+    right: 6px;
+
+}
+
+@media (min-width: $media-md) {
+    img.profile-pic {
+        padding: 0 1rem 0 0;
+        height: 365px;
+    }
 }

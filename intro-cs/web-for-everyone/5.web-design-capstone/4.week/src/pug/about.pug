@@ -1,23 +1,42 @@
 extends layout.pug
 include mixins/navbar.pug
+include includes/subhead.pug
+include about/mixins/whoami.pug
 block content
 
     body
+        - 
+            var navSetting = {   
+                "logo":{
+                "src":"assets/img/logo.png",
+                "alt":"Logo"
+                },
+                "links":[{
+                        "name":"About",
+                        "href":"about.html",
+                        "active": true
+                    
+                    },{
+                        "name":"Portfolio",
+                        "href":"portfolio.html"
+                    },{
+                        "name":"Blog",
+                        "href":"blog.html"
+                    }]
+            }
+
         +NavbarFixed(navSetting)
 
         main.container.profile
-            
-            include includes/subhead.pug
+            - var title = "Who am i?"
+            - var alttxt = "I'm Daniel Johnson, a visual UX/UI Designer and Web Developer"
+            - 
+                var content = "I'm baby umami bushwick pickled four dollar toast, helvetica hella crucifix stumptown mumblecore woke franzen. Freegan everyday carry yr post-ironic. Bespoke poutine glossier, yuccie drinking vinegar squid pug pork belly. Shoreditch lomo chillwave master cleanse affogato pabst kombucha cliche aesthetic letterpress bushwick activated charcoal. Deep v pork belly yuccie slow-carb viral PBR&B. Twee synth tilde try-hard occupy air plant typewriter vape palo santo VHS XOXO meh aesthetic glossier. Single-origin coffee disrupt synth chambray cronut literally raw denim celiac."
+
+
             +subhead("Get to know me", "About Me", true)
+            +whoami(title, alttxt, content)
             
-            include about-components/whoami.pug
-
-            section.stats
-                include about-components/stats.pug
-               
-
-                .row.social-container
-                    include about-components/download-btn.pug
-                    include about-components/navsocial.pug
-                p.text-muted.htmlcode.body
-                    | &lt; body &gt;
+            include about/components/section-stats.pug
+        include includes/scripts.pug
+        include includes/footer.pug

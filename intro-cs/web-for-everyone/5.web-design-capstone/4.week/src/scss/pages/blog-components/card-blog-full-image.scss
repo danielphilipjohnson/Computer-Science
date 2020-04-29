@@ -4,11 +4,11 @@
 .card.blog.full-image {
     .image {
         @include full-image-background;
-        margin-bottom: $push-blog-card-away; 
+        /*margin-bottom: $push-blog-card-away; */
     }
     .card-body {
         color: #fff;
-        background-color: rgba(0, 0, 0, 0.65);
+        background-color: rgba(0, 0, 0, 0.8);
         margin-bottom: 0;
         
         .media-body {

@@ -4,7 +4,7 @@ $overlay-color: #222527;
 $overlay-mobile-color: #0b0c0c;
 
 .v-header {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     color: #fff;
@@ -63,10 +63,9 @@ $overlay-mobile-color: #0b0c0c;
     }
 
     body#full-video {
-        background: url('../assets/img/poster.jpg');
+        background: url('../assets/img/processed-images/poster_800w.webp');
         @include full-image-background;
        
-  
     }
     
     .header-overlay {

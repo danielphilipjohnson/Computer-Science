@@ -1,8 +1,6 @@
-
 @import "variables";
 @import "utilties/utilites";
 @import "defaults";
-
 
 
 @import "text_animation";
@@ -14,8 +12,6 @@
 @import "components/nav-social";
 
 
-
-
 @import "components/card-column";
 
 @import "components/social-container";
@@ -25,6 +21,11 @@
 // ABOUT
 
 @import "pages/about-components/profile.scss";
+@import "pages/about-components/progress.scss";
+
+
+// PORTFOLIO
+@import "pages/portfolio-components/bar.scss";
 
 
 // BLOG
@@ -33,13 +34,8 @@
 @import "pages/blog-components/card-blog.scss";
 @import "pages/blog-components/card-blog-half-image.scss";
 /* components */
+@import "footer.scss";
 
-
-
-.navbar-collapse {
-
-/* DEBUG 
-    background: rgba(0, 0, 0, 0.8);
-    */
-        color: #eee;
+#typed {
+    margin-top: .75rem;
 }

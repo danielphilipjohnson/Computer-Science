@@ -1,10 +1,6 @@
-
-
 mixin socialIcons(socials)
-    ul.nav-social-fr
+    ul.nav-social-fr.wow.slideInRight
         each social in socials
-           
             li
-                a(href=social.href)
-                    i(class="fa fa-" + social.socialPlatform +  " lg" aria-hidden="true")
-          
+                a.lg(href=social.href)
+                    i(class="fab fa-" + social.socialPlatform aria-hidden="true")
