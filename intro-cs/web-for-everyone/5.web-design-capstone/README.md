@@ -68,13 +68,6 @@ You need to add four elements to your site that are unique – something beyond 
 - https://kimmobrunfeldt.github.io/progressbar.js/
 
 
-
-
-
-
-
-
-
 ## 5. Animate pages 
 - home page custom animation 
 - animation libraries
