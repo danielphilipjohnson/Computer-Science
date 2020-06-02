@@ -1,12 +1,10 @@
 # Google IT Automation with Python Professional Certificate
 
-
 ## What you will learn
 - Automate tasks by writing Python scripts
 - Use Git and GitHub for version control
 - Manage IT resources at scale, both for physical machines and virtual machines in the cloud
 - Analyze real-world IT problems and implement the appropriate strategies to solve those problems
-
 
 ## Skills you will gain
 - Using Version Control
@@ -21,9 +19,7 @@
 - Regular Expression (REGEX)
 - Testing in Python
 
-
 This certificate can be completed in about 6 months and is designed to prepare you for a variety of roles in IT, like more advanced IT Support Specialist or Junior Systems Administrator positions. Upon completing the program, you’ll have the option to share your information with potential employers, like Walmart, Sprint, Hulu, Bank of America, Google (of course!).
-
 
 ## There are 6 Courses in this Professional Certificate
 ### Course 1: Crash Course on Python
@@ -31,7 +27,6 @@ This certificate can be completed in about 6 months and is designed to prepare y
 This course is designed to teach you the foundations in order to write simple programs in Python using the most common structures. No previous exposure to programming is needed. By the end of this course, you'll understand the benefits of programming in IT roles; be able to write simple programs using Python; figure out how the building blocks of programming fit together; and combine all of this knowledge to solve a complex programming problem.
 
 We'll start off by diving into the basics of writing a computer program. Along the way, you’ll get hands-on experience with programming concepts through interactive exercises and real-world examples. You’ll quickly start to see how computers can perform a multitude of tasks — you just have to write code that tells them what to do.
-
 
 
 ### Course 2: Using Python to Interact with the Operating System
