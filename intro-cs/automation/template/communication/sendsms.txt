@@ -1,2 +1,0 @@
->>> from twilio.rest import Client
-and receiving

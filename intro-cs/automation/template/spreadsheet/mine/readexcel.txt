@@ -1,7 +1,0 @@
-https://openpyxl.readthedocs.io/en/stable/index.html
-
-
-
-convert email text to try
-
-make graphs and layout data

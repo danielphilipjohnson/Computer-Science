@@ -1,6 +1,0 @@
-1. Detect the best moment to launch the campaign
-2. Generate individual codes to be sent to potential customers
-3. Send the codes directly to users over their preferred channel, text message or
-email
-4. Collect the results of the campaign
-5. Generate a sales report with analysis of the results
