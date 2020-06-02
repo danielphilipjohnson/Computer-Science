@@ -17,9 +17,19 @@ context['pmovies'])
 
 
 
+<<<<<<< HEAD
 md_report = template.format(**context)
 report = mistune.markdown(md_report)
 
 
 with open('report.html', 'w') as file:
     file.write(report)
+=======
+>>> md_report = template.format(**context)
+>>> report = mistune.markdown(md_report)
+
+
+>>> with open('report.html', 'w') as file:
+...
+ file.write(report)
+>>>>>>> 526021ef6be37eb7fa6818d59cdb2686ca3dae45
