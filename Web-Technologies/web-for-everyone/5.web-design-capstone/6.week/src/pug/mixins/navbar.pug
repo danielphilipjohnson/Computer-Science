@@ -1,0 +1,28 @@
+mixin NavbarFixed(navSetting)
+  
+
+  nav.navbar.fixed.navbar-expand-lg.navbar-dark
+    a.navbar-brand.wow.slideInLeft(href='/' )
+      img.logo(
+        src=navSetting.logo.src
+        alt=navSetting.logo.alt
+      )
+    button.navbar-toggler(
+      type='button' 
+      data-toggle='collapse' 
+      data-target='#navbarSupportedContent' 
+      aria-controls='navbarSupportedContent' 
+      aria-expanded='false' 
+      aria-label='Toggle navigation'
+    )
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+    
+      ul.navbar-nav
+        each link in navSetting.links
+          if link.active == true
+            li.nav-item.active
+                  a.nav-link(href=link.href)=link.name 
+          else
+              li.nav-item
+                  a.nav-link(href=link.href)=link.name 

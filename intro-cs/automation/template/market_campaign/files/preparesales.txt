@@ -1,0 +1,23 @@
+1. Detect the best moment to launch the campaign
+2. Generate individual codes to be sent to potential customers
+3. Send the codes directly to users over their preferred channel, text message or
+email
+4. Collect the results of the campaign
+5. Generate a sales report with analysis of the results
+
+After sending the information to users, we need to collect the sales log from the shops to
+monitor how it is going and how big the campaign's impact is.
+The sales logs are reported as individual files from each of the associated shops, so in this
+recipe we'll see how to aggregate all the info into a spreadsheet to be able to treat the
+information as a whole.
+
+
+
+requirements
+
+$ echo "openpyxl==2.5.4" >> requirements.txt
+$ echo "parse==1.8.2" >> requirements.txt
+$ echo "delorean==1.0.0" >> requirements.txt
+$ pip install -r requirements.txt
+
+
