@@ -1,0 +1,13 @@
+include BlogCard/cardBlog.pug
+include BlogCard/cardBlogHalfImage.pug
+include BlogCard/cardBlogFullImage.pug
+
+
+mixin cardBlogs(blogs)
+    each blog in blogs
+        if blog.type == "text"
+            +cardTextBlog(blog)
+        else if blog.type == "half-image"
+            +CardBlogHalfImage(blog)
+        else if blog.type == "full-image"
+            +cardBlogFullImage(blog)

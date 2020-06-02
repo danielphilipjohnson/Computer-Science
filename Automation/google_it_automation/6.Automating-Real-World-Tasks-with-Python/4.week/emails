@@ -1,0 +1,55 @@
+ 
+from email.message import EmailMessage
+import mimetypes
+import smtplib
+import os
+message = EmailMessage()
+
+#emails.generate_email()
+#sender = "automation@example.com"
+#receiver = "{}@example.com".format(os.environ.get('USER'))
+#subject = "List of Fruits"
+#body = "Hi\n\nI'm sending an attachment with all my fruit."
+#message = emails.generate(sender, receiver, subject, body, "/tmp/report.pdf")
+#emails.send(message)
+### TypeError: generate_email() missing 1 required positional argument: 'attachment_path'  
+
+def generate_email(sender, recipient, subject,body, attachment_path):
+    message = EmailMessage()
+    message['From'] = sender
+    message['To'] = recipient
+    message['Subject'] = subject
+    print(message)
+    message.set_content(body)
+    #abs_path =  os.path.abspath(attachment_path)
+    if attachment_path == None:
+        return message
+    else:
+        abs_path =  os.path.abspath(attachment_path)
+        attachment_filename = os.path.basename(attachment_path)
+
+        mime_type, _ = mimetypes.guess_type(attachment_path)
+        print(mime_type)
+        mime_type, mime_subtype = mime_type.split('/', 1)
+
+        with open(abs_path, 'rb') as ap:
+            message.add_attachment(ap.read(),
+            maintype=mime_type,
+            subtype=mime_subtype,
+            filename=os.path.basename(attachment_filename))
+
+        print(message)
+        return message
+    # return email 
+
+
+# read about attachment
+
+
+
+
+def send_email(message):
+    mail_server = smtplib.SMTP('localhost')
+    mail_server.set_debuglevel(1)
+    mail_server.send_message(message)
+    mail_server.quit()

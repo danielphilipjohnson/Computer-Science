@@ -1,0 +1,23 @@
+include topBar.pug
+include footer.pug
+include topics.pug
+
+
+
+mixin CardBlogHalfImage(blog)
+    .card.blog.image(data-aos="fade-left" data-aos-delay="250" data-aos-duration="2000" data-aos-once="true")
+        +bar("blog", "fas fa-blog")
+        .card-body
+            .media
+                img.thumbnail.mr-3(src=blog.profileThumbnail alt=blog.alt)
+                .media-body
+                    p Posted by 
+                        span.title.title=blog.author
+                    small.text-muted.text-muted=blog.created
+            +keywords(blog.keywords)
+            h5.card-title=blog.title
+            p.card-text.text-muted=blog.text
+            
+        img.card-img-top(src=blog.image alt='Card image cap')
+        - var icons = ["codepen", "jsfiddle", "bitbucket"]
+        +blogFooter(icons)

@@ -1,0 +1,21 @@
+include topBar.pug
+include footer.pug
+include topics.pug
+
+mixin cardTextBlog(blog)
+    .card.blog(data-aos="fade-down" data-aos-delay="250" data-aos-duration="2000" data-aos-mirror="false" data-aos-once="true")
+        +bar("blog", "fas fa-blog")
+        .card-body
+            .media
+                img.thumbnail.mr-3(src=blog.profileThumbnail alt=blog.alt)
+                .media-body
+                    p Posted by 
+                        span.title=blog.author
+                    small.text-muted=blog.created
+            
+            +keywords(blog.keywords)
+            h5.card-title= blog.title
+            p.card-text.text-muted=blog.text            
+            
+        - var icons = ["codepen", "github", "jsfiddle"]
+        +blogFooter(icons)

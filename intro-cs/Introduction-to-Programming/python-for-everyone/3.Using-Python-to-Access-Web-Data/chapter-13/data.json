@@ -1,0 +1,254 @@
+{
+  "dimension": [
+                 {
+                   "label": "GHO",
+                   "display": "Indicator"
+                 },
+                 {
+                   "label": "PUBLISHSTATE",
+                   "display": "PUBLISH STATES"
+                 },
+                 {
+                   "label": "YEAR",
+                   "display": "Year"
+                 },
+                 {
+                   "label": "GBDREGION",
+                   "display": "GBD Region"
+                 },
+                 {
+                   "label": "WHOINCOMEREGION",
+                   "display": "WHO Income Region"
+                 },
+                 {
+                   "label": "AGEGROUP",
+                   "display": "Age Group"
+                 },
+                 {
+                   "label": "SEX",
+                   "display": "Sex"
+                 }
+               ],
+    "fact": [
+              {
+                "dims": {
+                          "GBDREGION": "Asia Pacific, High-income",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "12.2 [4.2-20.2]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Asia, Central",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "6.5 [0-13]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Asia, East",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "5.9 [0.1-11.6]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Asia, South",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "3.3 [0-8.4]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Asia, Southeast",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "5.3 [0.9-9.6]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Australasia",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "16.5 [11.5-21.4]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Caribbean",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "10.3 [3.7-16.9]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Europe, Central",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "10.8 [6.1-15.4]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Europe, Eastern",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "7 [0-14.1]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Europe, Western",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "11.5 [7.2-15.8]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Latin America, Andean",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "15.3 [10.1-20.5]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Latin America, Central",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "11.9 [7.3-16.5]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Latin America, Southern",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "5.9 [0.3-11.4]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Latin America, Tropical",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "7.7 [2.7-12.7]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "North Africa/Middle East",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "4.5 [0-12.7]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "North America, High-income",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "13 [9-17]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Oceania",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "14.9 [7.5-22.2]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Sub-Saharan Africa, Central",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "21 [4.6-37.5]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Sub-Saharan Africa, East",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "11.5 [7.3-15.6]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Sub-Saharan Africa, Southern",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "17.4 [11.5-23.3]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "Sub-Saharan Africa, West",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "9.2 [4.9-13.4]"
+              },
+              {
+                "dims": {
+                          "GBDREGION": "WORLD",
+                          "GHO": "Non-partner sexual violence prevalence (%)",
+                          "SEX": "Female",
+                          "YEAR": "2010",
+                          "AGEGROUP": "15-69 years"
+                        },
+                "Value": "7.2 [5.3-9.1]"
+              }
+      ]
+}
