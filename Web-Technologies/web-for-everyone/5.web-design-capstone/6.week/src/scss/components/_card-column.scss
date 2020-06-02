@@ -1,0 +1,58 @@
+.card-columns {
+    column-count: 1;
+    .card {
+        background: none;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+    }
+    .card-body {
+
+        background-color: #645f5eda;
+        /*position: absolute;
+        bottom: 0;
+        width: 100%;*/
+        color: #fff;
+        /*text-align: center;*/
+        padding: 0.25rem;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        
+
+    }
+
+    .card-body-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0.25rem;
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+        background-color: #645f5eda;
+        svg{
+            margin: 0 1rem;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            padding: 0.4rem;
+            color: #fff
+        }
+    }
+}
+
+
+
+
+@media(min-width: 760px) {
+
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+@media(min-width: 1200px) {
+
+    .card-columns {
+        column-count: 2;
+    }
+}

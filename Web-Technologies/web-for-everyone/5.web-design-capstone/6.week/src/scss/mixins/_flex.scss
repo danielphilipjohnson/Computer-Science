@@ -1,0 +1,28 @@
+@mixin flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+@mixin flex-justify-right {
+    @include flex;
+    justify-content: right;
+}
+
+@mixin flex-justify-between {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+@mixin flex-justify-center {
+    @include flex;
+    justify-content: center;
+
+}
+
+@mixin justify-content {
+    -webkit-box-pack: start !important;
+    -webkit-justify-content: flex-start !important;
+    -ms-flex-pack: start !important;
+    justify-content: flex-start !important;
+}
