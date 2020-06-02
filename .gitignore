@@ -1,3 +1,4 @@
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -138,9 +139,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-
-
- Logs
 logs
 *.log
 npm-debug.log*
@@ -254,5 +252,5 @@ dist
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
-.pnp.*
 
+.pnp.*
