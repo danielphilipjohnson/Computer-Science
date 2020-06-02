@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+import os
+from PIL import Image
+
+dir_path = "./supplier-data/images"
+out_path = "./supplier-data/images"
+height = 600
+width = 400
+abs_path =  os.path.abspath(dir_path)
+outfile_path = ""
+file_ext = ".jpeg"
+
+print("Current directory")
+print("-----------------")
+print(abs_path+"\n")
+
+for dirpath, dnames, fnames in os.walk(abs_path):
+    print(dirpath)
+    for f in fnames:
+        #print(f)
+        image_path = os.path.splitext(f)
+
+        if image_path[1] == ".tiff":
+            infile = f
+            infile_path = os.path.join(dirpath, f)
+            print(infile_path)
+            outfile = image_path[0]+file_ext
+            x = os.path.join(dirpath, image_path[0]+file_ext )
+            print(x)
+            #outfile_path = out_path + image_path[0]+file_ext 
+            #print(outfile_path)
+            try:
+                print("Coverting Image\n")
+                with Image.open(infile_path) as im:
+                    if im.mode in ('RGBA', 'LA'):
+                        print("RGBA mode ")
+                        new_im = Image.new("RGB", (height, width))
+                        new_im.paste(im)
+                        new_im.save(x, "JPEG")
+
+            except IOError as e:
+                print("cannot convert", infile_path)
+                print(e)
+

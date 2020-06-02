@@ -1,0 +1,26 @@
+1. Detect the best moment to launch the campaign
+2. Generate individual codes to be sent to potential customers
+3. Send the codes directly to users over their preferred channel, text message or
+email
+4. Collect the results of the campaign
+5. Generate a sales report with analysis of the results
+
+
+In this recipe, we'll see how to leverage reading from spreadsheets, creating PDFs, and
+producing graphs to generate a comprehensive report automatically in order to analyze the
+performance of our campaign.
+
+
+requirements text
+$
+ echo "openpyxl==2.5.4" >> requirements.txt
+$
+ echo "fpdf==1.7.2" >> requirements.txt
+$
+ echo "delorean==1.0.0" >> requirements.txt
+$
+ echo "PyPDF2==1.26.0" >> requirements.txt
+$
+ echo "matplotlib==2.2.2" >> requirements.txt
+$
+ pip install -r requirements.txt

@@ -1,0 +1,178 @@
+<Data>
+  <Fact>
+    <GBDREGION>Asia Pacific, High-income</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>12.2 [4.2-20.2]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Asia, Central</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>6.5 [0-13]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Asia, East</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>5.9 [0.1-11.6]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Asia, South</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>3.3 [0-8.4]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Asia, Southeast</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>5.3 [0.9-9.6]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Australasia</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>16.5 [11.5-21.4]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Caribbean</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>10.3 [3.7-16.9]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Europe, Central</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>10.8 [6.1-15.4]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Europe, Eastern</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>7 [0-14.1]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Europe, Western</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>11.5 [7.2-15.8]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Latin America, Andean</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>15.3 [10.1-20.5]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Latin America, Central</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>11.9 [7.3-16.5]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Latin America, Southern</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>5.9 [0.3-11.4]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Latin America, Tropical</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>7.7 [2.7-12.7]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>North Africa/Middle East</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>4.5 [0-12.7]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>North America, High-income</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>13 [9-17]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Oceania</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>14.9 [7.5-22.2]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Sub-Saharan Africa, Central</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>21 [4.6-37.5]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Sub-Saharan Africa, East</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>11.5 [7.3-15.6]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Sub-Saharan Africa, Southern</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>17.4 [11.5-23.3]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>Sub-Saharan Africa, West</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>9.2 [4.9-13.4]</Display>
+  </Fact>
+  <Fact>
+    <GBDREGION>WORLD</GBDREGION>
+    <GHO>Non-partner sexual violence prevalence (%)</GHO>
+    <SEX>Female</SEX>
+    <YEAR>2010</YEAR>
+    <AGEGROUP>15-69 years</AGEGROUP>
+    <Display>7.2 [5.3-9.1]</Display>
+  </Fact>
+</Data>

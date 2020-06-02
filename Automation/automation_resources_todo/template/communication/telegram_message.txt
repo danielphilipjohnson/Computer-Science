@@ -1,0 +1,63 @@
+# https://telegram.me/botfather
+
+
+1. Setup your generated token into the telegram_bot.py script on the TOKEN
+constant in line 6:
+
+TOKEN = '<YOUR TOKEN>'
+
+2. Start the bot:
+$ python telegram_bot.py
+
+
+3. Open the Telegram channel in your phone using the URL and start it. You can
+use the help, offers, and events commands:
+
+
+IMPORTS
+TOKEN
+# Define the information to return per command
+def get_help():
+def get_offers():
+def get_events():
+
+COMMANDS = {
+    'help': get_help,
+    'offers': get_offers,
+    'events': get_events,
+}
+
+class MarketingBot(telepot.helper.ChatHandler):
+# Create and start the bot
+
+
+
+The MarketingBot class creates an interface to handle the communication with Telegram:
+- When the channel is started, the open method will be called
+- When a message is received, the on_chat_message method will be called
+- If there's no answer in a while, on_idle will be called
+
+
+
+
+
+In each case, the self.sender.sendMessage method is used to send a message back to
+the user. Most of the interesting bits happen in on_chat_message:
+
+
+def on_chat_message(self, msg):
+    # If the data sent is not test, return an error
+    content_type, chat_type, chat_id = telepot.glance(msg)
+    if content_type != 'text':
+        self.sender.sendMessage("I don't understand you. "
+            "Please type 'help' for options")
+        return
+    # Make the commands case insensitive
+    command = msg['text'].lower()
+
+    if command not in COMMANDS:
+        self.sender.sendMessage("I don't understand you. "
+            "Please type 'help' for options")
+        return
+    message = COMMANDS[command]()
+    self.sender.sendMessage(message)
