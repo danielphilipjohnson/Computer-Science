@@ -36,6 +36,3 @@ Open Source Society University.  Path to a free self-taught education in Compute
     | ------------------------- | --------- |
     | Python for Everyone       | Completed | 
     | Fundamentals of Computing | Taking    |
-
-
-    
