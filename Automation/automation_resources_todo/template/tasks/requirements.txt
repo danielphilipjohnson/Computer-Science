@@ -1,4 +1,4 @@
 PyYAML==5.1
 delorean==1.0.0
-requests==2.18.4
+requests==2.20.0
 parse==1.8.2
