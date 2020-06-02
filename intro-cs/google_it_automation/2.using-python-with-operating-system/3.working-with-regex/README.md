@@ -1,8 +1,15 @@
-Identify the old domain
+# Working with Regular Expressions
+## Introduction
+
+It's time to put your new skills to the test! In this lab, you'll have to find the users using an old email domain in a big list using regular expressions.
+What you'll do
+
+- Replacing the old domain name (abc.edu) with a new domain name (xyz.edu).
+- Storing all domain names, including the updated ones, in a new file.
+
+## Identify the old domain
 
 we will write the body of the function named contains_domain. This function uses regex to identify the domain of the user email addresses in the user_emails.csv file.
-
-
 
 The function takes address and domain as parameters, and its primary objective is to check whether an email address belongs to the old domain(abc.edu).
 
@@ -169,22 +176,22 @@ def main():
     writer.writerows(user_data_list)
     output_file.close()
 
-main()
+  main()
 
 Save the file by clicking Ctrl-o, Enter key, and Ctrl-x.
 
 Now run the file.
 
-./script.py
+  ./script.py
 
 On a successful run, this should generate a new file named updated_user_emails within the data directory.
 
 To view the newly generated file, enter the following command:
 
-ls ~/data
+  ls ~/data
 
 You should now be able to see a new file named updated_user_emails.csv. To view the contents of this file, enter the following command:
 
-cat ~/data/updated_user_emails.csv
+  cat ~/data/updated_user_emails.csv
 
 Great job! You have successfully replaced the old domain names with the new ones and generated a new file containing all the user names with their respective email addresses.

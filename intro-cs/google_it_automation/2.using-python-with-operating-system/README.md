@@ -1,25 +1,46 @@
-Add to beginning of file
-#!/usr/bin/env python3
+# Using Python to Interact with the Operating System
 
-Make it executable 
-sudo chmod +x ????.py
+## About this Course
 
-check_localhost()
-    localhost = socket.gethostbyname('localhost')
-    return localhost
+By the end of this course, you’ll be able to manipulate files and processes on your computer’s operating system. You’ll also have learned about regular expressions -- a very powerful tool for processing text files -- and you’ll get practice using the Linux command line on a virtual machine. And, this might feel like a stretch right now, but you’ll also write a program that processes a bunch of errors in an actual log file and then generates a summary file. That’s a super useful skill for IT Specialists to know.
 
-check_connectivity():
-    request = requests.get("http://www.google.com")
-    return request.status_code
+We’ll kick off by exploring how to execute Python locally, and organize and use code across different Python files. We'll then learn how to read and write different types of files, and use subprocesses and input streams. We'll also dive into Bash scripting and regular expressions -- both very powerful tools for anyone working with systems. We'll even touch on automatic testing, which allow us to automate how we check if our code is correct. To finish, we’ll put all this together by using the tools that we’ve acquired to process data and generate automatic reports.
 
-#1,048,576
-file 
-check this 
-elif check_localhost() and check_connectivity():
-    print("Everything ok")
+We’ll also explain how to set up your own developer environment in your machine. This is a key step in being able to write and deploy powerful automation tools.
 
+## What you will learn
 
+- Setup, configure, and use your own developer environment in Python
+- Manipulate files and processes running on the Operating System using Python
+- Understand and use regular expressions (regex), a powerful tool for processing text files
+- Know when to choose Bash or Python, and create small scripts using Bash
 
-The shutil module offers a number of high-level operations on files and collections of files. In particular, it provides functions that support file copying and removal. It comes under Python's standard utility modules. disk_usage() method is used to get disk usage statistics of the given path. This method returns a named tuple with the attributes total, used, and free. The total attribute represents the total amount of space, the used attribute represents the amount of used space, and the free attribute represents the amount of available space, in bytes.
+### Getting Your Python On
 
-psutil (Python system and process utilities) is a cross-platform library for retrieving information on the processes currently running and system utilization (CPU, memory, disks, network, sensors) in Python. It's useful mainly for system monitoring, profiling, limiting process resources, and managing running processes. cpu_percent() returns a float showing the current system-wide CPU use as a percentage. When the interval is 0.0 or None (default), the function compares process times to system CPU times elapsed since the last call, returning immediately (non-blocking). That means that the first time it's called it will return a meaningful 0.0 value. When the interval is > 0.0, the function compares process times to system CPU times elapsed before and after the interval (blocking).
+In this module, you’ll learn about the different types of operating systems, and how you can get your python code ready to interact with the operating system. We’ll learn about getting your environment set up and installing additional Python modules that will help you along the way. We’ll rundown interpreted versus compiled language, and how they differ from each other. We’ll dive into the benefits of automation, and point out common pitfalls so you can avoid them. Finally, we’ll learn about Qwiklabs, which will be used for graded assessments.
+
+## Managing Files with Python
+
+In this module, you’ll learn about reading and writing to files and the commands that will enable you to do this. We’ll learn the importance of managing files and how we can navigate through different directories. We’ll understand how to work with files and how there is a layer of abstraction between Python and the operating system. Finally, we’ll dive into learning about CSV files and how to best utilize them.
+
+## Regular Expressions
+
+In this module, you’ll learn about what a regular expression is and why you would use one. We’ll dive into the basics of regular expressions and give examples of wildcards, repetition qualifiers, escapare characters, and more. Next up, we’ll explore advanced regular expressions and deep dive on repetition qualifiers. You’ll tackle new exercises like capturing groups and extracting PIDs using regexes. Finally, we’ll provide a cheat sheet to serve as your go-to guide for regular expressions.
+
+## Managing Data and Processes
+
+In this module, we’ll learn about reading and writing to data files based on an interaction with the user. Along the way, we’ll dive into standard streams, environment variables, and command line arguments. Next, we’ll jump into Python subprocesses, including system commands and how they can be used. We’ll review how to obtain output from a system command, and dive into subprocess management, including how to check exit values and manipulate the normal versus error exit values. Finally, we’ll rundown processing log files, and will cover what a log file is, how to filter log files using regular expressions, and how to understand the output captured from log files.
+
+## Testing in Python
+
+In this module, you’ll learn how to create tests in Python. We’ll cover what testing is all about and dive into the differences between manual versus automated testing. Next, we’ll explore what unit tests are intended to do and how to write them. Then, we’ll learn about other test concepts like black box versus white box tests and how test-driven development can frame how you design and write your code. Finally, you’ll learn about errors and exceptions, and how to combat them.
+
+## Bash Scripting
+
+In this module, you’ll be exposed to what the Linux OS has to offer and you'll learn about Bash scripting. We’ll go over basic Linux commands and explore the many processes Linux has to offer, including a key concept called redirection. We’ll then deep dive into creating bash scripts using variables and globs. Finally, we’ll learn about advanced bash concepts and develop an understanding of when to use bash versus Python.
+
+## Final Project
+
+In this module, you’ll put everything you’ve learned so far into action! You’ll apply your scripting knowledge to tackle a challenging final project: writing a script that scans for a specific error in the log files.
+
+You'll create a problem statement to understand the challenge, conduct some research to see what options are available, then begin planning how you intend to solve the problem. Lastly, you'll write the code to implement your solution!

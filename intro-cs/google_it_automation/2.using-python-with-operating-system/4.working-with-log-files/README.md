@@ -1,12 +1,15 @@
+# Introduction
+
 Imagine one of your colleagues is struggling with a program that keeps throwing an error. Unfortunately, the program's source code is too complicated to easily find the error there. The good news is that the program outputs a log file you can read! Let's write a script to search the log file for the exact error, then output that error into a separate file so you can work out what's wrong.
+
 What you'll do
 
-    Write a script to search the log file using regex to find for the exact error.
-    Report the error into a separate file so you know what's wrong for further analysis.
+- Write a script to search the log file using regex to find for the exact error.
+- Report the error into a separate file so you know what's wrong for further analysis.
 
 
 
-View log file
+## View log file
 
 In the /data directory, there's a file named fishy.log, which contains the system log. Log entries are written in this format:
 
@@ -14,28 +17,28 @@ Month Day hour:minute:second mycomputername "process_name"["random 5 digit numbe
 
 For every process, the runtime log that's generated contains a timestamp and appropriate message alongside. You can view all logs using the command below:
 
-cat ~/data/fishy.log
+  cat ~/data/fishy.log
 
 
-Find an error
+## Find an error
 
 In this lab, we'll search for the CRON error that failed to start. To do this, we'll use a python script to search log files for a particular type of ERROR log. In this case, we'll search for a CRON error within the fishy.log file that failed to start by narrowing our search to "CRON ERROR Failed to start".
 
 To get started, let's create a python script named find_error.py within scripts directory using nano editor.
 
-cd ~/scripts
+  cd ~/scripts
 
-nano find_error.py
+  nano find_error.py
 
 Add the shebang line:
 
-#!/usr/bin/env python3
+  #!/usr/bin/env python3
 
 Import the necessary Python modules:
 
-import sys
-import os
-import re
+  import sys
+  import os
+  import re
 
 The sys module provides information about the Python interpreter's constants, functions, and methods. The os module provides a portable way of using operating system dependent functionality with Python.
 
@@ -43,7 +46,7 @@ Regular Expression (RegEx) is a sequence of characters that defines a search pat
 
 Now, write a function error_search that takes log_file as a parameter and returns returned_errors. Define the error_search function and pass the log file to it as a parameter.
 
-def error_search(log_file):
+  def error_search(log_file):
 
 To allow us to search all log files for any type of logs, we'll be making our script consistent and dynamic.
 
@@ -81,8 +84,6 @@ Next, close the file fishy.log and return the results stored in the list returne
 
 Great job! You've successfully defined a function to store all the logs defined as a CRON error that fails to start. In the next section, we'll generate a new file consisting of the logs based on your search within /data directory.
 
-
-
 # Create an output file
 
 Let's define another function file_output that takes returned_errors, returned by a previous function, as a formal parameter.
@@ -103,7 +104,7 @@ And finally, close the file.
     file.close()
 
 
-Function call
+## Function call
 
 Now, let's call the functions and run the script.
 
@@ -156,20 +157,17 @@ Save the file by clicking Ctrl-o, followed by the Enter key and Ctrl-x.
 
 Make the file executable before running it.
 
-sudo chmod +x find_error.py
+  sudo chmod +x find_error.py
 
 Now, run the file by passing the path to fishy.log as a parameter to the script.
 
-./find_error.py ~/data/fishy.log
+  ./find_error.py ~/data/fishy.log
 
 This script will now prompt for the type of error to be searched. Continue by entering the following type of error:
 
-CRON ERROR Failed to start
+  CRON ERROR Failed to start
 
 On successful execution, this will generate an errors_found.log file, where you will find all the ERROR logs based on your search. You can view the ERROR log using the command below:
 
-cat ~/data/errors_found.log
+  cat ~/data/errors_found.log
 
-This will output the following:
-
-fa35b5be265b9a7b.png

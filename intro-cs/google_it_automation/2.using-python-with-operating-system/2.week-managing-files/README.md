@@ -1,14 +1,16 @@
+# Introduction
+
 The Human Resources Department at your company wants you to find out how many people are in each department. You need to write a Python script that reads a CSV file containing a list of the employees in the organization, counts how many people are in each department, and then generates a report using this information.
 
 
-reate a file named generate_report.py using the following command:
+Create a file named generate_report.py using the following command:
 
-nano generate_report.py
+  nano generate_report.py
 
 You will write your python script in this generate_report.py file. This script begins with a line containing the #! character combination, which is commonly called hash bang or shebang, and continues with the path to the interpreter. If the kernel finds that the first two bytes are #! then it uses the rest of the line as an interpreter and passes the file as an argument. We will use the following shebang in this script:
 
 #!/usr/bin/env python3
-Convert employee data to dictionary
+## Convert employee data to dictionary
 
 The goal of the script is to read the CSV file and generate a report with the total number of people in each department. To achieve this, we will divide the script into three functions.
 
@@ -18,11 +20,11 @@ The CSV module uses classes to read and write tabular data in CSV format. The CS
 
 Now, import the CSV module.
 
-import csv
+  import csv
 
 Define the function read_employees. This function takes file_location (path to employees.csv) as a parameter.
 
-def read_employees(csv_file_location):
+  def read_employees(csv_file_location):
 
 Open the CSV file by calling open and then csv.DictReader.
 
@@ -61,27 +63,23 @@ Replace <file_location> with the path to the employees.csv (this should look sim
 
 Save the file by clicking Ctrl-o, Enter, and Ctrl-x.
 
-For the file to run it needs to have execute permission (x). Let's update the file permissions and then try running the file. Use the following command to add execute permission to the file:
+For the file to run it needs to have execute pe# Introduction the following command:
 
-chmod +x generate_report.py
-
-Now test the function by running the file using the following command:
-
-./generate_report.py
+  ./generate_report.py
 
 The list employees_list within the script should return the list of dictionaries as shown below.
 
 
 
-Process employee data
+## Process employee data
 
 The second function process_data() should now receive the list of dictionaries, i.e., employee_list as a parameter and return a dictionary of department:amount.
 
 Open the file generate_report.py to define the function.
 
-nano generate_report.py
+  nano generate_report.py
 
-def process_data(employee_list):
+  def process_data(employee_list):
 
 This function needs to pass the employee_list, received from the previous section, as a parameter to the function.
 
@@ -102,14 +100,14 @@ This uses the set() method, which converts iterable elements to distinct element
 
 Now, call this function by passing the employee_list from the previous section. Then, save the output in a variable called dictionary. Print the variable dictionary.
 
-dictionary = process_data(employee_list)
-print(dictionary)
+  dictionary = process_data(employee_list)
+  print(dictionary)
 
 Save the file by clicking Ctrl-o, Enter, and Ctrl-x.
 
 Now test the function by running the file using the following command:
 
-./generate_report.py
+  ./generate_report.py
 
 This should return a dictionary in the format department: amount, as shown below.
 
@@ -127,9 +125,9 @@ The report should have the format:
 
 Lets open generate_report.py file to define the function.
 
-nano generate_report.py
+  nano generate_report.py
 
-def write_report(dictionary, report_file):
+  def write_report(dictionary, report_file):
 
 This function requires a dictionary, from the previous section, and report_file, an output file to generate report, to both be passed as parameters.
 
@@ -144,22 +142,22 @@ Once you open the file for writing, iterate through the dictionary and use write
 
 Now call the function write_report() by passing a dictionary variable from the previous section and also passing a report_file. The report_file passed within this function should be similar to /home/<username>/data/report.txt. Replace <username> with the one mentioned in Connection Details Panel at left-hand side.
 
-write_report(dictionary, '<report_file>')
+  write_report(dictionary, '<report_file>')
 
 Save the file by clicking Ctrl-o, Enter, and Ctrl-x.
 
 Let's execute the script now.
 
-./generate_report.py
+  ./generate_report.py
 
 This script does not generate any output, but it creates a new file named report.txt within the data directory. This report.txt file should now have the count of people in each department.
 
 Navigate to the data directory and list the files. You should see a new file named report.txt.
 
-cd ~/data
+  cd ~/data
 
-ls
+  ls
 
 To view the generated report file, use the following command:
 
-cat report.txt
+  cat report.txt
