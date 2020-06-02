@@ -1,0 +1,20 @@
+The IMPORTS section makes available all the Python modules to be used later. It
+also defines EmailConfig namedtuple to help with handling the email
+parameters.
+
+READ TEMPLATES retrieves the email templates and stores them for later use in
+the EMAIL_TEMPLATE and EMAIL_STYLING constants.
+The __main__ block starts the process by, getting the configuration parameters,
+parsing the config file, and then calling the main function.
+The main function combines the other functions. First, it retrieves the articles,
+and then it obtains the body and sends the email.
+get_articles walks through all the feeds, discards any article that is over a
+week old, retrieves each of them, and searches for a match on the keywords. All
+the matched articles are returned, including information about the link and a
+summary.
+
+compose_email_body uses the email templates to compile the email body.
+Notice that the template is in Markdown and it gets parsed into HTML, to give
+the same information in plain-text and in HTML.
+send_email gets the body information, as well as required info such as the
+username/password, and finally sends the email.
