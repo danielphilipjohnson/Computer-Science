@@ -1,3 +1,20 @@
+# Web Design for Everybody Capstone by University of Michigan
+
+## About this Course
+
+The capstone will develop a professional-quality web portfolio.  Students will demonstrate the ability to design and implement a responsive site for a minimum of three platforms.  Adherence to validation and accessibility standards will be required. The evolving student implementations will be reviewed each week by capstone peers and teaching assistants to make sure that the student keeps up with the agenda of the course. 
+
+Upon completion of this course students will feel comfortable creating and/or updating existing front-end sites, utilizing existing frameworks, and testing sites for accessibility compliance.
+
+This course is only open to students who have completed the first four courses in the Web Design for Everybody specialization: Introduction to HTML5, Introduction to CSS3, Interactivity with JavaScript, and Advanced Styling with Responsive Design.
+
+## Skills you will gain
+- Web Design
+- Html
+- JavaScript
+- Cascading Style Sheets (CCS)
+
+
 # Portfolio Grading Rubric
 
 I hope that people will be more concerned with their learning than their grade on this assignment. But I understand that people want to make sure they receive full credit so I will provide the grading rubric that will be used. Feel free to structure your page around it.

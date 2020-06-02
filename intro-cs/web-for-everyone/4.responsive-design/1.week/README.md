@@ -6,10 +6,3 @@ I like to include additional resources that align with my lectures and I will be
     Web Design Basics: Rem vs. Em vs. PX - Sizing Elements in CSS by Matthew Davis (** Material here is used in Week Two Assessment**) https://www.futurehosting.com/blog/web-design-basics-rem-vs-em-vs-px-sizing-elements-in-css/
     What's the Deal with Em and Rem? (** Material here is used in Week Two Assessment**) https://codemyviews.com/blog/whats-the-deal-with-em-and-rem
     Font Size Idea: px at the Root, rem for Components, em for Text Elements by Chris Coyier https://css-tricks.com/rems-ems/ (Please note, some people on Firefox get a warning when using this link. It is not the case for other students.)
-
-
-    answer maybe pica
-
-
-
-    

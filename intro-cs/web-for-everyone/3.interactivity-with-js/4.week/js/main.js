@@ -23,5 +23,4 @@ function billingFunction() {
         billingZip.value = "";
 
     }
-       
 }
