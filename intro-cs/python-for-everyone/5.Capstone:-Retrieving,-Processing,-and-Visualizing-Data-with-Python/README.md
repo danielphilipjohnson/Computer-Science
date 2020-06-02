@@ -1,13 +1,26 @@
-# Capstone: Retrieving, Processing, and Visualizing Data with Python
-by University of Michigan
+# Capstone: Retrieving, Processing, and Visualizing Data with Python by University of Michigan
 
+## About this Course
+
+In the capstone, students will build a series of applications to retrieve, process and visualize data using Python.   The projects will involve all the elements of the specialization.  In the first part of the capstone, students will do some visualizations to become familiar with the technologies in use and then will pursue their own project to visualize some other data that they have or can find.  Chapters 15 and 16 from the book “Python for Everybody” will serve as the backbone for the capstone. This course covers Python 3.
+
+## What you will learn
+- Make use of unicode characters and strings
+- Understand the basics of building a search engine
+- Select and process the data of your choice
+- Create email data visualizations
+
+## Skills you will gain
+- Data Analysis
+- Python Programming
+- Database (DBMS)
+- Data Visualization (DataViz)
 
 ## Building a Search Engine
 
 This week we will download and run a simple version of the Google PageRank Algorithm and practice spidering some content. The assignment is peer-graded, and the first of three optional Honors assignments in the course. This a continuation of the material covered in Course 4 of the specialization, and is based on Chapter 16 of the textbook. 
 
 - Graded: Peer Grade: Page Rank
-
 
 ## Exploring Data Sources (Project)
 

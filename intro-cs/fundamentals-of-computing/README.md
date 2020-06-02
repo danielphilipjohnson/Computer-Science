@@ -1,7 +1,23 @@
-# Fundamentals of Computing Specialization
-### Offered by Rice University
+# Fundamentals of Computing Specialization by Rice University
 Prepare for Advanced Computer Science Courses. Learn how to program and think like a Computer Scientist
 
+## About this Specialization
+
+This Specialization covers much of the material that first-year Computer Science students take at Rice University. Students learn sophisticated programming skills in Python from the ground up and apply these skills in building more than 20 fun projects. The Specialization concludes with a Capstone exam that allows the students to demonstrate the range of knowledge that they have acquired in the Specialization.
+
+## Skills you will gain
+- Recursion
+- Algorithms
+- Python Programming
+- Dynamic Programming
+- Programming Principles
+- Python Syntax And Semantics
+- Computer Programming
+- Logic Programming
+- Object-Oriented Programming (OOP)
+- Combinatorics
+- Tree (Data Structure)
+- Graph Theory
 
 ## An Introduction to Interactive Programming in Python (Part 1)
 
