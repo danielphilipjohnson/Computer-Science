@@ -1,0 +1,38 @@
+/* Footer */
+footer {
+
+    background-color: var(--footer-bg);
+
+    .footer-cols {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 2rem;
+        text-align: left;
+        font-size: 14px;
+
+        ul {
+            list-style: none;
+
+            li:first-child {
+                font-size: 1.2rem;
+                padding-bottom: 0.5rem;
+                border-bottom: #444 solid 1px;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    .footer-bottom {
+        background: #333;
+        padding: 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    footer .footer-cols {
+        display: none;
+    }
+}
