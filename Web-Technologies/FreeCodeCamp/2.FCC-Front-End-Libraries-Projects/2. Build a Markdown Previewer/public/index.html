@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Markdown Previewer</title>
+</head>
+
+<body>
+    <nav class="navbar  fixed-top navbar-toggleable-md  p-0">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <a class="navbar-brand" href="#">
+            <h1 class="logo">UD</h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="form-inline my-2 my-lg-0 col-8">
+                <i class="fa fa-search search-icon" aria-hidden="true"></i></span>
+                <input class="form-control mr-sm-2 col-6 search-box" type="text" placeholder="Search">
+            </form>
+
+            <ul class="navbar-nav mr-auto col-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fa fa-home nav-icons " aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-compass nav-icons" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-envelope nav-icons" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-commenting nav-icons" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-bolt nav-icons" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user nav-icons" aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-pencil nav-icons" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-flex flex-row modal-bar">
+            <div class="media">
+                <div class="d-flex mr-4 profile-box">
+                    <h2 class="profile-letter">D</h2>
+                </div>
+                <div class="media-body">
+                    <nav class="d-flex flex-row " aria-label="Page navigation example ">
+
+                        <ul class="pagination">
+                            <li class="page-item" data-toggle="modal" data-target="#myModal"><a class="page-link" href="#"><i class="fa fa-font text" aria-hidden="true"></i><p>Text</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-camera photo" aria-hidden="true"></i><p>Photo</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-quote-left quote" aria-hidden="true"></i><p>Quote</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-link link" aria-hidden="true"></i><p>Link</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-comments chat" aria-hidden="true"></i><p>Chat</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-music audio" aria-hidden="true"></i><p>Audio</p></a></li>
+                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-video-camera video" aria-hidden="true"></i><p>Video</p></a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="posts d-flex flex-row flex-wrap">
+            <div class="media">
+                <div class="d-flex mr-4 profile-box">
+                    <h2 class="profile-letter">U</h2>
+                </div>
+                <div class="media-body">
+
+                    <div class="card" style="width: 35.5rem;">
+                        <div class="card-header d-flex flex-row justify-content-between">
+                            <div class="post-user">
+                                <p class="">Here's a blog: <span>USERNAME</span></p>
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-retweet" aria-hidden="true"></i>
+                                <a href="#">Follow</a>
+                            </div>
+
+                        </div>
+                        <div class="post-content">
+                            <div id="root"></div>
+                        </div>
+                        <div class="card-block">
+                            <div id="root"></div>
+                            <p class="card-text text-muted post-tags"># example tags</p>
+                        </div>
+                        <div class="card-footer text-muted ">
+                            <div class="float-left footer-info">
+                                17,543 Notes
+                            </div>
+                            <div class="float-right">
+                                <i class="fa fa-paper-plane footer-icons" aria-hidden="true"></i>
+                                <i class="fa fa-share-square-o footer-icons" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o footer-icons" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="d-flex mr-4 profile-box">
+                    <h2 class="profile-letter">U</h2>
+                </div>
+                <div class="media-body">
+
+                    <div class="card" style="width: 35.5rem;">
+                        <div class="card-header d-flex flex-row justify-content-between">
+                            <div class="post-user">
+                                <p class="">Here's a blog: <span>USERNAME</span></p>
+                            </div>
+                            <div class="share">
+                                <i class="fa fa-retweet" aria-hidden="true"></i>
+                                <a href="#">Follow</a>
+                            </div>
+                        </div>
+                        <img class="img-fluid" src="https://placeimg.com/450/250/any" alt="">
+
+                        <div class="card-block">
+                            <div id="root"></div>
+                            <p class="card-text text-muted post-tags">#example tags</p>
+                        </div>
+                        <div class="card-footer text-muted ">
+                            <div class="float-left footer-info">
+                                17,543 Notes
+                            </div>
+                            <div class="float-right">
+                                <i class="fa fa-paper-plane footer-icons" aria-hidden="true"></i>
+                                <i class="fa fa-share-square-o footer-icons" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o footer-icons" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>
