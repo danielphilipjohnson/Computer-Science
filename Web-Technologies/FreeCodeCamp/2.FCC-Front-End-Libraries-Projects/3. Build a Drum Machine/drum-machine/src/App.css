@@ -1,0 +1,138 @@
+body {
+    background: #00d2ff;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.title {
+    color: #fff;
+}
+
+#display {
+    text-align: center;
+}
+
+.Drum-display {
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 75%;
+    margin: 0 1rem 0 0.15rem;
+    /* min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);*/
+    color: white;
+    padding: 1rem 0 1rem 0.5rem;
+}
+
+.slidecontainer {
+    width: 100%;
+    /* Width of the outside container */
+}
+
+.slider {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 90%;
+    /* Full-width */
+    height: 25px;
+    /* Specified height */
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #4CAF50;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.categories {
+    background: #e52d27;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #b31217, #e52d27);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #b31217, #e52d27);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+}
+
+.logo {
+    width: 60%;
+    padding: 0 1rem;
+}
+
+select {
+    background: #F0F3FB;
+    border: 2px solid #F0F3FB;
+    width: 40%;
+    padding: 20px;
+    font-size: 16px;
+    color: #3F3F3F;
+    /*Here'sthecodeweneed*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th {
+    border-left: 2px solid grey;
+    width: 25%;
+    background-color: #000;
+    padding: 0.5rem;
+}
