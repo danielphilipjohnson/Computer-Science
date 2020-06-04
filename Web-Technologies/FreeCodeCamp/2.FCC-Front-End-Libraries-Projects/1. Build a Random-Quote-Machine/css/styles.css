@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 0px;
+    margin: 0px;
+    background-color: #f5f8fa;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAV BAR */
+nav {
+    box-shadow: 19px 1px 20px grey;
+    width: 100%;
+}
+
+#bg-change {
+    background-color: #6BCC65;
+    color: white;
+}
+
+nav .top-nav {
+    padding: 0.8rem 0 0.8rem 1rem;
+    border-bottom: #17bf63;
+}
+
+nav .top-nav i {
+    font-size: 20px;
+}
+
+nav .top-nav h1 {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    padding: 0.75rem 0px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    color: black;
+    letter-spacing: 0.05em;
+    font-size: 22px;
+    padding: 9px 13px;
+}
+
+nav ul li.active {
+    border-bottom: 5px #17bf63 solid;
+}
+
+input[type=checkbox]:checked {
+    border-bottom: 5px #17bf63 solid;
+}
+
+/* Quote Box */
+.quote-box {
+    position: relative;
+    width: 60%;
+    margin: 1rem auto;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px grey;
+    border-radius: 6px;
+    padding: 10px 20px;
+}
+
+/* Banner */
+.banner .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.share-button {
+    display: inline-block;
+    padding: 10px 0px;
+}
+
+.banner-left img {
+    border-radius: 100%;
+    width: 50px;
+}
+
+.main-button {
+    margin: 0.75rem;
+}
+
+.author {
+    padding-top: 0.5rem;
+}
+
+.author h3,
+p {
+    margin: 0px;
+}
+
+#twitter-follow-button {
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid rgb(29, 161, 242);
+    border-radius: 9999px;
+    min-width: 75px;
+}
+
+.main-button span {
+    color: rgb(29, 161, 242);
+    font-size: 15px;
+}
+
+
+.quote {
+    padding-bottom: 1rem;
+}
+
+.quote-text,
+.quote-author {
+    width: 100%;
+    padding: 1rem 0 0 0;
+}
+
+.quote #text {
+    font-size: 22px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+#timestamp {
+    color: #657786;
+    padding: 10px 0px;
+}
+
+.retweets {
+    border-bottom: 1px solid #e6ecf0;
+    border-top: 1px solid #e6ecf0;
+}
+
+.retweets ul {
+    margin: 0px 0 0 0;
+    padding: 0px 0 0 0;
+    width: 95%;
+    list-style: none;
+}
+
+.retweets li {
+    float: left;
+    min-width: 72px;
+    margin-right: 22px;
+}
+
+.retweets li strong {
+    display: block;
+    color: lightskyblue;
+}
+
+.retweets .recent-likes {
+    border-left: 1px solid #e6ecf0;
+    padding: 4px 0 0 6px;
+}
+
+.retweets span {
+    float: left;
+}
+
+.retweets li img {
+    margin-right: 12px;
+    border-radius: 4px;
+}
+
+
+#twitter-share-button .fa {
+    color: #fff;
+}
+
+#twitter-share-button span {
+    color: #fff;
+}
+
+.buttons,
+.share-button a {
+    display: inline-block;
+}
+
+.buttons,
+.share-button i {
+    padding: 10px;
+    color: #1da1f2;
+    font-size: 26px;
+}
+
+.buttons .main-button {
+    padding: 0px;
+}
+
+.share-button button {
+    border-radius: 13px;
+    background-color: rgb(27, 149, 224);
+    border: 2px solid #e6ecf0;
+    font-size: 16px;
+    padding: 0 1rem;
+}
+
+#new-quote.button {
+    border-radius: 13px;
+    background-color: rgb(27, 149, 224);
+    border: 2px solid #e6ecf0;
+    padding: 0.56rem 1rem 0.5rem 1rem;
+}
+
+#new-quote.button span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.buttons,
+.share-button i {
+    font-size: 21px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 0 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer {
+    background-color: #2C532A;
+    padding: 15px;
+    width: 100%;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width:321px) {
+    nav .top-nav h1 {
+        font-size: 30px;
+        padding-top: 0px;
+        padding-right: 10px;
+    }
+
+    nav ul li {
+        font-size: 19px;
+        padding: 7px 5px;
+    }
+
+    #famous-quote {
+        border-left: 0px;
+        display: block;
+    }
+
+    #movie-quote {
+        border-left: 0px;
+        border-right: 0px;
+        display: block;
+    }
+
+    .retweets li {
+        margin-right: 12px;
+    }
+
+    .retweets li img {
+        margin-right: 4px;
+    }
+
+    .quote-box {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width:321px) and (max-width:378px) {
+    nav ul li {
+        font-size: 19px;
+        padding: 0px 5px;
+    }
+
+    .quote-box {
+        width: 80%;
+    }
+
+    #famous-quote {
+        border-left: 0px;
+    }
+
+    #movie-quote {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    .retweets li {
+        margin-right: 12px;
+    }
+
+    .retweets li img {
+        margin-right: 4px;
+    }
+}
+
+@media (min-width: 768px) {
+    nav .top-nav h1 {
+        font-size: 32px;
+    }
+
+    nav .top-nav i {
+        font-size: 40px;
+    }
+
+    .social-buttons {
+        justify-content: space-between;
+
+    }
+
+}
+
+
+@media screen and (min-width:378px) and (max-width:639px) {
+    .quote-box {
+        width: 80%;
+    }
+
+    nav .top-nav h1 {
+        font-size: 1.2rem;
+        padding-top: 40px;
+    }
+
+    nav ul {
+        padding: 20px 0px;
+    }
+
+    nav ul li {
+        font-size: 22px;
+        padding: 8px 11px;
+    }
+
+    #famous-quote {
+        border-left: 0px;
+    }
+
+    #movie-quote {
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    .retweets li {
+        margin-right: 12px;
+    }
+
+    .retweets li img {
+        margin-right: 4px;
+    }
+}
