@@ -1,0 +1,148 @@
+/* RESET */
+
+h2,
+h3,
+h4 {
+    margin: 7px;
+}
+
+body {
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #111;
+    font-family: Arial;
+    font-size: 11px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav h1 {
+    background-color: white;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 8px solid orange;
+    border-top: 8px solid orange;
+    margin: 0px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-bottom: 8px solid orange;
+    border-top: 8px solid orange;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    height: 830px;
+    margin: 10px auto;
+    padding: 20px 0;
+    width: 90%;
+}
+
+.title,
+.nav-title {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.extra-info {
+    font-size: 1.4em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+circle {
+    cursor: pointer;
+    stroke: rgb(204, 204, 204);
+    stroke-width: 4px;
+}
+
+circle:hover {
+    stroke: black;
+}
+
+.axis {
+    fill: black;
+}
+
+.axis text {
+    font: 15px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    shape-rendering: crispEdges;
+    stroke: #000;
+}
+
+.tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 auto;
+    padding: 12px;
+    pointer-events: pointer;
+    position: absolute;
+    width: 200px;
+}
+
+.legend-map {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 7px;
+    color: white;
+    height: 60px;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+    margin: 6px;
+    position: fixed;
+    width: 200px;
+}
+
+.legend-and-key {
+    padding: 10px 0px 2px 10px;
+    text-align: left;
+}
+
+.legend-key {
+    background-color: red;
+    border: 3px solid grey;
+    border-radius: 50%;
+    height: 10px;
+    margin-right: 5px;
+    padding: 2px 8px;
+    width: 10px;
+}
+
+.legend-text {
+    margin-left: 5px;
+}
+
+footer {
+    background-color: white;
+    border-bottom: 8px solid orange;
+    border-top: 8px solid orange;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 10px auto;
+    padding: 20px 0;
+    width: 90%;
+    word-wrap: break-word;
+}
