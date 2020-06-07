@@ -1,0 +1,24 @@
+doctype html
+html
+  
+  include includes/head.pug
+  body
+    include includes/nav.pug
+    include includes/modal.pug
+    div(class="tabs-content" data-tabs-content="example-tabs")
+      div(class="tabs-panel is-active summary-panel" id="panel1")
+        include includes/summary.pug
+      div(class="tabs-panel daily-panel" id="panel2")
+        include includes/daily.pug
+      div(class="tabs-panel hourly-panel" id="panel3")
+        include includes/hourly.pug
+    include includes/dayDetails.pug
+    //img(src="http://res.cloudinary.com/undreamtmayhem/image/upload/v1499114640/night-half-moon_gewzpj.jpg")
+    footer(class="row text-center")
+      div(class="small-12 large-12 columns")
+        p Data from 
+          a(href="https://darksky.net/poweredby/") darksky 
+          App Creator UndreamtMayhem
+    include includes/scripts.pug
+  
+  

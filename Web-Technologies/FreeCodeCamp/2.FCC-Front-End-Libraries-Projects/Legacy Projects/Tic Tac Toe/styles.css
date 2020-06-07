@@ -1,0 +1,111 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+.icon-choice {
+    margin: 0 40px;
+    color: white;
+    font-size: 70px;
+    background-color: transparent;
+    border: none;
+    padding: 3px 12px;
+}
+.icon-choice:hover {
+    color: mediumseagreen;
+    border: 4px white dashed;
+    border-radius: 50%;
+}
+.reset {
+    margin: 1px 21px;
+    padding: 0px 14px;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+
+}
+.board {
+    /*background: rgba(240,180,135,1);*/
+    background-image: url('http://res.cloudinary.com/undreamtmayhem/image/upload/v1501016405/tictactoe/frame-big.png');
+    position: relative;
+    border-radius: 10px;
+    width: 465px;
+    height: 331px;
+    /*margin: 10% auto;*/
+    padding: 20px 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.player-indicator {
+    background: transparent;
+    padding: 0 28px;
+    margin: 0px;
+    top:0px;
+    color: white;
+    position: absolute;
+    font-size: 18px;
+}
+.inner-board {
+  background-image: url('http://res.cloudinary.com/undreamtmayhem/image/upload/v1501016422/tictactoe/tic-tac-toe-orgi.jpg');
+  width: 465px;
+  height: 348px;
+  position: relative;
+  margin: 3% auto;
+  overflow: hidden;
+  background-size: cover;
+   }
+
+
+img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: auto;
+    /*background-color: rgba(0, 0, 0, 0.3);*/
+    justify-content: center;
+    
+}
+.cell {
+    height: 89px;
+    width: 107px;
+    background-color: transparent;
+    margin: 5px 20px 6 2px;
+    color: white;
+    font-size: 75px;
+    font-family: "Architects Daughter", "Helvetica", "sans-serif";
+    border: none;
+}
+.message {
+    color: white;
+}
+
+    .modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+}
+
+.modal-inner {
+    margin: 10px auto;
+    /*background-color: transparent;*/
+    text-align: center;
+    width: 91%;
+    height: 88%;
+    font-family: "Architects Daughter", "Helvetica", "sans-serif";
+    color: white;
+}
+
+.modal-header {
+    padding: 5px;
+    font-size: 25px;
+}

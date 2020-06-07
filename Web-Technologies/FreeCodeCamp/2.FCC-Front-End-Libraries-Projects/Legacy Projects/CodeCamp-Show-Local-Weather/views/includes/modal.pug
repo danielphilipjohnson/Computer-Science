@@ -1,0 +1,24 @@
+- var locations = ['Amsterdam', 'Athens', 'Atlanta', 'Baghdad', 'Bangkok', 'Barcelona', 'Beijing', 'Berlin', 'Brussels', 'Buenos Aires',  'Cambridge', 'Cape Town', 'Chennai', 'Chicago',   'Cologne', 'Delhi', 'Dubai', 'Frankfurt', 'Greater Minneapolis', 'Hamburg',   'Hanover', 'Hong-Kong', 'Honolulu', 'Houston',   'Indianapolis', 'Istanbul', 'Kansas', 'Kolkata', 'Lyon',   'Melbourne', 'Minneapolis Downtown', 'Montreal', 'Moscow',    'Mumbai', 'Munich', 'Osaka', 'Paris', 'Pune', 'Rio de Janeiro', 'Rome', 'San Diego', 'San Francisco', 'Shanghai', 'Singapore', 'Stuttgart', 'Sydney', 'Tokyo', 'Toledo', 'Toronto', 'Washington D.C'];
+
+div(class="full reveal row text-center" id="exampleModal8" data-reveal )
+  div(class="modal-title small-12 columns")
+    h1(id="modalTitle")  Weather APP settings
+  form(class="small-12 columns")
+    div(class="row")
+      div(class="small-12 large-10 large-push-1 columns")
+        label Weather Locations
+        select(id="locations")
+          each location in locations
+            option(value=location.toLowerCase() ) #{location}
+        input(type="button" class="button" id="set-location" value="Set Location")
+      div(class="small-12 large-10 large-pull-1 columns")
+        label Temperature
+        select(id="set-temperature-type")
+          option(value="celsius" id="celsius") Celsius
+          option(value="farenheit" id="farenheit" selected="selected") Farenheit
+        input(type="button" class="button" id="set-temperature" value="Set Temperature")
+  
+    Note: Your location is only used when you submit this form.
+  button(class="close-button" data-close aria-label="Close reveal" type="button")
+      span(aria-hidden="true") &times;
+  br
