@@ -1,0 +1,130 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #121212;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    background: #2a2a2a;
+    padding: 1rem;
+    color: #e7e7e7;
+}
+
+nav a {
+    padding: 0.5rem;
+    color: #e7e7e7;
+}
+
+.card {
+    background-color: #202020;
+    border-bottom: 8px solid #535353;
+    border-top: 8px solid #535353;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 95%;
+}
+
+.graph-title,
+.graph-subtitle,
+#details {
+    padding: 0px 0 3px 0;
+    text-align: center;
+}
+
+.graph-title {
+    color: #333;
+    font-weight: 700;
+}
+
+.graph-subtitle {
+    color: #555;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+#details {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+#chart {
+    background-color: white;
+}
+
+div.tooltip {
+    background-color: black;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    color: #fff;
+    height: auto;
+    padding: 6px 9px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: auto;
+}
+
+#main {
+    display: flex;
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title {
+    color: #fff;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+#description {
+    color: #fff;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+div.tooltip {
+    position: absolute;
+    padding: 10px;
+    font: 12px Arial;
+    background: rgba(32, 32, 32, 0.95);
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.6);
+    border: 0px;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+#legend {
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+svg {
+    font: 10px sans-serif;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tile-text {
+    cursor: default;
+}

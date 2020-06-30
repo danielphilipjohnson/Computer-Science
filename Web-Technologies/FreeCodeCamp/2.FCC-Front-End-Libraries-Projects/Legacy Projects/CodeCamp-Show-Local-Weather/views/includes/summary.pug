@@ -1,0 +1,36 @@
+//Complete v 1.0.01
+div(class="row summary" id="summary" data-magellan-target="summary")
+  div(class="weather-summary small-12 large-12 columns")
+    div(class="location text-center")
+      h3(id="location" class="location" ) Hayle, Cornwall    
+    div(class="row")
+      i(class="wi wi-showers small-offset-3 small-2  medium-offset-4 medium-1 columns")
+      div(class="temperature-types small-7 large-7 columns")
+        span(id="current-temperature" class="temperature current-temperature") 14 
+          i(class="wi wi-degrees")
+        span(class="temperature-type") 
+          span(class="farenheit active-temp") F
+          span(class="celsius") C
+    div(class="weather-addtional text-center")
+      div( class="weather-type" id="weather-type")
+        p Mostly Sunny
+      div(class="last-updated")
+        p Updated at 
+          span(id="current-time") 00:31        
+div(class="addtional-info stats  text-center row")
+  p(class="stats-item small-12 medium-4 columns")  Barometer  16
+    i(class="wi wi-barometer ")  
+    span(id="barometer") mb
+  p(class="stats-item small-12 medium-4 columns")  Humidity
+    span(id="humidity")
+    i(class="wi wi-humidity ")
+  p(class="stats-item small-12 medium-4 columns") wind
+    span(id="speed")
+    span(id="direction")
+    i(class="wi wi-direction-up")
+  p(class="stats-item small-12 medium-4 columns") Precipitation Probability 
+    span(id="precipProbability")
+  p(class="stats-item small-12 medium-4 columns") Precipitation Type 
+    span(id="precipType")
+  p(class="stats-item small-12 medium-4 columns") Visibility 
+    span(id="visibility")

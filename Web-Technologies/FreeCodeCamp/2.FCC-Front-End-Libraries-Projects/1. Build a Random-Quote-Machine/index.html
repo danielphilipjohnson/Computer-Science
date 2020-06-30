@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Twitter Quote Generator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="top-nav" id="bg-change"> <i class="fa fa-twitter"></i>
+            <h1>Twitter Quote Generator</h1>
+        </div>
+        <ul id="quote-type">
+            <li id="famous-quote">Famous Quotes</li>
+            <li class="active" id="movie-quote">Movie Quotes</li>
+        </ul>
+    </nav>
+    <div class="quote-box">
+        <div class="banner">
+            <div class="top">
+                <div class="banner-left">
+                    <img src="https://pbs.twimg.com/profile_images/1250428654200315906/u8JWnDjo_400x400.jpg"
+                        alt="profile image">
+
+                </div>
+                <div class="main-button">
+                    <a href="#" class="button" id="twitter-follow-button">
+                        <span>Follow</span>
+                    </a>
+
+                </div>
+            </div>
+            <div class="author">
+                <h3>Daniel Johnson</h3>
+                <p>@undreamtmayhem</p>
+            </div>
+
+
+            <div class="quote">
+                <div class="quote-text"> <i class="fa fa-quote-left"></i><span id="text">Your Quote will appear
+                        here</span> </div>
+                <div class="quote-author"> - <span id="author">Author</span> </div>
+            </div>
+            <div class="retweets">
+                <ul>
+                    <li><span>Retweets<strong id="retweets">160</strong></span></li>
+                    <li><span>Likes<strong id="likes">437</strong></span></li>
+                    <li class="recent-likes"><img src="http://placeimg.com/32/32/people"
+                            alt="picture of user who liked"><img src="http://placeimg.com/32/32/people"
+                            alt="another picture of user who liked"><img src="http://placeimg.com/32/32/people"
+                            alt="another picture of user who liked"></li>
+                </ul>
+            </div>
+            <div id="timestamp">5:13 am - 16 May 2017</div>
+            <div>
+
+                <div class="social-buttons">
+                    <div class="share-button">
+                        <button id="twitter-share-button">
+                            <i class="fa fa-twitter"></i>
+                            <span>Tweet</span>
+                        </button>
+                    </div>
+                    <div class="main-button">
+                        <button class="button" id="new-quote">
+    
+                            <span>New Quote</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+           
+        </div>
+    </div>
+    <footer>
+        <p><a href="https://codepen.io/undreamtmayhem/#">By UndreamtMayhem</a></p>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

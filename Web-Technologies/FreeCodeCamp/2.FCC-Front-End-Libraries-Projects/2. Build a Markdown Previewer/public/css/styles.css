@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+body {
+    background-color: #36465D;
+    line-height: 22px;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .13);
+    background-color: inherit;
+}
+
+.nav-icons {
+    color: #9BA3AE;
+    font-size: 1.6rem;
+    padding: 10px 8px
+}
+
+.nav-icons:hover {
+    color: #FDFFFF;
+    transform: rotate(19deg);
+}
+
+.logo {
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    padding: 6px 14px 0 10px
+}
+
+.logo:hover {
+    transform: rotate(19deg);
+}
+
+.search-icon {
+    position: absolute;
+    z-index: 99;
+    padding: 10px;
+    color: hsla(0, 0%, 100%, .6);
+}
+
+.search-icon:focus {
+    color: grey;
+}
+
+.search-box {
+    padding-left: 40px;
+    background-color: #2F3D51;
+}
+
+.search-box:focus {
+    background-color: white;
+    border: none;
+    color: grey;
+}
+
+.profile-box {
+    width: 75px;
+    height: 79px;
+    background-color: beige;
+    border-radius: 6px;
+}
+
+.profile-letter {
+    margin: 0px 0px 0px 17px;
+    font-size: 4rem;
+    color: #36465d;
+}
+
+.modal-bar {
+    padding-top: 80px;
+}
+
+.page-link {
+    padding: 1rem 1.2rem 0.0rem 1.2rem;
+}
+
+.page-link i {
+    font-size: 2.6rem;
+}
+
+.page-link i:hover {
+    transform: scale(1.2);
+}
+
+.page-link p {
+    padding-top: 10px;
+    color: #696969;
+    text-align: center;
+}
+
+.text {
+    color: black;
+}
+
+.photo {
+    color: #DD6F54;
+}
+
+.quote {
+    color: #F4A443;
+}
+
+.link {
+    color: #67C396;
+}
+
+.chat {
+    color: #257AE3;
+}
+
+.audio {
+    color: #a77dc2;
+}
+
+.video {
+    color: #748089;
+}
+
+.posts {
+    padding-top: 15px;
+}
+
+.media {
+    padding-bottom: 30px;
+}
+
+.post-user {
+    color: #8f8f8f;
+}
+
+.post-user span {
+    font-weight: bold;
+}
+
+.card-header {
+    padding-bottom: 0px;
+}
+
+.post-content {
+    padding: 1.4rem 2.4rem;
+    font-size: 14px;
+    color: #444;
+}
+
+.post-tags {
+    font-size: 14px;
+    color: #8f8f8f;
+}
+
+.card-footer {
+    border: none;
+    background-color: inherit;
+}
+
+.footer-info {
+    color: #8f8f8f;
+    font-weight: bold;
+}
+
+.footer-icons {
+    padding: 2px 5px;
+}
+
+.blog-title {
+    border: none;
+    padding: 10px 0px;
+    font-size: 26px;
+    height: 70px;
+}
+
+.blog-content {
+    border: none;
+    font-style: 17px;
+    line-height: 30px;
+    height: 250px;
+}
+
+/* use all tags along with this */
+
+.created-blog {
+    word-wrap: break-word;
+}
+
+
+#myModal {
+    height: 80vh;
+}

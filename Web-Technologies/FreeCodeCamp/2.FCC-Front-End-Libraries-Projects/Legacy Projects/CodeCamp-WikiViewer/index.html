@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card-2 w3-animate-left" style="width:200px;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large w3-hide-large sidebar-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+        <h4 class="sidebar-title">Random Wikisearch</h4>
+        <a class="w3-bar-item w3-button" id="Animal" href="#">Random Animal</a>
+        <a class="w3-bar-item w3-button" id="City" href="#">Random City</a>
+        <a class="w3-bar-item w3-button" id="Country" href="#">Random Countries</a>
+        <a class="w3-bar-item w3-button" id="Celebrity" href="#">Random Celebrities</a>
+        <a class="w3-bar-item w3-button" id="Movie" href="#">Random Movies </a>
+        <a class="w3-bar-item w3-button" href="https://en.wikipedia.org/wiki/Special:Random" target='_blank'>Totally Random</a>
+    </div>
+    <div class="w3-main" style="margin-left:184px">
+        <div class="w3-container" style="width: 100%">
+            <div class="w3-bar">
+                <button class="w3-bar-item w3-button tablink w3-white">WikiSearch</button>
+                <button class="w3-bar-item w3-button tablink">Result</button>
+                <button class="w3-button w3-teal w3-xlarge w3-hide-large" id="sidebar-open">&#9776;</button>
+            </div>
+            <div id="WikiSearch" class="w3-container Tab">
+                <div style="width: 80%">
+                    <h2>WikiSearch</h2>
+                    <div class="w3-panel  w3-round-large wiki-panel l12">
+                        <h4>Welcome to WikiSearch</h4>
+                        <input type="search" class="input-group" placeholder="search">
+                        <button class="inner-search w3-btn w3-blue"><i class="fa fa-search"></i></button>
+                        <p>Search history</p>
+                        <ul class="search-history">
+                        </ul>
+                    </div>
+                    <div class="l12 results">
+                        <h2 id="result-title" class="result"> Results </h2>
+                        <p class="wiki-text">From Wikipedia, the free encyclopedia</p>
+                        <div id="results">
+                            <div class="w3-panel w3-pale-green holder-column">
+                                <p>.................................................</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Result" class="w3-container w3-border Tab" style="display:none">
+                <h2>Result</h2>
+                <iframe src="https://en.wikipedia.org/?curid=5328241"></iframe>
+            </div>
+                    <footer><div class="l12"><p>Creator <a href="https://codepen.io/undreamtmayhem/#"><span class="name">UndreamtMayhem</span></a></p></div></footer>
+
+        </div>
+
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="app.js"></script>
+</body>
+</html>

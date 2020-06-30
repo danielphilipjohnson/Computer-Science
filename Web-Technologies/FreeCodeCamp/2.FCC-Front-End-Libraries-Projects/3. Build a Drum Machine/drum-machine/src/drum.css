@@ -1,0 +1,142 @@
+.App {
+    background: linear-gradient(to top, #434343, #000000);
+    width: 50%;
+    margin: 0 auto;
+    border: 5px solid orange;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.power-buttons {
+    width: 25%;
+}
+
+.bottom {
+    display: flex;
+    width: 100%;
+}
+
+.controls {
+    width: 25%;
+    text-align: center;
+}
+
+.padBank {
+    margin: 0 1rem 0 0;
+    width: 75%;
+    background: #000000;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #434343, #000000);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #434343, #000000);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.power-button {
+    background: #536976;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #292E49, #536976);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #292E49, #536976);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem 2rem;
+    margin: 1rem;
+}
+
+.drum-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+}
+
+.drum-button {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    margin: 0.35rem 0.35rem 0.35rem 0;
+    padding: 1rem 2rem;
+    vertical-align: middle;
+}
+
+.\30,
+.\31 {
+    background: #FDC830;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F37335, #FDC830);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F37335, #FDC830);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.\32,
+.\33 {
+    background: #06beb6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #48b1bf, #06beb6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #48b1bf, #06beb6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.\34,
+.\35 {
+    background: #ffb347;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ffcc33, #ffb347);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ffcc33, #ffb347);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.\36,
+.\37 {
+    background: #1488CC;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2B32B2, #1488CC);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2B32B2, #1488CC);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.\38 {
+    background: #CB356B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #BD3F32, #CB356B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #BD3F32, #CB356B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.button-text {
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.button-text span {
+    color: orange;
+}
+
+.master {
+    margin: 0.5rem;
+    border-top: 2px solid #fff;
+    text-align: left;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-color: red;
+    }
+    .App {
+        width: 90%;
+    }
+}

@@ -1,0 +1,55 @@
+body {
+	background: #56CCF2;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: Arial;
+	overflow-x: hidden;
+}
+
+h1 {
+	text-align: center;
+}
+
+.flag {
+	position: absolute;
+}
+
+.flagbox {
+	position: absolute;
+}
+
+#tooltip {
+	background: hsla(0, 0%, 100%, .8);  
+	border-bottom: 8px solid orange;
+	border-top:8px solid orange;
+	box-shadow: 0 5px 10px hsla(0, 0%, 0%, .2);
+	font: 1em;
+	font-family:  'Arial', sans-serif;
+	height: auto;  
+	line-height: 1.5em; 
+	padding: 10px;             
+	pointer-events: none;         
+	position: absolute; 
+	text-align: left;
+	width: auto; 
+}
+
+.graph {
+	background-color: white;
+	border-bottom: 8px solid orange;
+	border-top:8px solid orange;
+	box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+	height: 640px;
+	margin: 10px auto;
+	padding: 0px;
+	width: 90%;
+}
+.bar-graph-title {
+	color: black;
+	font-size: 1.3em;
+	font-family: sans-serif;
+	margin: 10px 0 0 0;
+	text-align: center;
+	
+  }
+

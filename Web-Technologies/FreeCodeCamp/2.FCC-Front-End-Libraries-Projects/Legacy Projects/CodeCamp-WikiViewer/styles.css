@@ -1,0 +1,131 @@
+
+        .l12 {
+            width: 100%;
+        }
+        .open{
+        display: block!important;
+
+    }
+    #mySidebar {
+        display: none;
+    }
+        .Tab {
+            border: 1px solid #87CEEB !important;
+            border-radius: 5px;
+        }
+        .results {
+            padding-bottom: 200px;
+        }
+        .w3-sidebar {
+            background-color: #f3f3f3;
+        }
+       
+        .result-bar:hover {
+            border-left: 6px solid #ccc!important;
+            border-top: 1px solid #ccc!important;
+            border-bottom: 1px solid #ccc!important;
+            border-top: 1px solid #ccc!important;
+            border-left-color: red!important;
+        }
+        
+        .active-bar {
+            border-left: 6px solid #ccc;
+            border-color: red;
+        }
+        
+        .w3-bar {
+            background-color: #f3f3f3;
+        }
+        
+        .w3-bar .w3-bar-item {
+            padding: 16px;
+        }
+        
+        .w3-bar-item {
+            font-size: 12px;
+            color: #0b0080!important;
+        }
+        
+        button.w3-bar-item {
+            /*border-left: 1px solid #87CEEB!important;*/
+            border-right: 1px solid #87CEEB!important;
+        }
+        .w3-border {
+            border-radius: 5px;
+        }
+        img.center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .sidebar-title {
+            text-align: center;
+        }
+        
+        .w3-panel {
+            padding: 5px 20px 10px 20px;
+        }
+        .wiki-panel {
+            padding-bottom: 50px;
+            padding-top: 12px;
+            background-color: #f8f9fa;
+            border: 1px solid #a2a9b1;
+        }
+        .w3-main {
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+        }
+        .container {
+            /* width: 600px;*/
+            /*margin: 50px auto;*/
+            position: absolute;
+            top: 134px;
+            bottom: auto;
+            left: auto;
+            right: 760px;
+        }
+        
+        .result-title, .result {
+            border-bottom: 1px solid black;
+            
+        }
+        .result-title {
+            font-weight: 500;
+            font-size: 1.8em;
+            line-height: 1.3;
+            font-family: Georgia;
+        }
+        .wiki-text {
+            font-size: 11px;
+        }
+        .extract {
+            float: left;
+            font-size: 0.87em;
+        }
+        
+        input[type=search] {
+            padding: 4px 10px 7px 24px
+        }
+        
+        .input-group {
+            margin-right: -6px;
+        }
+        iframe {
+            height: 100%;
+            width: 89%
+        }
+        #Result {
+            height: 800px;
+        }
+        footer {
+            padding: 0 10px
+        }
+        .text-center {
+            text-align: center;
+        }
+        .name {
+            color: #87ceeb ;
+        }

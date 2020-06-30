@@ -1,0 +1,130 @@
+body {
+    background: #F2994A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #F2C94C, #F2994A);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #F2C94C, #F2994A);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Roboto, sans-serif;
+}
+
+.card {
+    background-color: white;
+    border-bottom: 8px solid orange;
+    border-top: 8px solid orange;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    height: 830px;
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 95%;
+}
+
+.graph-title,
+.graph-subtitle,
+.details {
+    padding: 0px 0 3px 0;
+    text-align: center;
+}
+
+.graph-title {
+    color: #333;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.graph-subtitle {
+    color: #555;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.details {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+#chart {
+    background-color: white;
+}
+
+svg {
+    background-color: #fff;
+}
+
+text.scales {
+    font-family: Roboto, sans-serif;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+.axis text {
+    font-family: Roboto, sans-serif;
+    font-size: 1.05em;
+    font-weight: 300;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #111;
+    shape-rendering: crispEdges;
+}
+
+.axislabel {
+    font-family: Roboto, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+rect {
+    cursor: pointer;
+    stroke-width: 0px;
+}
+
+.year {
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.temperature {
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 0.95em;
+    font-weight: bolder;
+    white-space: nowrap;
+}
+
+.variance {
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 0.8em;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.measurement-scale {
+    color: grey;
+    display: flex;
+    font-size: 0.75em;
+    font-style: italic;
+    justify-content: right;
+    margin: 0px;
+    padding: 0 30px 0 0;
+}
+
+.tooltip {
+    background-color: black;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    height: auto;
+    padding: 6px 9px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: auto;
+}

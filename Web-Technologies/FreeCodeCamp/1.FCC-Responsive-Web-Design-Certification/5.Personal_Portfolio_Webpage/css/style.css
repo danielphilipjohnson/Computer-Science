@@ -1,0 +1,354 @@
+:root {
+    --nav-bg-color: #020303;
+    --about-bg-color: #515556;
+    --portfolio-bg-color: #050a0b;
+    --box-shadow: 5px 0px 21px #888888
+}
+
+body {
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+header.navbar {
+    background-color: var(--nav-bg-color);
+    box-shadow: -3px 3px 14px black;
+}
+
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    color: red;
+}
+
+.dropdown-menu {
+    background-color: black;
+}
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover {
+    background-color: darkgray;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: lightgrey;
+}
+
+.dropdown-menu>li>a {
+    color: white;
+}
+
+.source-link {
+    color: dodgerblue !important;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    padding-left: 0.9rem;
+}
+
+main {
+    max-width: 91%;
+    margin: -10px auto;
+    box-shadow:  var(--box-shadow);
+}
+
+.info-section {
+    padding: 4rem 0.5rem 0rem 0.5rem;
+    text-align: center;
+    background-color: var(--about-bg-color);
+    color: white;
+    box-shadow: 3px 4px 21px #888888;
+}
+
+.info-box {
+    border-bottom: 10px solid black;
+}
+
+.info {
+    display: inline-block;
+    text-align: center;
+}
+
+.name {
+    color: darkorange;
+    font-weight: bold;
+    margin: 6rem 0 0 0;
+}
+
+.profile-pic {
+    margin: 0 auto;
+    height: 150px;
+    width: 150px;
+}
+
+.btn-grouped {
+    padding: 3rem 0 0;
+}
+
+#full-stack {
+    background-color: darkgray;
+    padding: 1rem 0;
+    box-shadow: 3px 4px 21px #888888;
+}
+
+#full-stack h4 {
+    padding-left: 1.05rem;
+}
+
+.type-header {
+    padding-top: 4rem;
+    margin: 0px 1.5rem 1rem;
+}
+
+.skill-list {
+    list-style: none;
+    display: inline-block;
+    padding: 0.9rem;
+}
+
+.skill-item {
+    padding: 1rem;
+    display: inline-block;
+}
+
+.block-element {
+    display: block;
+}
+
+#portfolio {
+    background-color: var(--portfolio-bg-color);
+    padding-bottom: 5rem;
+}
+
+#portfolio h2 {
+    margin: 0;
+    padding: 4rem 0
+}
+
+#portfolio img {
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.title {
+    padding-bottom: 0.75rem;
+}
+
+#projects {
+    background-color: #EEEEEE;
+    color: #050a0b;
+}
+
+#project-current {
+    padding: 1.5rem 0 0 0;
+}
+
+.projects-header-title {
+    margin: 0px 1.5rem 1rem;
+    padding-top: 4rem;
+    border-bottom: 1px solid black;
+}
+
+.img-gal {
+    padding: 0.9rem 0 0 0;
+    margin: 0 auto;
+}
+
+.img-gal img {
+    margin: 0 auto 4rem auto;
+}
+
+.additional-info {
+    margin: 2rem 0;
+}
+
+
+#education,
+#education-current,
+#software-development,
+#projects {
+    padding: 0.5rem 0.75rem;
+}
+
+
+#education {
+    border-bottom: 2px solid black;
+    background-color: #4c4c4c;
+}
+
+.education-title {
+    margin: 0px 1.5rem 1rem;
+    padding-top: 4rem;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+#education-current {
+    color: white;
+    background-color: #030607;
+}
+
+#education-future {
+    background-color: darkgray;
+}
+
+.education-description {
+    margin: 0 0 3rem 0;
+    padding-left: 1rem;
+}
+
+#front-end {
+    padding-bottom: 0.25rem;
+    color: white;
+}
+
+#front-end h3 {
+    padding-bottom: 0.9rem;
+}
+
+#software-development {
+    background-color: #eeeeee;
+    color: #030607;
+}
+
+p {
+    text-align: center;
+    margin-left: 0.9rem;
+}
+
+.contact {
+    background-color: white;
+    color: #020303;
+    padding: 3rem 0;
+    max-width: 91%;
+    margin: 0 auto;
+    box-shadow:  var(--box-shadow);
+}
+
+.contact-header {
+    padding: 0px 0px;
+    margin: 0px;
+}
+
+.contact-title {
+    margin: 0.9rem;
+}
+
+.social-buttons {
+    margin: 1rem 1rem 2.5rem 0px;
+}
+
+.social-buttons .block {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: 0px;
+}
+
+i {
+    color: white !important;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.google {
+    background-color: rgb(197, 67, 51);
+}
+
+.twitter {
+    background-color: #2ca9e1;
+}
+
+.email {
+    background-color: #2eb897;
+}
+
+.instagram {
+    background-color: rgb(191, 3, 152);
+}
+
+.linkedin {
+    background-color: #007292;
+}
+
+.github>i {
+    color: black !important;
+}
+
+.github {
+    background-color: #ececec;
+    color: black !important;
+}
+
+.tumblr {
+    background: #56BC8A;
+}
+
+.social-text {
+    padding-left: 0.9rem;
+    color: white;
+}
+
+.site-nav {
+    background-color: white;
+}
+
+footer {
+    max-width: 91%;
+    margin: 0 auto;
+    box-shadow:  var(--box-shadow);
+}
+
+.footer-sitenav {
+    list-style: none;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0;
+}
+
+.sitenav-item {
+    padding: 0 2.5rem 0 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#top-footer {
+    background-color: #4c4c4c;
+    box-shadow:  var(--box-shadow);
+    color: white;
+}
+
+.btn-default:hover {
+    background-color: red;
+}
+
+#bottom-footer {
+    background-color: black;
+    color: white;
+    box-shadow:  var(--box-shadow);
+    padding: 10px 0;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+.sitenav-item a {
+    color: white;
+}

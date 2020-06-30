@@ -1,0 +1,23 @@
+html,body {
+  margin: 0;
+}
+
+.tooltip {   
+  background: hsla(0, 0%, 100%, .8);  
+  border-bottom: 8px solid orange;
+  border-top:8px solid orange;
+  box-shadow: 0 5px 10px hsla(0, 0%, 0%, .2);
+  font: 1em;
+  font-family:  'Arial', sans-serif;
+  height: auto;  
+  line-height: 1.5em; 
+  padding: 20px;             
+  pointer-events: none;         
+  position: absolute; 
+  text-align: left;
+  width: auto; 
+}
+
+.def {
+  font-weight: 700;
+}

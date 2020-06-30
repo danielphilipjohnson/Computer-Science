@@ -1,0 +1,257 @@
+/**
+ * @author Daniel Philip Johnson
+ * @email daniel-philip-johnson@outlook.com
+ * @create date 2020-06-04 13:13:38
+ * @modify date 2020-06-04 13:13:38
+ * @desc Free code camp technical documentation
+ */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Defaults */
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    padding: 2rem 0 4rem 0.5rem;
+}
+
+p,
+ul li {
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #6d6d6d;
+}
+
+ul {
+    padding: 0 2.5rem;
+}
+
+
+/* Navbar */
+
+#navbar {
+    position: relative;
+    width: 100%;
+    border-right: 1px solid #ececec;
+    background-color: #f7f7f7;
+    overflow-y: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#navbar header {
+    padding: 1.5rem 1rem;
+    background-color: #434343;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+#navbar ul {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#navbar ul li {
+    padding: 0.65rem 2.2rem;
+    letter-spacing: 0.08rem;
+    font-size: 1rem;
+}
+
+#navbar ul li:hover {
+    color: #000;
+}
+
+ul.nav {
+    list-style-type: none;
+}
+
+.nav-link {
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* Main */
+
+#main-doc {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.main-section {
+    padding: 0 0 2rem 0;
+    border-bottom: 3px solid #4285F4;
+}
+
+.main-section.more-info {
+    border: none;
+}
+
+.main-section h2 {
+    padding: 2rem 0;
+    color: #282c34;
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+
+/* highlighted text */
+
+.highlight {
+    margin: 0.5rem;
+    padding: 0.25rem;
+    font-weight: 700;
+    background-color: #E1E8ED;
+    color: #005cc5;
+}
+
+.sub-header {
+    width: 290px;
+    margin: 01.2rem 0.5rem;
+    padding: 0.1rem 0 0.1rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: #292F33;
+    color: #fff;
+}
+
+
+/* Code related */
+
+code {
+    padding: 1.1rem;
+    margin: 0.5rem 0;
+    display: block;
+    border-left: 5px solid #4285F4;
+    border-radius: 4px;
+    background-color: #E1E8ED;
+    color: #000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    letter-spacing: 0.02rem;
+    line-height: 3;
+    font-size: 1.2rem;
+    font-family: 'aconsolas, monaco, "Andale Mono", monospace';
+}
+
+.comment {
+    padding: 0 0 0 0.5rem;
+    color: #708090;
+}
+
+.function,
+.var,
+.return,
+.if,
+.while {
+    padding: 0 0.5rem 0 0;
+    color: #d73a49;
+}
+
+.function-name {
+    color: #6f42c1;
+}
+
+.keyword {
+    color: #005cc5;
+}
+
+.note {
+    margin: 1rem 0;
+    padding: 2rem 1.2rem;
+    background-color: #ffffcc;
+    border-left: 6px solid yellow;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+}
+
+.footer-header {
+    background-color: royalblue;
+    padding: 2rem 1rem;
+}
+
+footer .bottom {
+    padding: 0 0 2rem 0;
+    background-color: #4285F4;
+}
+
+.footer-header .top,
+.footer-header .middle,
+footer .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-subheader p {
+    padding: 2rem 0 0.8rem 0;
+    color: #292F33;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+footer .top a {
+    padding: 1rem 0;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+footer .middle h3 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer-links,
+.footer-subheader {
+    padding: 0.3rem 0;
+    list-style: none;
+    color: #fff;
+}
+
+.footer-links:hover {
+    color: #a6e8ff;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1000px) {
+    #navbar {
+        height: 100vh;
+        width: 30%;
+        position: fixed;
+    }
+
+    #navbar ul {
+        text-align: left;
+    }
+
+    #main-doc {
+        width: 70%;
+        margin-left: 30%;
+    }
+
+    footer {
+        width: 70%;
+        margin-left: 30%;
+    }
+}

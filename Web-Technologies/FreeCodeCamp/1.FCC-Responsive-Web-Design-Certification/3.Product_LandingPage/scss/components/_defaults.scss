@@ -1,0 +1,91 @@
+/* CSS Variables */
+
+$font: 'PT Sans',
+sans-serif;
+$background-color:rgb(255, 255, 255);
+
+*:root {
+    --primary-color: #b90415;
+    --primary-color-hover: #d3071b;
+    --secondary-color: #06c;
+    --secondary-color-hover: #143f85;
+    --light-color: rgb(251, 251, 253);
+    --dark-bg: rgb(245, 245, 247);
+    --footer-bg: #86868b;
+}
+
+body {
+    font-family: $font;
+    background-color: $background-color;
+    margin: 0;
+    color: #fff;
+    line-height: 1.2;
+}
+
+#header-img {
+    width: 30px;
+    height: 35px;
+}
+
+#email {
+    background-color: hsla(0, 0%, 100%, .8);
+    color: #1d1d1f;
+    box-shadow: inset rgba(0, 0, 0, 0.75) 0 1px 3px;
+    border: none;
+    border-radius: 12px;
+    height: 3.2rem;
+    padding: 0.24rem 1rem;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    font-size: 17px;
+    line-height: 1.23536;
+    width: 70%;
+}
+
+#submit {
+    border: none;
+    padding: 1.1rem 2rem;
+    margin: 0.5rem 0 0 0;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.cf:before,
+.cf:after {
+    content: '';
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    zoom: 1;
+}
+
+#video {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+.button {
+    background-color: #0071e3;
+    color: #FFF;
+    border-radius: 17px;
+    padding: 0.5rem 0.75rem;
+    text-align: center;
+    display: inline-block;
+
+}

@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link href="./css/circle.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <div class="clock">
+        <div class="outer-clock">
+            <div class="inner-clock">
+                <div id="display" class="clock-display">
+                    <span class="task">Task Length: </span>
+                    <div>
+                        <h1 class="clock-timer" id="clock-timer"> 01:00 </h1>
+                        <div class="clock-buttons"><span id="minus-session" class="session-length"> - </span>
+                            <span id="session-length" class="session-length"> 1 </span>
+                            <span id="plus-session" class="session-length">+</span></div>
+                    </div>
+                </div>
+                <div class="clock-break">
+                    Break Length:
+                    <div>
+                        <h1 class="break-timer" id="break-timer"> 05:00 </h1>
+                        <p class="break-controls"><span id="minus-break-session" class="session-length"> - </span>
+                            <span id="break-length" class="session-length"> 5 </span><span id="plus-break-session" class="session-length">+</span></p>
+                    </div>
+                </div>
+                <div class="bottom-buttons">
+                    <button id="start">Start</button>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap4/scss/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://opensource.keycdn.com/angularjs/1.6.5/angular.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="bootstrap4/js/app.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#basic-nav" ng-app="twitchApp">
+  <div class=" col-xs-12">
+    <nav class="navbar navbar-light navbar-inverse navbar-toggleable-md navbar-fixed bg-primary flex-column" id="basic-nav">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="http://res.cloudinary.com/undreamtmayhem/image/upload/v1499817024/logo_c9o8zs.png" width="30" height="30" class="d-inline-block align-top" alt=""> Twitch Viewer
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#users">Users</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fave-games">Favorite games</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container-fluid channels" id="users">
+    <div class="row no-gutters ">
+      <h2 class="col align-self-start"><span class="header">Users</span></h2>
+      <div class="dropdown">
+        <button class="btn btn-square dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort by
+      </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" ng-click="filters.category = All">All</a>
+          <a class="dropdown-item" href="#">Online</a>
+          <a class="dropdown-item" href="#">Offline</a>
+        </div>
+      </div>
+    </div>
+    <!--
+    <div class="card-group row justify-content-center" ng-controller="ChannelController">
+      <div class="card m-3" style="width: 18rem;" ng-repeat="channel in channels">
+        <img class="card-img-top" src="{{channel.video_banner}}" alt="Card image cap">
+        <div class="channel-live">
+          <span ng-if="channel.live">Live now <div class="circle"></div></span>
+        </div>
+        <div class="card-block">
+          <div class="row align-items-start">
+            <div class="col"><img class="logo" src="{{channel.logo}}" alt="Channel Logo"> {{channel.channelLogo}}</div>
+            <div class="col">
+              <h4 class="card-title"><a href="{{channel.url}}">{{channel.display_name}}</a></h4></div>
+          </div>
+          <p class="status">{{channel.status}}</p>
+          <div class="d-flex flex-row">
+            <div class="p-2">Follower: {{channel.followers}}</div>
+            <div class="p-2">Views: {{channel.views}}</div>
+            {{channelsz}}
+            <div class="p-2 stream-modal"><a href="#" class="follow-button btn-follow btn-square" data-toggle="modal" data-target="#exampleModal"><span>&#10084;</span> Follow</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+-->
+    <div class="card-group row justify-content-center" id="channel" ng-controller="ChannelController">
+      <div class="card m-4 {{channel.onlinestatus}}" style="width: 18rem;" ng-repeat="channel in channelsModel" data-status="{{channel.onlinestatus}}">
+        <img class="card-img-top" ng-src="{{channel.video_banner}}" alt="Card image cap">
+        <div class="channel-live" ng-if="channel.onlinestatus === 'Online'">
+          <span>Live now <div class="circle"></div></span>
+        </div>
+        <div class="card-block">
+          <div class="row align-items-start">
+            <div class="col"><img class="logo" src="{{channel.logo}}" alt="Channel Logo"> {{channel.channelLogo}}</div>
+            <div class="col">
+              <h4 class="card-title"><a href="{{channel.url}}">{{channel.display_name}}</a></h4></div>
+          </div>
+          <p class="status">{{channel.status}}</p>
+          <div class="d-flex flex-row">
+            <div class="p-2">Follower: {{channel.followers}}</div>
+            <div class="p-2">Views: {{channel.views}}</div>
+            <div class="p-2 stream-modal" ng-if="channel.onlinestatus === 'Online'"><a href="#" class="follow-button btn-follow btn-square" data-toggle="modal" data-target="#{{channel.name}}"><span>&#127918; </span>Stream Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- insert more cards   style="width: 18rem;"-->
+    </div>
+  </div>
+  </div>
+
+  <div class="container fave-game" id="fave-games">
+    <h2 class="text-center">Favorite Games</h2>
+    <div class="card-group row" ng-controller="FavGameComponent">
+      <div class="game-card m-1" style="width: 34rem;" ng-repeat="game in games">
+        <img class="card-img-top" src="{{game.image}}" alt="Card image cap">
+        <div class="card-block">
+          <h5 class="card-title text-center">{{game.title}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container-fluid">
+    <div class="row d-flex justify-content-center">
+      <p class="col-xs-9">Designed and Created by: UndreamtMayhem thanks to twitch for the API. <i>Please don't abuse there API with this site.</i></p>
+    </div>
+    <div class="row d-flex justify-content-center footer-logo">
+      <img class="img-fluid col-xs-3" src="http://res.cloudinary.com/undreamtmayhem/image/upload/v1499817026/undreamtmayhem_hjikco.png" alt="undreamtmayhem logo" style="height: 50px">
+    </div>
+  </footer>
+  <!-- insert modals-->
+  <div class="stream" ng-controller="ChannelController">
+    <div ng-repeat="stream in streamModel">
+      <div class="modal fade" id="{{stream.stream.channel.name}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header p-0">
+              <img class="img-fluid" src="{{stream.stream.preview.large}}" alt="">
+              <div class="channel-live">
+                <span class="ng-scope">Live now <div class="circle"></div></span>
+              </div>
+            
+              <button type="button" class="close modal-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body p-0">
+              <div class="player row">
+                <div class="m-2 col-sm-3">
+                  <img class="stream-logo p-1" src="{{stream.stream.channel.logo}}" alt="">
+                </div>
+                <div class="stream-info  m-2 col">
+                  <h3 class="stream-channel-name"><a href="#">{{stream.stream.channel.name}}</a></h3>
+                  <p class="status">{{stream.stream.channel.status}}</p>
+                  <p><span>&#127918;</span> Playing: {{stream.stream.game}}</p>
+                  <p><span>&#128065; </span>Views: {{stream.stream.viewers}}</p>
+                  <button class="btn btn-outline-info" data-dismiss="modal">Close</button>
+                  <button class="btn btn-outline-primary"><a href="{{stream.stream.channel.url}}">Watch</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of modal -->
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $('.dropdown-item').click(function() {
+        var filterBY = $(this).html();
+        if (filterBY === 'Online') {
+          $(".Offline").each(function(index) {
+            $(this).css('display', 'none');
+          });
+          $(".Online").each(function(index) {
+            $(this).css('display', 'flex');
+          });
+        } else if (filterBY === 'Offline') {
+          $(".Online").each(function(index) {
+            $(this).css('display', 'none');
+          });
+          $(".Offline").each(function(index) {
+            $(this).css('display', 'flex');
+          });
+        } else if (filterBY === 'All') {
+          console.log('all selected');
+          $(".Offline").each(function(index) {
+            $(this).css('display', 'flex');
+          });
+          $(".Online").each(function(index) {
+            $(this).css('display', 'flex');
+          });;
+        }
+      })
+    });
+  </script>
+</body>
+
+</html>

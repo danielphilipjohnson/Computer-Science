@@ -1,0 +1,95 @@
+/* Navigation */
+
+nav {
+    min-height: 44px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.8);
+    color: #eee;
+    z-index: 9999;
+
+    a {
+        display: inline-block;
+        width: 10rem;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.2rem 0;
+        color: #eee;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        height: 250px;
+        width: 100%;
+        list-style-type: none;
+
+
+        li {
+            padding: 0.8rem;
+            border-bottom: 1px solid #555;
+
+            &:hover {
+                opacity: 0.6;
+                background: #444;
+                color: #a9a9a9;
+            }
+
+            &:active {
+                color: #a9a9a9;
+            }
+
+            .fab.fa-apple {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 939px) {
+    nav {
+        ul {
+            height: auto;
+
+            li {
+                width: 100%;
+
+                a {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 939px) {
+    nav {
+        position: fixed;
+
+        ul {
+            height: 65px;
+            width: 100%;
+            justify-content: center;
+
+            li {
+                padding: 0.8rem 0 0 0;
+                border: none;
+            }
+        }
+    }
+}
