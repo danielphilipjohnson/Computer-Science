@@ -33,4 +33,3 @@ This module rounds out our discussions on Bootstrap JavaScript components. Then 
 
 - Graded: Assignment 4: Bootstrap, JQuery and Sass
 - Graded: Project Implementation and Final Report
-
