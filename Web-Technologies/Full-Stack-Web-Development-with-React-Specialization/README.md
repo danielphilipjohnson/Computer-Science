@@ -20,17 +20,15 @@ Mongodb
 Express.Js
 
 
-
 ## There are 4 Courses in this Specialization
 1. Front-End Web UI Frameworks and Tools: Bootstrap 4
-
 
 This course will give you an overview of client-side web UI frameworks, in particular Bootstrap 4. You will learn about grids and responsive design, Bootstrap CSS and JavaScript components. You will learn about CSS preprocessors, Less and Sass. You will also learn the basics of Node.js and NPM and task runners like Grunt and Gulp.
 
 At the end of this course, you will be able to a)Set up, design and style a web page using Bootstrap 4 and its components, b) Create a responsive web page design, and c) Make use of web tools to setup and manage web sites. This course also includes an honors track that enables you to work on your own project developing a website using Bootstrap 4. Students enrolling in this course should have prior good working knowledge of HTML, CSS and JavaScript.
 
 
-2. Front-End Web Development with React
+1. Front-End Web Development with React
 
 This course explores Javascript based front-end application development, and in particular the React library (Currently Ver. 16.3). This course will use JavaScript ES6 for developing React application. You will also get an introduction to the use of Reactstrap for Bootstrap 4-based responsive UI design. You will be introduced to various aspects of React components. You will learn about React router and its use in developing single-page applications. You will also learn about designing controlled forms. You will be introduced to the Flux architecture and Redux. You will explore various aspects of Redux and use it to develop React-Redux powered applications. You will then learn to use Fetch for client-server communication and the use of REST API on the server side. A quick tour through React animation support and testing rounds off the course. You must have preferably completed the previous course in the specialization on Bootstrap 4, or have a working knowledge of Bootstrap 4 to be able to navigate this course. Also a good working knowledge of JavaScript, especially ES 5 is strongly recommended.
 
