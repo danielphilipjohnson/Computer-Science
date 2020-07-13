@@ -19,10 +19,11 @@ import {
     Label
 } from 'reactstrap';
 
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
     constructor(props) {
+
         super(props);
 
         this.toggleNav = this.toggleNav.bind(this);
@@ -56,7 +57,6 @@ class Header extends Component {
         this.toggleModal();
         alert("Username: " + this.username.value + "Password: " + this.password.value + " Remember: " + this.remember.checked);
         event.preventDefault();
-
 
     }
 
