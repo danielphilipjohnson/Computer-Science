@@ -13,25 +13,17 @@ import {Link} from 'react-router-dom';
 function RenderLeader({leader}) {
     console.log(leader)
     return (
-        <Media>
-            <Media top middle>
-                <Media object
-                    src={
-                        leader.image
-                    }
-                    alt="Generic placeholder image"/>
-            </Media>
-            <Media body className="mb-5 ml-5">
-                <Media heading>
-                    {
-                    leader.name
-                } </Media>
-                <p>{
-                    leader.designation
-                }</p>
-                {
-                leader.description
-            } </Media>
+        <Media key={leader.id}>
+             <Media tag="li">
+                    <Media left middle>
+                        <Media object src={leader.image} alt={leader.name} />
+                    </Media>
+                    <Media body className="ml-5">
+                        <Media heading>{leader.name}</Media>
+                        <p>{leader.designation}</p>
+                        <p>{leader.description}</p>
+                    </Media>
+                </Media>
         </Media>
     );
 }
