@@ -22,6 +22,7 @@ import {
 // import CommentForm from './CommentForm';
 import {Link} from 'react-router-dom';
 import {Control, LocalForm, Errors} from 'react-redux-form';
+import {baseUrl} from '../shared/baseUrl';
 
 
 class CommentForm extends Component {
@@ -155,7 +156,7 @@ function RenderDish({dish}) {
                 <Card>
                     <CardImg top
                         src={
-                            dish.image
+                            baseUrl + dish.image
                         }
                         alt={
                             dish.name
