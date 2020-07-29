@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, FlatList, ScrollView, SectionList } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
+import * as Animatable from 'react-native-animatable';
+
 import { LEADERS } from '../shared/leaders';
 
 import { connect } from 'react-redux';
@@ -43,25 +45,58 @@ class AboutUs extends Component{
                     title = {item.name}
                     subtitle = {item.description}
                     hideChevron = {true}
-                    leftAvatar={{ source: require('./images/alberto.png')}}
+                    leftAvatar={{ source: {uri: baseUrl + item.image}}}
                 />
             )
         }
         const{ navigate } = this.props.navigation;
-        return(
-            <ScrollView>
-                <Card title = "Our History">
+        if (this.props.leaders.isLoading) {
+            return(
+                <ScrollView>
                     <History />
-                </Card>
-                <Card title = "Corporate Leadership">
-                    <FlatList
+                    <Card
+                        title='Corporate Leadership'>
+                        <Loading />
+                    </Card>
+                </ScrollView>
+            );
+        }
+        else if (this.props.leaders.errMess) {
+            return(
+                <ScrollView>
+                    <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
+                    <Card title ='Our History'>
+                    <History />
+                    </Card>
+                    <Card
+                        title='Corporate Leadership'>
+                        <Text>{this.props.leaders.errMess}</Text>
+                    </Card>
+                    </Animatable.View>
+                </ScrollView>
+            );
+        }
+
+
+        else {
+            return(
+                <ScrollView>
+                    <Animatable.View animation="fadeInDown" duration={2000} delay={1000}>
+                    <Card title ='Our History'>
+                    <History />
+                    </Card>
+                    <Card
+                        title='Corporate Leadership'>
+                    <FlatList 
                         data={this.props.leaders.leaders}
-                        renderItem = {renderLeaders}
-                        keyExtractor = {(item) => item.id.toString()}
-                    />
-                </Card>
-            </ScrollView>
-        );
+                        renderItem={renderLeaders}
+                        keyExtractor={item => item.id.toString()}
+                        />
+                    </Card>
+                    </Animatable.View>
+                </ScrollView>
+            );
+        }
     }
 }
 export default connect(mapStateToProps)(AboutUs);
