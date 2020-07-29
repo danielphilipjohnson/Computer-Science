@@ -106,10 +106,14 @@ class DishDetail extends Component {
             showModal: false
         };
     }
+
     markFavorite(dishId) {
-        /// need to change
-        this.setState({ favorites: this.state.favorites.concat(dishId) });
-    }
+       
+        const { postFavorite } = this.props;
+        postFavorite(dishId);
+      }
+
+
     toggleModal() {
         this.setState({ showModal: !this.state.showModal });
     }
@@ -131,7 +135,7 @@ class DishDetail extends Component {
         return (
             <ScrollView>
                 <RenderDish dish={this.props.dishes.dishes[+dishId]}
-                    favorite={this.state.favorites.some(el => el === dishId)}
+                    favorite={this.props.favorites.some(el => el === dishId)}
                     onPress={() => this.markFavorite(dishId)}
                     onSelect={() => this.toggleModal()}
                 />

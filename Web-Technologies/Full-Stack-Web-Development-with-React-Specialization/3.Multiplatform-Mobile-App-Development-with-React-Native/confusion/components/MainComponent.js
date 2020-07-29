@@ -15,11 +15,12 @@ import Dishdetail from './DishdetailComponent';
 import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Reservation from './ReservationComponent';
+import Favorites from './FavoriteComponent';
 
 
 const mapStateToProps = state => {
     return {
-       dishes: state.dishes,
+        dishes: state.dishes,
         comments: state.comments,
         promotions: state.promotions,
         leaders: state.leaders
@@ -40,43 +41,43 @@ const MenuStack = createStackNavigator();
 
 function MenuStackNavigator({ navigation, route }) {
     return (
-    <MenuStack.Navigator >
-        <MenuStack.Screen name="Menu"
-            component={Menu}
-            options={{
-                title: 'Menu',
-                headerStyle: {
-                    backgroundColor: "#512DA8",
-                },
+        <MenuStack.Navigator >
+            <MenuStack.Screen name="Menu"
+                component={Menu}
+                options={{
+                    title: 'Menu',
+                    headerStyle: {
+                        backgroundColor: "#512DA8",
+                    },
 
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                    color: "#fff",
-                },
-                headerLeft: () => (
-                    <Icon name="menu" size={24}
-                        color='white'
-                        onPress={() => navigation.toggleDrawer()} />
-                ),
-            }}
-        />
-        <MenuStack.Screen name="Dishdetail"
-            route={{ route }}
-            component={Dishdetail}
-            options={{
-                title: 'Dish',
-                headerStyle: {
-                    backgroundColor: "#512DA8",
-                },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        color: "#fff",
+                    },
+                    headerLeft: () => (
+                        <Icon name="menu" size={24}
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()} />
+                    ),
+                }}
+            />
+            <MenuStack.Screen name="Dishdetail"
+                route={{ route }}
+                component={Dishdetail}
+                options={{
+                    title: 'Dish',
+                    headerStyle: {
+                        backgroundColor: "#512DA8",
+                    },
 
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                    color: "#fff",
-                },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        color: "#fff",
+                    },
 
-            }}
-        />
-    </MenuStack.Navigator>);
+                }}
+            />
+        </MenuStack.Navigator>);
 }
 
 
@@ -160,25 +161,68 @@ function HomeStackNavigator({ navigation }) {
 const CustomDrawerContentComponent = (props) => (
     <DrawerContentScrollView>
         <SafeAreaView style={styles.container} forceInset={{ top: 'always', horizontal: 'never' }}>
-        <View style={styles.drawerHeader}>
-          <View style={{flex:1}}>
-          <Image source={require('./images/logo.png')} style={styles.drawerImage} />
-          </View>
-          <View style={{flex: 2}}>
-            <Text style={styles.drawerHeaderText}>Ristorante Con Fusion</Text>
-          </View>
-        </View>
-    
+            <View style={styles.drawerHeader}>
+                <View style={{ flex: 1 }}>
+                    <Image source={require('./images/logo.png')} style={styles.drawerImage} />
+                </View>
+                <View style={{ flex: 2 }}>
+                    <Text style={styles.drawerHeaderText}>Ristorante Con Fusion</Text>
+                </View>
+            </View>
 
-        <DrawerItemList {...props} />
+
+            <DrawerItemList {...props} />
         </SafeAreaView>
     </DrawerContentScrollView>
 );
 
+
+
+
+
+const FavoritesStack = createStackNavigator();
+
+function FavoritesNavigator({ navigation, route }) {
+    return (
+        <FavoritesStack.Navigator>
+            <FavoritesStack.Screen name="Reservation"
+                options={{
+                    title: 'Reserve Table',
+                    headerStyle: {
+                        backgroundColor: "#512DA8"
+                    },
+                    headerTintColor: "#fff",
+                    headerTitleStyle: {
+                        color: "#fff"
+                    },
+                    headerLeft: () => (
+                        <Icon name="menu" size={24}
+                            iconStyle={{ color: 'white' }}
+                            onPress={() => navigation.toggleDrawer()} />
+                    ),
+                }}
+                component={Favorites} />
+            <FavoritesStack.Screen name="Dishdetail"
+                route={{ route }}
+                component={Dishdetail}
+                options={{
+                    title: 'Dish',
+                    headerStyle: {
+                        backgroundColor: "#512DA8",
+                    },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        color: "#fff",
+                    },
+
+                }}
+            />
+        </FavoritesStack.Navigator>);
+
+}
+
 const ReservationStack = createStackNavigator();
-
-
-function ReservationNavigator({navigation}) {
+function ReservationNavigator({ navigation }) {
     return (
         <ReservationStack.Navigator>
             <ReservationStack.Screen name="Reservation"
@@ -279,7 +323,7 @@ function MainNavigatorContainer({ navigation }) {
                     )
                 }
             } />
-            <MainNavigator.Screen name="Reservation"
+        <MainNavigator.Screen name="Reservation"
             component={ReservationNavigator}
             options={
                 {
@@ -295,6 +339,25 @@ function MainNavigatorContainer({ navigation }) {
                     )
                 }
             } />
+        <MainNavigator.Screen name="My Favorites"
+            navigation={{ navigation }}
+            component={FavoritesNavigator}
+            options={
+                {
+                    drawerLabel: 'My Favorites',
+
+                    drawerIcon: ({ tintColor }) => (
+                        <Icon
+                            name='heart'
+                            type='font-awesome'
+                            size={24}
+                            color={tintColor}
+                        />
+                    )
+                }
+            } />
+
+
 
     </MainNavigator.Navigator>);
 }
@@ -331,26 +394,26 @@ class Main extends Component {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+        flex: 1,
     },
     drawerHeader: {
-      backgroundColor: '#512DA8',
-      height: 140,
-      alignItems: 'center',
-      justifyContent: 'center',
-      flex: 1,
-      flexDirection: 'row'
+        backgroundColor: '#512DA8',
+        height: 140,
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        flexDirection: 'row'
     },
     drawerHeaderText: {
-      color: 'white',
-      fontSize: 24,
-      fontWeight: 'bold'
+        color: 'white',
+        fontSize: 24,
+        fontWeight: 'bold'
     },
     drawerImage: {
-      margin: 10,
-      width: 80,
-      height: 60
+        margin: 10,
+        width: 80,
+        height: 60
     }
-  });
+});
 
-  export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main);
