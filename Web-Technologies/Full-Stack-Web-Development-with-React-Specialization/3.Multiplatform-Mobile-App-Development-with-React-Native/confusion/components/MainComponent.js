@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Image, Platform, StyleSheet, Text, View } from "react-native";
+import { Image, Platform, ScrollView, StyleSheet, ToastAndroid, Text, View } from "react-native";
+
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { createDrawerNavigator, DrawerItems, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Icon } from 'react-native-elements';
+
+import NetInfo, { NetInfoCellularGeneration } from "@react-native-community/netinfo";
+import Constants from "expo-constants";
+
 import { connect } from 'react-redux';
 import { fetchDishes, fetchComments, fetchPromos, fetchLeaders } from '../redux/ActionCreators';
 
@@ -17,7 +22,6 @@ import Contact from './ContactComponent';
 import Reservation from './ReservationComponent';
 import Favorites from './FavoriteComponent';
 import Login from './LoginComponent';
-
 
 
 const mapStateToProps = state => {
@@ -37,7 +41,6 @@ const mapDispatchToProps = dispatch => ({
     fetchLeaders: () => dispatch(fetchLeaders()),
     fetchPromotions: () => dispatch(fetchPromos())
 });
-
 
 const MenuStack = createStackNavigator();
 
@@ -81,7 +84,6 @@ function MenuStackNavigator({ navigation, route }) {
             />
         </MenuStack.Navigator>);
 }
-
 
 const AboutStack = createStackNavigator();
 
@@ -134,7 +136,6 @@ function ContactStackNavigator({ navigation }) {
         </ContactStack.Navigator>);
 }
 
-
 const HomeStack = createStackNavigator();
 
 function HomeStackNavigator({ navigation }) {
@@ -177,10 +178,6 @@ const CustomDrawerContentComponent = (props) => (
         </SafeAreaView>
     </DrawerContentScrollView>
 );
-
-
-
-
 
 const FavoritesStack = createStackNavigator();
 
@@ -250,13 +247,12 @@ function ReservationNavigator({ navigation }) {
 const LoginStack = createStackNavigator();
 
 
-function LoginNavigator({}) {
-
+function LoginNavigator({ }) {
 
     return (
         <LoginStack.Navigator>
             <LoginStack.Screen name="Login"
-             component={Login} 
+                component={Login}
                 options={{
                     title: 'Login',
                     headerStyle: {
@@ -272,7 +268,7 @@ function LoginNavigator({}) {
                             onPress={() => navigation.toggleDrawer()} />
                     ),
                 }}
-                /> 
+            />
         </LoginStack.Navigator>);
 };
 
@@ -386,7 +382,7 @@ function MainNavigatorContainer({ navigation }) {
                     )
                 }
             } />
-    <MainNavigator.Screen name="Login"
+        <MainNavigator.Screen name="Login"
             navigation={{ navigation }}
             component={LoginNavigator}
             options={
@@ -416,6 +412,56 @@ class Main extends Component {
         this.props.fetchComments();
         this.props.fetchLeaders();
         this.props.fetchPromotions();
+
+        NetInfo.fetch().then(state => {
+            console.log(NetInfoCellularGeneration["4g"])
+            ToastAndroid.show("Initial Network Connectivity Type: ", ToastAndroid.SHORT);
+
+
+            if (NetInfoCellularGeneration["4g"]) {
+                ToastAndroid.show(''
+                    + state.type + ', effectiveType: ' + NetInfoCellularGeneration["4g"],
+                    ToastAndroid.SHORT)
+            }
+            else if (NetInfoCellularGeneration["3g"]) {
+                ToastAndroid.show(''
+                    + state.type + ', effectiveType: ' + NetInfoCellularGeneration["3g"],
+                    ToastAndroid.SHORT)
+            }
+            else if (NetInfoCellularGeneration["2g"]) {
+                ToastAndroid.show(''
+                    + state.type + ', effectiveType: ' + NetInfoCellularGeneration["2g"],
+                    ToastAndroid.SHORT)
+            }
+            else {
+                ToastAndroid.show(''
+                    + state.type + ', effectiveType: wifi',
+                    ToastAndroid.SHORT)
+            }
+        });
+
+        const unsubscribe = NetInfo.addEventListener(state => {
+            switch (state.type) {
+                case 'none':
+                    ToastAndroid.show('You are now offline!', ToastAndroid.LONG);
+                    break;
+                case 'wifi':
+                    ToastAndroid.show('You are now connected to WiFi!', ToastAndroid.LONG);
+                    break;
+                case 'cellular':
+                    ToastAndroid.show('You are now connected to Cellular!', ToastAndroid.LONG);
+                    break;
+                case 'unknown':
+                    ToastAndroid.show('You now have an unknown connection!', ToastAndroid.LONG);
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+
+    componentWillUnmount() {
+        unsubscribe();
     }
 
     onDishSelect(dishId) {
