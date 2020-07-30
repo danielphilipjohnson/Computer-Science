@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Text, View, ScrollView, StyleSheet, Picker, Switch, Button, Modal } from 'react-native';
+import { Text, View, ScrollView, StyleSheet, Picker, Switch, Button, Modal, Alert } from 'react-native';
 import { Icon } from 'react-native-elements';
 
+import * as Animatable from 'react-native-animatable';
 import DateTimePicker from '@react-native-community/datetimepicker';
-
+import * as Permissions from 'expo-permissions';
+import { Notifications } from 'expo';
 class Reservation extends Component {
 
     constructor(props) {
@@ -17,6 +19,35 @@ class Reservation extends Component {
         }
     }
 
+    async obtainNotificationPermission() {
+        let permission = await Permissions.getAsync(Permissions.USER_FACING_NOTIFICATIONS);
+        if (permission.status !== 'granted') {
+            permission = await Permissions.askAsync(Permissions.USER_FACING_NOTIFICATIONS);
+            if (permission.status !== 'granted') {
+                Alert.alert('Permission not granted to show notifications');
+            }
+        }
+        return permission;
+    }
+
+    async presentLocalNotification(date) {
+        await this.obtainNotificationPermission();
+        Notifications.presentLocalNotificationAsync({
+            title: 'Your Reservation',
+            body: 'Reservation for '+ date + ' requested',
+            ios: {
+                sound: true
+            },
+            android: {
+                sound: true,
+                vibrate: true,
+                color: '#512DA8'
+            }
+        });
+    }
+    
+
+
     static navigationOptions = {
         title: 'Reserve Table',
     };
@@ -27,8 +58,25 @@ class Reservation extends Component {
 
     handleReservation() {
         //console.log(JSON.stringify(this.state));
-        this.toggleModal();
+        //this.toggleModal();
+
+        Alert.alert(
+            'Your Reservation OK?',
+            'Number of Guests: ' + this.state.guests + '\nSmoking? ' + this.state.smoking + '\nDate and Time: ' + this.state.date,
+            [
+            {text: 'Cancel', onPress: () => this.resetForm(), style: 'cancel'},
+            {text: 'OK', onPress: () => this.confirmReservation(this.state.date)},
+            ],
+            { cancelable: false }
+        );
     }
+    
+    confirmReservation(date) {
+        this.presentLocalNotification(date);
+        // Reservation.addReservationToCalendar(date);
+        this.resetForm();
+      }
+    
 
     resetForm() {
         this.setState({
@@ -50,6 +98,7 @@ class Reservation extends Component {
         };
 
         return (
+            <Animatable.View animation="zoomIn" duration={2000}>
             <ScrollView>
                 <View style={styles.formRow}>
                     <Text style={styles.formLabel}>Number of Guests</Text>
@@ -101,8 +150,6 @@ class Reservation extends Component {
                             />
                         )
                     }
-
-
                     <Icon
                         name='calendar'
                         type='font-awesome'
@@ -118,8 +165,6 @@ class Reservation extends Component {
                         accessibilityLabel="Learn more about this purple button"
                     />
                 </View>
-
-
 
                 <Modal animationType={"slide"} transparent={false}
                     visible={this.state.showModal}
@@ -138,6 +183,8 @@ class Reservation extends Component {
                     </View>
                 </Modal>
             </ScrollView>
+            </Animatable.View>
+
 
         );
     }

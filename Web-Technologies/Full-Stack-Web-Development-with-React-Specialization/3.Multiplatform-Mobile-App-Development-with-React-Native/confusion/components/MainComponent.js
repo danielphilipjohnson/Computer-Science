@@ -16,6 +16,8 @@ import About from './AboutComponent';
 import Contact from './ContactComponent';
 import Reservation from './ReservationComponent';
 import Favorites from './FavoriteComponent';
+import Login from './LoginComponent';
+
 
 
 const mapStateToProps = state => {
@@ -245,6 +247,34 @@ function ReservationNavigator({ navigation }) {
         </ReservationStack.Navigator>);
 
 }
+const LoginStack = createStackNavigator();
+
+
+function LoginNavigator({}) {
+
+
+    return (
+        <LoginStack.Navigator>
+            <LoginStack.Screen name="Login"
+             component={Login} 
+                options={{
+                    title: 'Login',
+                    headerStyle: {
+                        backgroundColor: "#512DA8"
+                    },
+                    headerTintColor: "#fff",
+                    headerTitleStyle: {
+                        color: "#fff"
+                    },
+                    headerLeft: () => (
+                        <Icon name="menu" size={24}
+                            color='white'
+                            onPress={() => navigation.toggleDrawer()} />
+                    ),
+                }}
+                /> 
+        </LoginStack.Navigator>);
+};
 
 const MainNavigator = createDrawerNavigator();
 
@@ -356,6 +386,23 @@ function MainNavigatorContainer({ navigation }) {
                     )
                 }
             } />
+    <MainNavigator.Screen name="Login"
+            navigation={{ navigation }}
+            component={LoginNavigator}
+            options={
+                {
+                    drawerLabel: 'Login',
+                    drawerIcon: ({ tintColor }) => (
+                        <Icon
+                            name='sign-in'
+                            type='font-awesome'
+                            size={24}
+                            color={tintColor}
+                        />
+                    )
+                }
+            } />
+
 
 
 
