@@ -247,7 +247,7 @@ function ReservationNavigator({ navigation }) {
 const LoginStack = createStackNavigator();
 
 
-function LoginNavigator({ }) {
+function LoginNavigator({ navigation }) {
 
     return (
         <LoginStack.Navigator>

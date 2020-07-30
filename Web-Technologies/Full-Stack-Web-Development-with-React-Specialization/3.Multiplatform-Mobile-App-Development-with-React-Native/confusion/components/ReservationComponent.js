@@ -5,6 +5,7 @@ import { Icon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import * as Permissions from 'expo-permissions';
+import * as Calendar from 'expo-calendar';
 import { Notifications } from 'expo';
 class Reservation extends Component {
 
@@ -17,7 +18,13 @@ class Reservation extends Component {
             showModal: false,
             showDate: false
         }
+
+     
     }
+
+
+ 
+
 
     async obtainNotificationPermission() {
         let permission = await Permissions.getAsync(Permissions.USER_FACING_NOTIFICATIONS);
@@ -29,6 +36,19 @@ class Reservation extends Component {
         }
         return permission;
     }
+    async obtainCalendarPermission() {
+        let permission = await Permissions.getAsync(Permissions.CALENDAR);
+        if (permission.status !== 'granted') {
+          permission = await Permissions.askAsync(Permissions.CALENDAR);
+          if (permission.status !== 'granted') {
+            Alert.alert('Permission not granted to access the calendar');
+          }
+        }
+        return permission;
+      }
+
+    
+
 
     async presentLocalNotification(date) {
         await this.obtainNotificationPermission();
@@ -47,6 +67,43 @@ class Reservation extends Component {
     }
     
 
+    async getDefaultCalendarSource() {
+        const calendars = await Calendar.getCalendarsAsync();
+        const defaultCalendars = calendars.filter(each => {
+
+            each.source.name === 'Default'
+           
+        }
+            
+            
+            );
+       
+        return defaultCalendars[0];
+    }
+
+    async addReservationToCalendar(date) {
+      await this.obtainCalendarPermission();
+      const startDate = new Date(Date.parse(date));
+      const endDate = new Date(Date.parse(date) + (2 * 60 * 60 * 1000)); // 2 hours
+       
+
+
+      Calendar.createEventAsync(
+        
+        this.getDefaultCalendarSource()[0],
+        {
+          title: 'Con Fusion Table Reservation',
+          location: '121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong',
+          startDate,
+          endDate,
+          timeZone: 'Asia/Hong_Kong',
+        },
+      );
+      Alert.alert('Reservation has been added to your calendar');
+
+
+    }
+
 
     static navigationOptions = {
         title: 'Reserve Table',
@@ -57,8 +114,6 @@ class Reservation extends Component {
     }
 
     handleReservation() {
-        //console.log(JSON.stringify(this.state));
-        //this.toggleModal();
 
         Alert.alert(
             'Your Reservation OK?',
@@ -73,7 +128,7 @@ class Reservation extends Component {
     
     confirmReservation(date) {
         this.presentLocalNotification(date);
-        // Reservation.addReservationToCalendar(date);
+        this.addReservationToCalendar(date);
         this.resetForm();
       }
     

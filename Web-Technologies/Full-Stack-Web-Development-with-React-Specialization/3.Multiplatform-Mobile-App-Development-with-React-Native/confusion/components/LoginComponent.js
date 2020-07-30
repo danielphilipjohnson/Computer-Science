@@ -258,7 +258,7 @@ class RegisterTab extends Component {
 
 const LoginTabNavigator = createBottomTabNavigator();
 
-function Login() {
+function Login({ navigation }) {
     return (
     <LoginTabNavigator.Navigator
 
