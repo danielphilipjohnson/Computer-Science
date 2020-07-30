@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+
 import { Text, View, FlatList, ScrollView, SectionList } from 'react-native';
 import { Card, ListItem } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 
-import { LEADERS } from '../shared/leaders';
 
 import { connect } from 'react-redux';
+
+
+import { LEADERS } from '../shared/leaders';
 import { baseUrl } from '../shared/baseUrl';
 
 
@@ -27,6 +30,7 @@ function History() {
         </View>
     );
 }
+
 class AboutUs extends Component{
     constructor(props) {
         super(props);
@@ -34,9 +38,7 @@ class AboutUs extends Component{
             leaders: LEADERS
         };
     }
-    static navigationOptions = {
-        title: 'About Us'
-    };
+
     render() {
         const renderLeaders = ({ item, index }) => {
             return(
@@ -49,7 +51,7 @@ class AboutUs extends Component{
                 />
             )
         }
-        const{ navigate } = this.props.navigation;
+
         if (this.props.leaders.isLoading) {
             return(
                 <ScrollView>

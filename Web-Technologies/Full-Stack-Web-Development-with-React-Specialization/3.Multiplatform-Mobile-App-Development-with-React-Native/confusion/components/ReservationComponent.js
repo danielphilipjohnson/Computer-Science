@@ -68,42 +68,47 @@ class Reservation extends Component {
     
 
     async getDefaultCalendarSource() {
-        const calendars = await Calendar.getCalendarsAsync();
-        const defaultCalendars = calendars.filter(each => {
 
-            each.source.name === 'Default'
-           
-        }
-            
-            
-            );
-       
-        return defaultCalendars[0];
+        const defaultCalendarSource =
+        Platform.OS === 'ios'
+          ? await addReservationToCalendar()
+          : { isLocalAccount: true, name: 'Expo Calendar' };
+        console.error(defaultCalendarSource)
+       return defaultCalendarSource;
+        
     }
 
     async addReservationToCalendar(date) {
-      await this.obtainCalendarPermission();
-      const startDate = new Date(Date.parse(date));
-      const endDate = new Date(Date.parse(date) + (2 * 60 * 60 * 1000)); // 2 hours
-       
+        //let defaultCalendarSource  = Calendar.getCalendarsAsync(Calendar.EntityTypes.EVENT);
 
 
-      Calendar.createEventAsync(
-        
-        this.getDefaultCalendarSource()[0],
-        {
+        //https://docs.expo.io/versions/latest/sdk/calendar/#calendarcreatecalendarasyncdetails
+        let newCalendarID = await Calendar.createCalendarAsync({
           title: 'Con Fusion Table Reservation',
-          location: '121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong',
-          startDate,
-          endDate,
-          timeZone: 'Asia/Hong_Kong',
-        },
-      );
-      Alert.alert('Reservation has been added to your calendar');
+            color: 'blue',
+            startDate: Date(Date.parse(date)),
+            endDate: Date(Date.parse(date + (2 * 60 * 60 * 1000))),
+            location: "121, Clear Water Bay Road, Clear Water Bay, Kowloon, Hong Kong",
+            timeZone: "Asia/Hong_Kong",
+            source: {
+                isLocalAccount: true,
+                name: 'internalCalendarName',
+                type: 'isLocalAccount'
+            },
+            
+            name: 'internalCalendarName',
+            ownerAccount: 'personal',
+            accessLevel: Calendar.CalendarAccessLevel.OWNER,
+
+        });
+        Alert.alert('Reservation has been added to your calendar');
+        console.log(`Your new calendar ID is: ${newCalendarID}`);
+      }
+      
 
 
-    }
 
+   
 
     static navigationOptions = {
         title: 'Reserve Table',
@@ -114,7 +119,6 @@ class Reservation extends Component {
     }
 
     handleReservation() {
-
         Alert.alert(
             'Your Reservation OK?',
             'Number of Guests: ' + this.state.guests + '\nSmoking? ' + this.state.smoking + '\nDate and Time: ' + this.state.date,
@@ -132,7 +136,6 @@ class Reservation extends Component {
         this.resetForm();
       }
     
-
     resetForm() {
         this.setState({
             guests: 1,
@@ -149,7 +152,6 @@ class Reservation extends Component {
                 this.setState({ date: selectedDate })
                 this.setState({ showDate: false })
             }
-
         };
 
         return (
@@ -239,11 +241,8 @@ class Reservation extends Component {
                 </Modal>
             </ScrollView>
             </Animatable.View>
-
-
         );
     }
-
 };
 
 const styles = StyleSheet.create({
