@@ -30,9 +30,20 @@ connect.then((db) => {
 }, (err) => { console.log(err); });
 
 
+
+
+
+
+
+
+
+
+
+var app = express();
+
+
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(cookieParser('12345-67890-09876-54321'));
 
 app.use(session({
@@ -42,14 +53,6 @@ app.use(session({
   resave: false,
   store: new FileStore()
 }));
-
-
-
-
-
-
-var app = express();
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -62,7 +65,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/users', usersRouter);
 app.use('/dishes', dishRouter);
 app.use('/promotions', promoRouter);

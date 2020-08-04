@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const leaderRouter = express.Router();
+const authenticate = require('../authenticate');
 const Leaders = require('../models/leaders');
 
 leaderRouter.use(bodyParser.json());

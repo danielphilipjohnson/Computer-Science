@@ -1,8 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-const mongoose = require('mongoose');
 
+const mongoose = require('mongoose');
+const authenticate = require('../authenticate');
 const Promotions = require('../models/promotions');
 
 const promoRouter = express.Router();
@@ -49,11 +50,10 @@ promoRouter.route('/:promoId')
     Promotions.findById(req.params.promoId)
     .then((promotion) => {
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'application/json');
         res.json(promotion);
     }, (err) => next(err))
     .catch((err) => next(err));
-    next();
+   
 })
 .post(authenticate.verifyUser, (req, res, next) => {
     res.statusCode = 403;
