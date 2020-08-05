@@ -1,7 +1,0 @@
-@import "mixins/flex";
-.cards {
-    @include flex;
-
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-}
