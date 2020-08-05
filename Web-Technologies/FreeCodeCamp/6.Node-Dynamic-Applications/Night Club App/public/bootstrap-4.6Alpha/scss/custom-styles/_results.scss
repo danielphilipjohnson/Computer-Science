@@ -1,0 +1,101 @@
+.results {
+    @extend .d-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0px;
+    .card {
+        min-width: 260px;
+        margin-bottom: 30px;
+        max-width: 280px;
+        .card-header {
+            background-color: inherit;
+            border-bottom: 1px solid #eceeef;
+            padding: 5px 10px 0px 10px;
+        }
+        .main-content {
+            margin: 1px 0px;
+            padding: 0px;
+        }
+        .card-block {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .attend-block-stats {
+            border-bottom: 1px solid #eceeef;
+            padding: 0px;
+            ;
+            .attend {
+                font-size: 14px;
+                margin: 9px;
+            }
+        }
+        .polls-social-bar {
+            border-bottom: 1px solid #eceeef;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 7px;
+            .left {
+                align-items: center;
+                border-right: 1px solid #eceeef;
+                display: flex;
+                margin: 0 4px;
+            }
+            .right {
+                align-items: center;
+                border-left: 1px solid #eceeef;
+                display: flex;
+                .dropdown-menu {
+                    margin-bottom: 30px;
+                }
+                .share-content {
+                    .fa-twitter {
+                        color: #1da1f2;
+                    }
+                }
+            }
+            i {
+                padding-left: 10px;
+                padding-right: 10px;
+                color: #636c72;
+            }
+        }
+        .collapse.show .card.card-block {
+            border: none;
+            padding: 10px;
+        }
+    }
+}
+
+.section-header {
+    padding: 10px;
+    text-align: center;
+}
+.dropdown-menu {
+    padding: 10px;
+}
+
+.answers {
+    .poll-form {
+        padding: 0 10px;
+    }
+    .post-bar {
+        background-color: $gray-lightest;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        .btn-post {
+            background-color: #2196F3;
+            border: none;
+            border-radius: 0px;
+            color: white;
+            margin: 5px 10px;
+            padding: 7px 13px;
+        }
+    }
+}
+.share-content {
+    height: 44px;
+    padding: 10px;
+    width: 200px;
+}

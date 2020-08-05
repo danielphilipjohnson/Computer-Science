@@ -1,0 +1,21 @@
+{
+    "name": "unixtime",
+    "version": "1.0.0",
+    "description": "unixtime",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "author": "Daniel Johnson",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "express": "^4.15.3",
+        "express-messages": "^1.0.1",
+        "express-session": "^1.15.4",
+        "express-validator": "^3.2.1",
+        "mongoose": "^4.11.3",
+        "node-bing-api": "*",
+        "pug": "^2.0.0-rc.2"
+    }
+}

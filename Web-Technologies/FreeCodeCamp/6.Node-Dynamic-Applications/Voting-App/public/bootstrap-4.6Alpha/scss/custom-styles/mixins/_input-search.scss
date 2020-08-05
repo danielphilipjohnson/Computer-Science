@@ -1,0 +1,29 @@
+
+@mixin icon-in-search-input($background-color, $font-color) {
+  .search-input {
+    border:none;
+  }
+  .search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white;
+  }
+  .search-input::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+  }
+  .search-input:-ms-input-placeholder { /* IE 10+ */
+    color: white;
+  }
+  .search-input:-moz-placeholder { /* Firefox 18- */
+    color: white;
+  }
+
+  .search-icon{
+    background-color: #5d34a4;
+    color: white;
+    border: none;
+  }
+
+  .search-input[type="text"] {
+    color: white;
+    background-color: #5d34a4;
+  }
+}

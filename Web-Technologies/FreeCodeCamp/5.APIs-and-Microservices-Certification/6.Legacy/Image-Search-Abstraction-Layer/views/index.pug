@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 Node API: Image Search Abstraction Layer
+
+  br
+  h3 User stories:
+
+  ul 
+    li 1) I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+    li 2) I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+    li 3) I can get a list of the most recently submitted search strings.
+
+  h4 Example creation usage:
+  ul 
+    li 
+      code /api/imagesearch/lolcats%20funny?offset=10
+    li
+      code /api/imagesearch/lolcats%20funny?
+
+  h4 Example creation output
+  code [{"url":"https://i.ytimg.com/vi/8nOsEEBrEuA/hqdefault.jpg","snippet":"LOLCats in All Fired Up lol Cats Rock Funny Cats - YouTube","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuWNpmeNmLlMNc0v32tK83j4eOrOPVS6M2kty-CVFzQTvbS9d9WdKfrg7E","context":"https://www.youtube.com/watch?v=8nOsEEBrEuA"},{"url":"http://i0.kym-cdn.com/photos/images/original/000/024/741/lolcats-funny-picture-lalalalala.jpg","snippet":"Image - 24741] | LOLcats | Know Your Meme","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbI6Mcuceeqicb3LYxL1Qer6aY7-pDUCQk6hplRCZVMxNzSLF6jDb0Z1Y","context":"http://knowyourmeme.com/photos/24741-lolcats"},{"url":"http://www.bajiroo.com/wp-content/uploads/2013/06/funny-lol-cats-fun-pics-images-photos-pictures-5.jpg","snippet":"33 Funniest LOLcats Ever | Bajiroo.com","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUXCGnfYdIRdxb86GIz-VCaSsgmgG5uS27hMCq1IquRvSTd2zwQwtphXA","context":"http://www.bajiroo.com/33-funniest-lolcats-ever"},{"url":"https://s2.favim.com/orig/33/cat-funny-lol-lolcats-mean-Favim.com-261389.jpg","snippet":"cat, funny, lol, lolcats, mean - image #261389 on Favim.com","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEWW7RAqY4HHhgiOc80Qr8AbZHEUN_KYOWOTmmGqDlPA0JYibUYGCnME","context":"https://favim.com/image/261389/"},{"url":"http://blog4free.com/wp-content/uploads/2017/05/funny-cats-pictures-when-it-went-nobody-knows-but-its-gone.jpg","snippet":"Funny Cats Pictures Lolcats: I let my mind wander. – Blog4Free.com","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-RtX7YyCOpFQyrkTPbvJBeBIHjS1S8KjfCPstVcIiotW9GoAEJ0GnAPQ","context":"http://blog4free.com/images/funny-cats-pictures-lolcats-i-let-my-mind-wander-2/"},{"url":"http://i0.kym-cdn.com/photos/images/original/000/010/014/lolcats-funny-pictures-leroy-jenkins.jpg","snippet":"Image - 10014] | LOLcats | Know Your Meme","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe_pDSRjgo3sEUaNo0xOOjh_frpTjCy1VyoPG-hh0aK7aRvfTDlXPnx-Q","context":"http://knowyourmeme.com/photos/10014-lolcats"},{"url":"http://blog4free.com/wp-content/uploads/2017/06/funny-cats-pictures-funny-cat-pictures-lolcats-stop-laughing-pet-cat.jpg","snippet":"Funny Cats Pictures funny cat pictures – Lolcats: STOP LAUGHING ...","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo2h4FMnxR0J_6wt-SSRgMogKJiA6P8WpXF0VHuCMIL1AyOMvoRHp3g00","context":"http://blog4free.com/images/funny-cats-pictures-funny-cat-pictures-lolcats-stop-laughing-pet-cat/"},{"url":"http://i0.kym-cdn.com/photos/images/newsfeed/000/010/017/lolcats-funny-pictures-surprise-cannibalism.jpg","snippet":"Image - 10017] | LOLcats | Know Your Meme","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3LXRSIoZhjjSnZYvCE67Yxf4XR-dxpkhIVMU8FQhpRqWpKUeXaJmNCc","context":"http://knowyourmeme.com/photos/10017-lolcats"},{"url":"http://cdn.playbuzz.com/cdn/d68ef92c-3973-4b00-98c9-913e423d83ff/f9ec20e0-bb55-48b1-8789-bb51947e4d12.jpg","snippet":"Whats a Summary of Your life? | Playbuzz","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWWY7kdyrsQXsyW8fqoVs6_I-RwRm1BFpduC6imCrnbsbuT0Q5pmqrHrg","context":"http://www.playbuzz.com/mikeyh10/whats-a-summary-of-your-life"},{"url":"http://i0.kym-cdn.com/photos/images/original/000/010/017/lolcats-funny-pictures-surprise-cannibalism.jpg","snippet":"Image - 10017] | LOLcats | Know Your Meme","thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXBpDueya0bfWRnj-q0FfTmx01gdr1kCCSlfZ3brV8-oiVQKjZ1YwKb6c","context":"http://knowyourmeme.com/photos/10017-lolcats"}]
+  
+  br
+  h4 Latest imagesearch Usage:
+  code /api/latest/imagesearch/

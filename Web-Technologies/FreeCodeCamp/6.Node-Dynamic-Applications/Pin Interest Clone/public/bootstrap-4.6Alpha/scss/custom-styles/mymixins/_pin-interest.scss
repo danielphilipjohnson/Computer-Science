@@ -1,0 +1,58 @@
+@mixin create-pin-interest-grids($grid-width, $card-width, $justify-cards){
+    .categories {
+        @extend .results;
+        // experimental change if becomes broken
+        @extend .flex-wrap;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        height: fit-content;
+        width: $grid-width;
+        justify-content: $justify-cards;
+    
+        
+        
+        .card {
+            border: none;
+            width: $card-width;
+            padding: 10px;
+            border-radius: 25px;
+            background-color: transparent;
+            &:hover {
+                background-color: rgba(0,0,0,.05);
+            }
+        }
+    }
+    
+    .pin-img {
+        border-radius: 20px;
+        height: 175px;
+    }
+    .pin-saved-img {
+        border-radius: 20px;
+        
+    }
+    .pin-profile-bubble {
+        position: relative;
+        top:auto;
+        bottom: 25px;
+        border-radius: 50%;
+        border: 3px solid white;
+        height: 50px;
+        width: 50px;
+    }
+    .pin-text {
+        position: relative;
+        top: auto;
+        bottom: 18px;
+        h5 {
+            margin: 0 0 3px 0;
+        }
+        p {
+            margin: 0px;
+        }
+    }
+    
+    
+    
+        
+}

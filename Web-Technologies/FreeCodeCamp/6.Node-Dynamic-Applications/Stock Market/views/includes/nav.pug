@@ -1,0 +1,14 @@
+nav.app-nav
+  h1.nav-logo Money   
+  .input-group.search-nav.hidden-sm-down
+    input.form-control.search-input(type='text', placeholder='Search')      
+    span.input-group-addon.search-icon
+      i.fa.fa-search(aria-hidden='true')    
+  ul.navbar-nav
+    li.nav-item.hidden-md-up.nav-mobile
+      i.fa.fa-search(aria-hidden='true', data-toggle='collapse', href='#collapseSearch', aria-expanded='false', aria-controls='collapseSearch')
+#collapseSearch.collapse.search-collapse.hidden-md-up
+  .input-group.search-nav
+    input.form-control.search-input(type='text', placeholder='Search')        
+    span.input-group-addon.search-icon
+      i.fa.fa-search(aria-hidden='true')

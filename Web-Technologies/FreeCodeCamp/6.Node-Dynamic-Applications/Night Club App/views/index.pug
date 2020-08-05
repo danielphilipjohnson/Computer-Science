@@ -1,0 +1,31 @@
+extends layout
+block content
+  .jumbotron.jumbotron-fluid
+    .jumbotron-content
+      .box
+        h1 Nightlife!        
+        p.lead Things to do.
+  form.search-container.container(action='/', method='post')
+    .icon
+      i.fa.fa-search(aria-hidden='true') 
+      p Find me: Things to do
+    .d-flex.flex-wrap
+      .form-group.resized-input
+        input#state.form-control(type='text', aria-describedby='state', placeholder='US State')     
+      .form-group.resized-input
+        select#activity-type.form-control
+          option All (Activities)          
+          option Restaurants          
+          option Bars           
+          option Music &amp; Nightlife            
+          option Movies           
+          option Hotels            
+          option Villas   
+    .bottom-row
+      input.btn.btn-primary(type='button', name='reset', value='Reset') 
+      input#submitBars.btn.btn-primary(type='button', name='submit', value='Submit')
+  .results.d-flex.container#searchresults
+  // display saved bars
+  if user
+    include includes/savedBars.pug
+  // display attending bars

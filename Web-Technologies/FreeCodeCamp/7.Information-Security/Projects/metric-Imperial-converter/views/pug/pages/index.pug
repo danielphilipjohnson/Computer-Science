@@ -1,0 +1,24 @@
+extends ../layout.pug
+
+block content
+    
+
+        
+    //                
+        .ui.vertical.stripe.segment
+            .ui.text.container
+                h3.ui.header.center.aligned Pick a conversion
+
+            .ui.middle.aligned.stackable.grid.container
+                .row
+                    .eight.wide.column
+                        include ../mixins/basic-card.pug
+                        
+                    .six.wide.right.floated.column
+                        img.ui.large.bordered.rounded.image(src='assets/images/wireframe/white-image.png')
+            
+        
+        .ui.vertical.stripe.segment
+            .ui.text.container
+                h3.ui.header Conversions
+                include ../mixins/basic-table.pug

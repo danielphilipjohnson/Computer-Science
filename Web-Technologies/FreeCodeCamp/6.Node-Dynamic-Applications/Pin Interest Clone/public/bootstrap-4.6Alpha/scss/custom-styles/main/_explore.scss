@@ -1,0 +1,110 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", arial, sans-serif;
+    
+}
+
+main {
+    background-color: white!important;
+}
+.title {
+    font-weight: 700;
+    padding: 100px 20px 0 40px;
+    h3 {
+        color:#555;
+        font-size: 36px;
+        line-height: 42px;
+        line-height: 42px;
+        letter-spacing: -1.35px;
+        word-spacing: 6.75px;
+    }
+
+    p{
+        line-height: 1;
+    }
+}
+
+aside {
+    @extend .navbar-toggleable-md;
+    background-color: white;
+    width: 20%;
+    min-width: 175px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+
+    .collapse {
+        @extend .navbar-collapse;
+        flex-direction: column;
+        padding-top: 25px;
+    }
+    .navbar-toggler-left {
+        left: 0px;
+    }
+    button {
+        z-index: 2;
+    }
+}
+
+.side-nav {
+    font-size: 14px;
+    border-bottom: 1px solid #eceeef;
+    padding: 20px 0px;
+    .nav-link {
+        color: #a19f9f;
+        line-height: 0.5;
+        font-weight: 700;
+    }
+}
+.exp {
+    background-color: white;
+    margin-top: 35px;
+    @include create-pin-interest-grids(100%, 440px, space-evenly);
+    width: 80%;
+    .pin-img {
+        min-width:100%;
+    }
+
+}
+/*
+.categories {
+    @extend .results;
+    padding-top: 0px;
+    height: 310px;
+    width: 79%;
+    justify-content: space-between;
+
+    
+    
+    .card {
+        border: none;
+        width: 477px;
+        padding: 10px;
+        border-radius: 25px;
+        &:hover {
+            background-color: rgba(0,0,0,.05);
+        }
+    }
+}
+
+.pin-img {
+    border-radius: 20px;
+}
+
+.pin-profile-bubble {
+    position: relative;
+    top:auto;
+    bottom: 25px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.pin-text {
+    position: relative;
+    top: auto;
+    bottom: 18px;
+    h5 {
+        margin: 0 0 3px 0;
+    }
+    p {
+        margin: 0px;
+    }
+}
+*/

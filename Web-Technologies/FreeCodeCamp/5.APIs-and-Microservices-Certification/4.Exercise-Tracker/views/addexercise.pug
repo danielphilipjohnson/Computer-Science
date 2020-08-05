@@ -1,0 +1,27 @@
+
+div(class="col s12 m3")
+  div(class="card")
+    div(class="card-image")
+      img(src="./img/jogging.jpg")
+      span(class="card-title") Create a New Exercise
+      a(class="btn-floating halfway-fab waves-effect waves-light red")
+        i(class="material-icons") add
+
+    div(class="card-content")
+      p POST /api/exercise/add
+        form(action="/api/exercise/add" method="post")
+          div(class="row")
+            div(class="input-field col s6")
+              input(placeholder="userId*" name='userId' id="userId" type="text" class="validate")
+
+            div(class="input-field col s6")
+              input(placeholder="Placeholder" name='description' id="description" type="text" class="validate")
+  
+            div(class="input-field col s6")
+              input(placeholder="duration*" name='duration' id="duration" type="text" class="validate")
+  
+            div(class="input-field col s6")
+              input(placeholder="date*" name='date' id="date" type="date" class="validate")
+
+            button(class="btn waves-effect waves-light" type="submit" name="action") Submit
+              i(class="material-icons right") send 

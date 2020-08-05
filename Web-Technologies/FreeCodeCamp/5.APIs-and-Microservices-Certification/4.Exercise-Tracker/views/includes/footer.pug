@@ -1,0 +1,72 @@
+- var categories = ['Gaming','Funny','Ask','Movie & TV','Comic','Sport','WTF','Pets','Science','Politics','Food',]
+
+div(class="modal fade" id="addpollModal" tabindex="-1" role="dialog" aria-labelledby="addpollModal" aria-hidden="true")
+  div(class="modal-dialog" role="document")
+    div(class="modal-content")
+      div(class="modal-header")
+        h5(class="modal-title" id="addpollModallabel") #{errors} New Poll
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+          if errors
+            each error, i in errors
+              div(class="alert alert-danger") #{error.msg}
+
+      div(class="modal-body")
+        form(id="pollform")
+          div(class="form-group")
+            label(for="pollquestion") Poll question
+            input(type="text" class="form-control pollquestion" id="pollquestion" placeholder="Poll Question")
+
+          div(class="form-group")
+            label(for="selectCategory" id="select") Example multiple select
+            select(class="form-control" name="selectCategory" id="selectCategory")
+              each category in categories
+                option= category
+
+          div(class="form-group" id="pollanswer")
+            label(for="pollanswer") Poll Answer
+            input(type="text" class="form-control pollanswer" name="0" placeholder="Poll Answer")
+
+          input(class="btn btn-polls" id="add-answer" type="button" name="add-answer" value="Add Answer")
+          input(class="btn btn-polls" id="remove-answer" type="button" name="remove-answer" value="Remove Answer")
+
+        div(class="modal-footer")
+          button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+          button(type="button"  class="btn btn-polls btn-add") Add Poll
+footer
+  nav(class="navbar")
+    ul(class="nav d-flex justify-content-around")
+
+      li(class="nav-item")
+        a(href="/")
+          i(class="fa fa-home" aria-hidden="true")
+        p(class="hidden-sm-down") Home
+
+      li(class="nav-item")
+        a(href="/categories")
+          i(class="fa fa-search" aria-hidden="true")
+        p(class="hidden-sm-down") Explore
+      if user
+        li(class="nav-item")
+          i(class="fa fa-plus" aria-hidden="true" data-toggle="modal" data-target="#addpollModal")
+          p(class="hidden-sm-down") Add
+
+      li(class="nav-item")
+        a(href="/alerts")
+          i(class="fa fa-bell" aria-hidden="true")
+        p(class="hidden-sm-down") News
+
+      li(class="nav-item")
+        if user 
+          - 
+            var link = "/profile/" + user.username;
+          a(href=link)
+            i(class="fa fa-user" aria-hidden="true")
+          p(class="hidden-sm-down") Profile
+        else
+          a(href="/profile/guest")
+            i(class="fa fa-user" aria-hidden="true")
+            p(class="hidden-sm-down") Profile
+
+  script(src="/js/materialize.js")
+  script(src="/js/main.js")

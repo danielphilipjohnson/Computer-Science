@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1668</x>
+      <y>0</y>
+      <w>372</w>
+      <h>420</h>
+    </coordinates>
+    <panel_attributes>TimeStamp(time)
+-
+dict: months = {1: "january", .....}
+string: timeStamp = time
+-
+string: unixTime = ""
+string: naturalTime = ""
+-
+#Operations
+
+
++ isNaturalTimeStamp [done] test
++ isUnixTimeStamp [done] test
++ UnixToNatural [done] test
++ NaturalToUnix [done] test
++ SetNaturalTime ------------- should i use this
++ SetUnixTimeStamp
+
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>0</x>
+      <y>48</y>
+      <w>540</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>unixToNatural
+works on paper
+
+--
+ 
+var d = new Date(1450137600 * 1000)
+
+Date 2015-12-15T00:00:00.000Z
+
+format string
+Date.prototype.getMonth()
+access dict and get month
+Date.prototype.getDay()
+Date.prototype.getYear()
+
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1080</x>
+      <y>48</y>
+      <w>540</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>SetNaturalTime(time)
+ may need to change
+--
+var naturalTime = time.split(" ")
+month = naturalTime[0];
+day = naturalTime[1]
+year = naturalTime[2]
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1248</x>
+      <y>432</y>
+      <w>540</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>SetUnixTimeStamp(time)
+
+--
+ var date = new Date(unix_tm * 1000)
+ 
+
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>540</x>
+      <y>48</y>
+      <w>540</w>
+      <h>276</h>
+    </coordinates>
+    <panel_attributes>naturalToUnix
+works on paper
+--
+UnixTime  = Date.parse('December 15, 2015');
+UnixTime / 1000
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>2100</x>
+      <y>180</y>
+      <w>444</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>isNaturalTime(time)
+--
+var isItNaturalTime = Date.parse(time);
+
+if(isNaN(isItNaturalTime))
+return false
+else return true
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>2100</x>
+      <y>36</y>
+      <w>408</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>isUnixTime(time)
+--
+var isNotValidUnix  = isNaN(time)
+
+if(isNotValidUnix) return false
+else return true
+
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>2088</x>
+      <y>528</y>
+      <w>444</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>SetNaturalTime(time)
+--
+this.naturalTime = time;
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>2088</x>
+      <y>624</y>
+      <w>444</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>SetUnixTimeStamp(time)
+--
+this.unixTime = time;
+-.
+valign=top
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

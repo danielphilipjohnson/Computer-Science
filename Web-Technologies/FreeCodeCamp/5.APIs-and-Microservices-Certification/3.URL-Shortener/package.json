@@ -1,0 +1,22 @@
+{
+    "name": "knowledgebase",
+    "version": "1.0.0",
+    "description": "simple knowledgebase",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "author": "Daniel Johnson",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "express": "^4.15.3",
+        "express-messages": "^1.0.1",
+        "express-validator": "^3.2.1",
+        "mongoose": "^4.11.3",
+        "mongoose-unique-validator": "*",
+        "pug": "^2.0.0-rc.2",
+        "shortid": "*",
+        "valid-url": "^1.0.9"
+    }
+}

@@ -1,0 +1,41 @@
+@mixin search-nav {
+        //margin: auto;
+        //padding: 10px;
+        width: 100%;
+        //max-width: 60%;
+
+      .search-input {
+        border:none;
+      }
+      .search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: black;
+      }
+      .search-input::-moz-placeholder { /* Firefox 19+ */
+        color: black;
+      }
+      .search-input:-ms-input-placeholder { /* IE 10+ */
+        color: black;
+      }
+      .search-input:-moz-placeholder { /* Firefox 18- */
+        color: black;
+      }
+      
+      .search-icon{
+        background-color: white;
+       
+        border: none;
+        font-size: 21px;
+        i {
+          color: black;
+        }
+      }
+      
+      .search-input[type="text"] {
+        color: black;
+        background-color: white;
+      }
+
+
+
+// height 41px
+}

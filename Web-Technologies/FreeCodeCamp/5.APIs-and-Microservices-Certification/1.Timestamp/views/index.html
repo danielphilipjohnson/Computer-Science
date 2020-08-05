@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>TimeStamp</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Node API: Timestamp microservice</h1>
+
+        <h2>Example usage</h2>
+        <p><code>replace with approp  http://localhost:3000/timestamp/December%2015,%202015</code></p>
+        <p><code>replace with approp http://localhost:3000/timestamp/1450137600</code></p>
+
+
+        <h2>Example Output: </h2>
+        <code>{ "unix": 1502990129, "natural": "August 17, 2017" }</code>
+
+        <h3>User Stories</h3>
+        <ul>
+            <li>DONE: 1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)</li>
+            <li>DONE: 2) If it does, it returns both the Unix timestamp and the natural language form of that date.</li>
+            <li>DONE: 3) If it does not contain a date or Unix timestamp, it returns null for those properties.</li>
+            <li>4) Update look of website add social icons and about me</li>
+            <li>5) Allow the user to get current unix time or current naturalTime</li>
+            <li>6) Allow mutliple Date formats in natural such as shorter one like JAN and day as a string WEDNESDAY</li>
+            <li>7) Future supported types</li>
+            <ul>
+                <li><code>2017-08-17T17:15:29+00:00 </code></li>
+                <li><code>Thu, 17 Aug 2017 17:15:29 </code></li>
+                <li><code>Thursday, 17-Aug-17 17:15:29 </code></li>
+                <li><code>2017-08-17T17:15:29</code></li>
+            </ul>
+            </li>
+        </ul>
+        <footer>
+            <p>Made by Daniel Johnson</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

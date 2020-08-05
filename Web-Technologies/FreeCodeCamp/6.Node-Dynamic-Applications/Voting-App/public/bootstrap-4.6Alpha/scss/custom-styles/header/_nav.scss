@@ -1,0 +1,18 @@
+.app-nav {
+  //background-color:#673ab7;
+  background-color: #3e236d;
+//  box-shadow: 0px 5px 3px 1px #761717;
+  margin-bottom: 5px;
+  h4 {
+    font-size: 19px;
+  }
+}
+
+.sub-nav {
+  width: 100%;
+  justify-content: space-between;
+  color: $brand-background-light-4;
+  a {
+    color: $brand-background-light-4;
+  }
+}

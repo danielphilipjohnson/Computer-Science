@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title URL Shortener Microservice
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/style.css')
+  body
+    nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+        button.navbar-toggler.navbar-toggler.right(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-expanded='false', aria-controls='navbar')
+            span.navbar.toggler-icon
+        a.navbar-brand(href='/') URL Shortener Microservice
+    .container
+      block content
+      br
+      hr
+  
+   
+      footer
+        p Copyright &copy; 2017
+    script(src='/bower_components/jquery/dist/jquery.js')  
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+    //script(src='/js/main.js')  

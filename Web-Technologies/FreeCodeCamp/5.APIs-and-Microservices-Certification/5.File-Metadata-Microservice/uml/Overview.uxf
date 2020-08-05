@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>28</x>
+      <y>56</y>
+      <w>308</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>File Metadata Microservice</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>504</x>
+      <y>56</y>
+      <w>952</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>user stories
+
+User Story: I can submit a FormData object that includes a file upload.
+User Story: When I submit something, I will receive the file size in bytes within the JSON response</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>574</x>
+      <y>350</y>
+      <w>882</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>.single(fieldname)
+
+&lt;input name="fieldname" type="file"&gt;
+
+
+route
+app.post('/', upload.single('fieldname'), function (req, res) {
+  // req.file is the `avatar` file 
+  // req.body will hold the text fields, if there were any 
+  // req.file.size
+  // output as json
+})</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>28</x>
+      <y>350</y>
+      <w>504</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>3rd Party Plugins = multer
+
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
+
+file attributes i need
+ 
+ size 	           Size of the file in bytes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>420</x>
+      <y>686</y>
+      <w>882</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>&lt;form action="/get-file-size" method="post" enctype="multipart/form-data"&gt;
+
+&lt;/form&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

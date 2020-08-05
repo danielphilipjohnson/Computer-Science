@@ -1,0 +1,31 @@
+extends layout
+mixin card()
+  .card
+    .card-block.main-content
+      img.img-fluid.pin-saved-img(src='http://placeimg.com/477/750/any', alt='')
+block content
+  .user-profile
+    .user-stats
+      .profile-icons
+        i.fa.fa-pencil(aria-hidden='true')           
+        i.fa.fa-arrows-alt(aria-hidden='true')           
+        i.fa.fa-ellipsis-h(aria-hidden='true')            
+        h2 Pin Name            
+        span.text-muted 7 pins     
+      .social-stats-container
+        .profile-pic.d-flex
+          .add-user
+            i.fa.fa-plus(aria-hidden='true')              
+          img.img-fluid(src='https://placeimg.com/80/80/any', alt='')
+  main
+    .categories.tab-pane.active.d-flex.flex-wrap.container
+      .card
+        .card-block.main-content
+          .blank-img
+            i.fa.fa-plus-circle(aria-hidden='true')          
+        .card-block.blank-img-title
+          .pin-text
+            h5 Save Pin
+      each val in [1,2,3,4,5]
+        +card(val)
+

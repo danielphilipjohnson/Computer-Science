@@ -1,0 +1,239 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+//cyan
+$nav-color: #2196F3;
+$logo-color: #e91e63;
+$search-box-color: #5d34a4;
+
+// change colors 
+.app-nav {
+  @extend .navbar;
+  padding: 0px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  background: #e44d26; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e44d26, #f16529); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e44d26, #f16529); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.nav-logo {
+  @extend .navbar-brand;
+  color: white;
+
+  font-size: 40px;
+  margin-left: 50px;
+  padding: 0px;
+}
+
+.nav-right {
+  ////@extend .navbar-toggleable-md;
+  ////@extend .navbar-collapse;
+  padding-bottom: 5px;
+  width: 100%;
+  
+ .navbar-nav {
+  align-items: baseline;
+  flex-direction: row;
+   width: 100%;
+   
+   justify-content: space-evenly;
+   
+   .nav-item-search{
+    width: 100%;
+  }
+ }
+  
+ .nav-desktop {
+  padding: 5px 20px;
+ }
+ .nav-mobile {
+   padding: 4px 10px;
+   font-size: 26px;
+   .fa {
+     padding-top: .75rem;
+     //padding-left: 10px;
+     color: white;
+   }
+ }
+  
+  .nav-item {
+
+    .btn-save {
+      background-color: azure;
+      border-radius: 50px;
+    }
+    .nav-link {
+      color: white;
+      //margin: 0px 15px 0 0 ;
+      font-weight: 700;
+    }
+    .fa-commenting {
+      
+      font-size: 23px;
+      //margin-left: 15px;
+      margin-top: 8px;
+      color: white;
+      
+    }
+    img {
+      width: 25px;
+      height:25px;
+      //margin-bottom: 0.75rem;
+     // padding-right: 4px;
+      border-radius: 50%;
+    }
+    .notifications {
+      @extend .badge-pill;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: 10px;
+      bottom: 10px;
+      font-size: 14px;
+    }
+    .fa-commenting {
+      font-size: 30px;
+      color: white;
+    }
+  }
+  
+}
+
+
+.search-nav {
+  @include search-nav;
+  padding:8px 0 0 0;
+  //width: 87%;
+}
+
+
+.search-collapse {
+  padding-top: 100px;
+  background: #e44d26; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e44d26, #f16529); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e44d26, #f16529); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  div {
+    position: relative;
+    top: -21px;
+    width: 88%;
+    margin: auto;
+  }
+}
+.comment-collapse {
+  background-color: white;
+  
+  bottom: auto;
+  border-radius: 11px;
+  left: auto;
+  padding: 20px 0px 20px 25px;
+  //padding-bottom: 100px;
+  position: fixed;
+  right: 30px;
+  top:80px;
+  z-index: 600;
+  box-shadow:-3px 2px 36px 18px rgba(0,0,0,.1), 0 0 0 0.5px rgba(0,0,0,.04);
+  
+}
+
+.notification {
+  border-bottom: 1px solid #eceeef;
+  padding: 10px;
+  padding-bottom: 14px;
+  overflow-y: scroll;
+  max-height: 300px;
+  h4 {
+    padding: 10px 0 10px 0;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+    font-size: 20px;
+    word-spacing: 3.2px;
+
+  }
+  .media {
+    margin-bottom: 15px;
+    img {
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+    .media-body {
+      h5 {
+        padding-top: 5px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 17px;
+        color: #555;
+        margin: 0px;
+      }
+      p {
+        line-height: 1.9;
+        font-size: 12px;
+      }
+    }
+  }
+  .img-notification {
+    @extend .d-flex;
+    margin-left: 40px;
+    img {
+      height: 150px;
+    }
+  }
+}
+
+.nav-tabs .nav-item {
+  background-color: #b5b5b5;
+}
+.nav-link {
+  border-color: #b5b5b5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.login-modal {
+  .modal-header, .modal-footer {
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	right top,
+    	color-stop(0, #AB158D),
+    	color-stop(1, #E90E62)
+    );
+    background-image: -o-linear-gradient(right top, #AB158D 0%, #E90E62 100%);
+    background-image: -moz-linear-gradient(right top, #AB158D 0%, #E90E62 100%);
+    background-image: -webkit-linear-gradient(right top, #AB158D 0%, #E90E62 100%);
+    background-image: -ms-linear-gradient(right top, #AB158D 0%, #E90E62 100%);
+    background-image: linear-gradient(to right top, #AB158D 0%, #E90E62 100%);
+    color: white;
+  }
+  .fa-times {
+    color: #fff;
+  }
+}

@@ -1,0 +1,40 @@
+.social-button-group {
+    .fa-social {
+        border: 1px solid #313030;
+        border-radius: 50%;
+        font-size: 23px;
+        padding: 11px;        
+        text-align: center;
+        text-decoration: none;
+        width: 45px;    
+    }
+    /* Facebook */
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    /* Twitter */
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    /* GooglePlus */
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+    }
+    .fa-instagram {
+        background-image: -webkit-gradient( linear, left bottom, left bottom, color-stop(0, #7372FF), color-stop(0, #E1306B), color-stop(1, #FFDB80), color-stop(1, #FCB045), color-stop(1, #F77737), color-stop(1, #F77737), color-stop(1, #F56140), color-stop(1, #FD1D1D));
+        background-image: -o-linear-gradient(left bottom, #7372FF 0%, #E1306B 0%, #FFDB80 100%, #FCB045 100%, #F77737 100%, #F77737 100%, #F56140 100%, #FD1D1D 100%);
+        background-image: -moz-linear-gradient(left bottom, #7372FF 0%, #E1306B 0%, #FFDB80 100%, #FCB045 100%, #F77737 100%, #F77737 100%, #F56140 100%, #FD1D1D 100%);
+        background-image: -webkit-linear-gradient(left bottom, #7372FF 0%, #E1306B 0%, #FFDB80 100%, #FCB045 100%, #F77737 100%, #F77737 100%, #F56140 100%, #FD1D1D 100%);
+        background-image: -ms-linear-gradient(left bottom, #7372FF 0%, #E1306B 0%, #FFDB80 100%, #FCB045 100%, #F77737 100%, #F77737 100%, #F56140 100%, #FD1D1D 100%);
+        background-image: linear-gradient(to left bottom, #7372FF 0%, #E1306B 0%, #FFDB80 100%, #FCB045 100%, #F77737 100%, #F77737 100%, #F56140 100%, #FD1D1D 100%);
+        color: white;
+    }
+    .fa-snapchat-ghost {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+}

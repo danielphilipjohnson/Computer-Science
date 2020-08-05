@@ -1,0 +1,88 @@
+extends layout
+
+block content
+  main
+    .title
+      h1.display-5 Markets
+      span Updated: #{time}   
+    .card-group
+      .market
+        .market-stats
+          h5.market-type Japan Nikki 225                
+          span + 0.30%          
+        .market-value
+          p 19.985.79 
+            span /             
+          span +60.79       
+      .market
+        .market-stats
+          h5.market-type London FTSE               
+          span + 0.70%         
+        .market-value
+          p 19.985.79 
+            span /             
+          span +60.79        
+      .market
+        .market-stats
+          h5.market-type Germany Dax                
+          span + 1.30%          
+        .market-value
+          p 19.985.79 
+            span /               
+          span +60.79     
+      .market
+        .market-stats
+          h5.market-type Hong Kong SENG               
+          span + 0.30%           
+        .market-value
+          p 19.985.79 
+            span /              
+          span +60.79  
+    .chart
+      .card-block
+        canvas#stockChart.charts(width='200', height='90px')
+      .chart-header
+        i.fa.fa-plus(aria-hidden='true', data-toggle='collapse', href='#addStock', aria-expanded='false', aria-controls='addStock')
+          span Add stock          
+        .date  
+          i.fa.fa-calendar(aria-hidden='true')
+          span   Time range                         
+          i.fa.fa-chevron-down(aria-hidden='true', data-toggle='collapse', href='#chartType', aria-expanded='false', aria-controls='chartType')
+        .zoom
+          i.fa.fa-search-plus(aria-hidden="true", data-toggle='collapse', href='#date')
+          span(aria-hidden='true', aria-haspopup='true', aria-expanded='false') Zoom       
+      #date.collapse             
+          select
+            option(value="1")
+              span.badge.badge-default  1m   
+            option(value="3")               
+              a.dropdown-item(href='#')
+              span.badge.badge-default  3m
+            option(value="6")                    
+              a.dropdown-item(href='#')
+              span.badge.badge-default  6m
+            option(value="year")
+              a.dropdown-item(href='year')
+              span.badge.badge-default  Year
+            option(value="All")
+              a.dropdown-item(href='#')
+              span.badge.badge-default  All 
+      #addStock.collapse
+        .card.card-block.stock-block
+          form#stockNameForm
+            .form-group.row
+              .col-10.stock-names                 
+                input#stocknamevalue.typeahead.form-control(type='text', name="stockname", placeholder='Stock Name')
+              i.col-2.col-form-label.fa.fa-thumb-tack(aria-hidden="true")  
+      #chartType.collapse
+        .card.card-block.stock-block
+          form#date-range
+            .form-group.row
+              label.col-2.col-form-label(for='example-date-input') Date                      
+              .col-8#date-range
+                input#example-date-input.form-control(type='date', value='2017-02-12')
+              i.col-2.fa.fa-check(aria-hidden="true")   
+    .stock-cards
+      .stock-header
+        h3.card-title Listed Stock      
+      .answer-blocks.card-block

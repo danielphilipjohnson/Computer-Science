@@ -1,0 +1,17 @@
+doctype html
+html
+  title Knowledgebase
+  include includes/head.pug
+  body
+    include includes/nav.pug
+    
+    block content
+    
+    include includes/footer.pug
+    include includes/addpinmodal.pug
+    block scripts
+      script(src='/jquery/dist/jquery.min.js')
+      script(src='/tether/dist/js/tether.min.js')
+      script(src='/bootstrap-4.6Alpha/dist/js/bootstrap.min.js')
+      script(src='/js/main.js')
+    include includes/scripts.pug

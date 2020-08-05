@@ -1,0 +1,63 @@
+extends layout
+block content
+  main
+    .pin-container.flex-wrap
+      .single-pin
+        .pin-header
+          .icons
+            i.fa.fa-pencil(aria-hidden='true')                  
+            i.fa.fa-download(aria-hidden='true')                    
+            i.fa.fa-ellipsis-h(aria-hidden='true')                
+          .btn-save
+            a.btn.btn-danger(href='#')
+              i.fa.fa-thumb-tack(aria-hidden='true')
+              | Save             
+        .pin-image-container
+          img.pin-image.card-img.img-fluid(src=pin.imageurl, alt='Card image')           
+        .pin-author
+          .author-info
+            img.img-fluid(src='https://placeimg.com/35/35/any', alt='image')                    
+            .author-stats
+              h5.text-muted Sold by                         
+              p=pin.author
+            if user  
+                  - var found = false
+                  each userlike in pin.likes.users
+                    if user.local.username
+                      if userlike.username == user.local.username
+                        button.btn.btn-default#likepin(data-pinid=pin._id) Unlike
+                        - found = true
+                        - break
+                    if user.twitter.username
+                      if userlike.username == user.twitter.username
+                        button.btn.btn-default#likepin(data-pinid=pin._id) Unlike
+                        - found = true
+                        - break
+                  if !found
+                    button.btn.btn-default#likepin(data-pinid=pin._id) Like
+                
+            else
+              button.btn.btn-default.mustlogin(data-pinid=pin._id) Login            
+        .share-content-container
+          .share-contents
+            .share-contents-text
+              h4.card-title.m-0 Tried this Pin?                       
+              p.card-text Be the first to share how it went                     
+            .share-contents-btn
+              a.btn(href='#') Add photo or note            
+        .pin-comment
+          .user-comment
+            img.img-fluid(src='https://placeimg.com/35/35/any', alt='image')                    
+            .user-stats
+              h4
+                span Garry Ancestry
+                |  saved to 
+                span Landscape photography                         
+              p
+                | The woods are lovely, dark and deep, but I have promises to keep and miles to go before I sleep.~Robert
+                | Frost            
+        .comment-box
+          h3(data-toggle='collapse', href='#collapseExample', aria-expanded='false', aria-controls='collapseExample') Comments
+          #collapseExample.collapse
+            input.comment-input(type='text', value='Comment')                     
+            input.btn.btn-danger(type='button', name='', id='', value='Add')

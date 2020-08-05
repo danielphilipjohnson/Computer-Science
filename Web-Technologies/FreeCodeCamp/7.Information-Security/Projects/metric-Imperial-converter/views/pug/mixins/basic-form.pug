@@ -1,0 +1,13 @@
+mixin createForm(id, title, action, method="POST",frmField1, msg)
+    .ui.inverted.left.aligned.segment
+        h2=title
+        form.ui.huge.form(action=action method=method)
+                .field
+                        input(type='text' name=frmField1 placeholder=frmField1 id=frmField1)
+                .ui.error.message
+                        .header Warning
+                                p Value given must be a number
+                p=msg
+                
+                button.ui.primary.submit.huge.button(id=id) Submit
+        

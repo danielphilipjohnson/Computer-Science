@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>42</y>
+      <w>420</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Image Search Abstraction Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>770</x>
+      <y>0</y>
+      <w>1064</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>User Stories
+
+User Story: I can get the image URLs, alt text and page urls for a set of images relating to a given search string.
+User Story: I can paginate through the responses by adding a ?offset=2 parameter to the URL.
+User Story: I can get a list of the most recently submitted search strings.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>112</x>
+      <y>364</y>
+      <w>532</w>
+      <h>518</h>
+    </coordinates>
+    <panel_attributes>Image search in route!
+
+Bing.images("Ninja Turtles", {
+  
+  count: 10,   // Number of results (max 50) 
+  
+  offset: 3    // Skip first 3 result 
+  // multiply this by the offset param
+
+  
+  }, function(error, res, body){
+   
+   bingImageData = []
+   
+   for looop over 10
+   push to bingImageData {
+   	url: body.value[i].webSearchUrl,
+   	snippet: .name,
+   	thumbnail: .thumbnailUrl,
+   	context: .hostPageDisplayUrl
+  });
+
+
+  res.json (bingImageData)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>322</x>
+      <y>1246</y>
+      <w>560</w>
+      <h>588</h>
+    </coordinates>
+    <panel_attributes>cors
+
+var cors = require('cors')
+
+Enable CORS for a Single Route
+
+var express = require('express')
+var cors = require('cors')
+var app = express()
+ 
+app.get('/products/:id', cors(), function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for a Single Route'})
+})
+ 
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
+
+var corsOptions = {
+  origin: 'http://example.com',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
+}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>126</y>
+      <w>420</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>3rd Party</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>112</x>
+      <y>182</y>
+      <w>560</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Setup image search
+
+var util = require('util'),
+  Bing = require('node-bing-api')({ accKey: 'someKey' }),
+  searchBing = util.promisify(Bing.web.bind(Bing));</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>770</x>
+      <y>210</y>
+      <w>1064</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>Simple Routes
+-
+api/imagesearch/:image*
+* means all 
+image = req.params
+// get this via the asterik
+offset = req.query 
+
+res.json({image, offset})
+-
+
+api/recentsearches
+
+find mongoose doc! past 24 hours
+
+res.json(data)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>770</x>
+      <y>616</y>
+      <w>1064</w>
+      <h>196</h>
+    </coordinates>
+    <panel_attributes>Use Cases
+1.1 Use Bing API for image search
+2.1 use bing offset
+   route    api/imagesearch/:image 
+3.1 Save submitted searchs via mongoose
+    route api/recentsearches</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>798</x>
+      <y>952</y>
+      <w>196</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>model fields
+- searchValue string required
+searchDate: Date
+{timestamps : true}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>84</x>
+      <y>952</y>
+      <w>616</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>dealing with offset need to make sure it exists
+
+find efficent algorithm</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1036</x>
+      <y>952</y>
+      <w>196</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>mongo 
+-model folder
+- a schema
+- save searches </panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
