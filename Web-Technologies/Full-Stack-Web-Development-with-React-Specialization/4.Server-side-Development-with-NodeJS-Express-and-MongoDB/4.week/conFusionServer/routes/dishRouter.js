@@ -2,8 +2,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('./cors');
 
-
-const mongoose = require('mongoose');
 const authenticate = require('../authenticate');
 const Dishes = require('../models/dishes');
 
@@ -91,18 +89,18 @@ dishRouter.route('/:dishId')
 dishRouter.route('/:dishId/comments')
     .options(cors.corsWithOptions, (req, res) => { res.sendStatus(200); })
     .get(cors.cors, (req, res, next) => {
-            Dishes.findById(req.params.dishId).then((dish) => {
-                if (dish != null) {
-                    res.statusCode = 200;
-                    res.setHeader("Content-Type", "application/json");
-                    res.json(dish.comments);
-                } else {
-                    err = new Error('Dish ' + req.params.dishId + ' not found');
-                    err.status = 404;
-                    return next(err);
-                }
-            }, (err) => next(err)).catch((err) => next(err));
-        })
+        Dishes.findById(req.params.dishId).then((dish) => {
+            if (dish != null) {
+                res.statusCode = 200;
+                res.setHeader("Content-Type", "application/json");
+                res.json(dish.comments);
+            } else {
+                err = new Error('Dish ' + req.params.dishId + ' not found');
+                err.status = 404;
+                return next(err);
+            }
+        }, (err) => next(err)).catch((err) => next(err));
+    })
 
     .post(cors.corsWithOptions,
         authenticate.verifyUser,
@@ -171,14 +169,12 @@ dishRouter.route('/:dishId/comments/:commentId')
             }
         }, (err) => next(err)).catch((err) => next(err));
     })
-
     .post(cors.corsWithOptions,
         authenticate.verifyUser,
         authenticate.verifyAdmin, (req, res, next) => {
             res.statusCode = 403;
             res.end('POST operation is not supported on /dishes/' + req.params.dishId + '/comments/' + req.params.commentId);
-    })
-
+        })
     .put(cors.corsWithOptions,
         authenticate.verifyUser,
         authenticate.verifyAdmin, (req, res, next) => {
@@ -211,8 +207,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                     return next(err);
                 }
             }, (err) => next(err)).catch((err) => next(err));
-    })
-
+        })
     .delete(cors.corsWithOptions,
         authenticate.verifyUser,
         authenticate.verifyAdmin, (req, res, next) => {
@@ -239,6 +234,6 @@ dishRouter.route('/:dishId/comments/:commentId')
                     return next(err);
                 }
             }, (err) => next(err)).catch((err) => next(err));
-    });
+        });
 
 module.exports = dishRouter;
