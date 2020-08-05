@@ -1,0 +1,14 @@
+mixin subhead(subtext, heading, displayPhoto)
+    
+    section.heading
+            p.text-muted.htmlcode.body(data-aos="fade-left" data-aos-delay="300" data-aos-duration="3000")
+                | &lt; body &gt;
+            .inner-text(data-aos="fade-right" data-aos-delay="500" data-aos-duration="3000")
+                h5.addtional-text= subtext 
+        
+                p.htmlcode.htag
+                    span &lt; h1 &gt;
+                    span.title= heading
+                    span.htmlcode.htag
+                        | &lt; &#x2F; h1 &gt;
+                    span.bottom-border
