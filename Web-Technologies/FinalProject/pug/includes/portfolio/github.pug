@@ -1,0 +1,19 @@
+section.github
+  .content-section-heading
+    h3.text-blue-header.mb-0 Github
+    h2.mb-2 Recent Repositories
+    .sectionline
+    p.lead.statement.mb-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem ab expedita architecto mollitia autem iste molestias corporis voluptas, alias minus ad tempora optio pariatur officiis, aliquid nobis nemo officia!
+  .container  
+    .row.wow.slideInRight(data-wow-delay=".5s")
+      - var repos = [1,2,3,4,5]
+      each repo in repos
+        .card.github.col-md-6.mb-3.mx-auto.rounded-1.border-gray-dark.border
+          .card-body
+            h5.card-title 
+              a.text-bold(href="https://github.com/UndreamtMayhem") Project
+            p.card-text
+              | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+            p.mb-0.f6.text-muted
+              span.repo-language-color
+              | HTML

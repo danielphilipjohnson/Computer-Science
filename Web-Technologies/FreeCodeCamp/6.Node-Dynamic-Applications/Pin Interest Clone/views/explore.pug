@@ -1,0 +1,33 @@
+extends layout
+
+
+
+block content
+  include ./mixins/categorymixin.pug
+
+
+  .d-flex.flex-column.title
+    h2 Explore 
+      span.text-muted Trending    
+    p Welcome to the best pins of today
+  main.d-flex.flex-wrap
+    aside
+      button.navbar-toggler.navbar-toggler-left(type='button', data-toggle='collapse', data-target='#aside', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+          i.fa.fa-bars(aria-hidden='true')        
+      #aside.collapse
+        +CategoryUL(leftSide)
+        +CategoryUL(rightSide)
+    .exp
+      .categories
+        each board in boards
+          if board.secret == false
+            .card
+              .card-block.main-content
+                a(href="/board/" + board._id)
+                  img.img-fluid.pin-img(src=board.pins[0], alt=board.name)               
+              .card-block
+                img.img-fluid.pin-profile-bubble(src='https://placeimg.com/50/50/any', alt='profile-pic')                   
+                .pin-text
+                  h5 #{board.name} #{board.category} category                       
+                  p.text-muted Likes #{board.likes}

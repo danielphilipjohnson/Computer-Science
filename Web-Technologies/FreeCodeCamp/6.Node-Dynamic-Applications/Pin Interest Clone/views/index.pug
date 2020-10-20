@@ -1,0 +1,21 @@
+extends layout
+block content
+  main
+    .card-grid
+      != messages('message', locals)
+      if errors
+        each error, i in errors
+            div(class="alert alert-danger") #{error.msg}
+      if danger 
+          .alert.alert-danger= danger + "  to access this page"
+      if success 
+          .alert.alert-danger= success
+      if usernameexists
+          .alert.alert-danger= usernameexists
+      .categories.tab-pane.active.d-flex.flex-wrap.container
+        if pins
+          each pin in pins
+            .card
+              .card-block.main-content
+                a(href="/pin/"+pin._id)
+                  img.img-fluid.pin-saved-img(src=pin.imageurl, alt=pin.category)

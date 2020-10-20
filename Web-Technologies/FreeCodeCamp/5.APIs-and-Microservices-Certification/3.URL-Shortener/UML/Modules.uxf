@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>15</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>45</x>
+      <y>0</y>
+      <w>1410</w>
+      <h>570</h>
+    </coordinates>
+    <panel_attributes>APP</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>765</x>
+      <y>45</y>
+      <w>525</w>
+      <h>480</h>
+    </coordinates>
+    <panel_attributes>Mongo</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>615</y>
+      <w>315</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>Routes::WebAddress
+--
+#Operations
+validateOperations()
+addURL()
+
+--
+Responsibilities
+-- must return json</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>405</x>
+      <y>615</y>
+      <w>315</w>
+      <h>285</h>
+    </coordinates>
+    <panel_attributes>Routes::WebAddressSocket
+--
+#Operations
+validateOperations() 
+### all that changes
+addURL()
+
+--
+Responsibilities
+-- must return json</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>795</x>
+      <y>615</y>
+      <w>390</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>Routes::ShortnedAddress
+--
+#Operations
+validateShortnedAddressOperations()
+findURL('url')
+
+
+
+--
+Responsibilities
+-- must redirect to long URL</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>45</x>
+      <y>45</y>
+      <w>525</w>
+      <h>330</h>
+    </coordinates>
+    <panel_attributes>Routes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>45</x>
+      <y>75</y>
+      <w>525</w>
+      <h>300</h>
+    </coordinates>
+    <panel_attributes>#Operations
+
+home()
+
+WebAddress('address')
+
+WebAddressSocket('address', 'socket')
+
+ShortnedAddress('shortnedAddress')
+
+bg=blue
+layer=2
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>780</x>
+      <y>105</y>
+      <w>315</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>Models</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>345</y>
+      <w>315</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>--
+#Operations
+ADD_URL('url')
+RETRIVE_URL('url')</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>780</x>
+      <y>315</y>
+      <w>315</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>CRUD</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>135</y>
+      <w>315</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>--
+-id: int | required
+-long_url: string  | required
+-short_code: int  required
+-date_created: date | required
+-
+-</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

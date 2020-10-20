@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+
+block content
+    
+    
+        include ../mixins/basic-form.pug
+        
+
+        .ui.container
+                +createForm('ftoc', 'Fahrenheit to Celsius (°F to °C)', 'ftoc', 'POST', 'fahrenheit', '0°C= 0°F')
+                +createForm('ctof', 'Celsius to Fahrenheit (°C to °F)', 'ctof', 'POST', 'celsius', '0°F= 0°C')
+                

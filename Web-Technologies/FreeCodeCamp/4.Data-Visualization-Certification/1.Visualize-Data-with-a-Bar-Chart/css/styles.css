@@ -1,0 +1,118 @@
+/* reset */
+
+body,
+p {
+    margin: 0;
+}
+
+body {
+    background: #56CCF2;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav h1 {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    background-color: orange;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    margin: 0px;
+    padding: 10px 23px 22px 23px;
+}
+
+.bar-graph-title {
+    color: beige;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.period {
+    display: block;
+    font-size: 0.6em;
+    font-style: italic;
+    padding-top: 10px;
+}
+
+.card {
+    background-color: white;
+    border-bottom: 8px solid orange;
+    border-top: 8px solid orange;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    height: 640px;
+    margin: 10px auto;
+    padding: 0px;
+    width: 90%;
+}
+
+.chart {
+    background-color: white;
+}
+
+.addition-info {
+    color: black;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding: 20px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.chart .mouseover {
+    fill: #56CCF2;
+}
+
+.chart rect,
+.chart .mouseoff {
+    fill: #2F80ED;
+}
+
+.chart text {
+    fill: black;
+    font: 10px sans-serif;
+    text-anchor: end;
+}
+
+.axis text {
+    font: 12px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+#tooltip {
+    background-color: #56CCF2;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font: 0.8em sans-serif;
+    height: auto;
+    padding: 3px 5px 3px 5px;
+    pointer-events: none;
+    position: absolute;
+    text-align: left;
+    width: auto;
+}
+
+.amount {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.year {
+    font-size: 0.8em;
+    font-weight: normal;
+}

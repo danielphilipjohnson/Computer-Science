@@ -1,0 +1,42 @@
+.languages {
+    background-color: #303f9f;
+    //background-color: #e1e2e2;
+    color: #fff;
+}
+
+.chart {
+    display: inline-block;
+    height: 140px;
+    position: relative;
+    text-align: center;
+    width: 140px;
+}
+
+.easyPieChart {
+    width: 110px;
+    height: 140px;
+    line-height: 120px
+}
+
+.chart canvas {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.percent {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 100px;
+    z-index: 2;
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+
+.percent:after {
+    content: "%";
+    font-size: 50%;
+    margin-left: 0.1em;
+}

@@ -1,0 +1,24 @@
+section.profile
+    .container
+        .row
+            .col-sm-12.col-md-8.wow.slideInLeft(data-wow-delay=".5s")
+                header
+                    h1.section-header.display-4 Hello I'm John Doe
+                p.statement
+                    span 
+                    i(class="fa fa-quote-left")
+                    | I am a Front-end Developer with lots of experience I have completed udacity and free code camp. 
+                    | I can utilise both Python frameworks and Javascript Frameworks.
+                    | I can develop anything you design or come up with something for you! 
+                    | Check out my work
+                    i(class="fa fa-quote-right")
+                    - var socialIcons = ['facebook', 'google','youtube', 'snapchat-ghost']
+                ul.nav.sociallinks
+                    each icon in socialIcons
+                        li.nav-item.nav-link.px-2.py-0
+                            - var socialClass = "fa fa-" + icon
+                            a(class=socialClass,href='#')
+
+            .col-sm-12.col-md-4.wow.slideInRight(data-wow-delay=".5s")
+                .profile-avatar.mx-auto
+                    img(alt="woman avatar", src="../img/man2.jpg")

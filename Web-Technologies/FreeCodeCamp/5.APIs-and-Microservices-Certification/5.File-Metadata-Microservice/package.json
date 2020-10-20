@@ -1,0 +1,16 @@
+{
+    "name": "unixtime",
+    "version": "1.0.0",
+    "description": "unixtime",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app"
+    },
+    "author": "Daniel Johnson",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.15.3",
+        "multer": "*"
+
+    }
+}

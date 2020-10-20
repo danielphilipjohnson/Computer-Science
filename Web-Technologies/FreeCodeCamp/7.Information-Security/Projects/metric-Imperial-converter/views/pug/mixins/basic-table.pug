@@ -1,0 +1,27 @@
+mixin imperialList(...items)
+    tr
+        each item in items
+            td(data-label=item)=item
+
+table.ui.celled.table
+  thead
+    tr
+      th Imperial
+      th Metric
+  tbody
+    +imperialList('1 inch', 'cm')
+    +imperialList('1 foot', 'cm')
+    +imperialList('1 yard', 'm')
+    +imperialList('1 mile', 'km')
+    +imperialList('1 ounce', 'g')
+    +imperialList('1 pound', 'kg')
+    +imperialList('1 stone', 'kg')
+    +imperialList('1 pint', 'litre')
+    +imperialList('1 gallon', 'litres')
+
+   
+
+
+
+
+

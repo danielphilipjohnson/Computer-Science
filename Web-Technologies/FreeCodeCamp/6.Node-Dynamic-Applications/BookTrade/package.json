@@ -1,0 +1,24 @@
+{
+  "name": "knowledgebase",
+  "version": "1.0.0",
+  "description": "simple knowledgebase",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Daniel Johnson",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "express": "^4.15.3",
+    "express-messages": "^1.0.1",
+    "express-session": "^1.15.4",
+    "express-validator": "^3.2.1",
+    "mongoose": "^4.11.3",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.0-rc.2"
+  }
+}

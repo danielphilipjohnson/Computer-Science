@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>14</x>
+      <y>336</y>
+      <w>1316</w>
+      <h>756</h>
+    </coordinates>
+    <panel_attributes>Routes Logic
+-
+
+
+
+bg=blue
+layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>784</x>
+      <y>574</y>
+      <w>350</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>Output {}
+original_url":"http://foo.com:80",
+"short_url":"https://appname/8170" }
+bg=orange
+layer=3
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>28</x>
+      <y>14</y>
+      <w>462</w>
+      <h>308</h>
+    </coordinates>
+    <panel_attributes>Routes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>28</x>
+      <y>42</y>
+      <w>462</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>home ('/') 
+
+WebAddress ('/new/:webaddress')
+
+WebAddressSocket ('/new/:webaddress:socket')
+ShortnedAddress('/:shortenedAddress')
+
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>574</x>
+      <y>0</y>
+      <w>504</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Routes
+-
+Expected routes
+
+- ('/')
+- https://appname/new/https://www.google.com
+- https://appname/new/http://foo.com:80
+- https://appname/2871
+bg=blue
+layer=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>378</y>
+      <w>308</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes> WebAddress
+
+-
+ 
+ Logic 
+-
+  1.1: validate URL parameter
+  2.1: Return null if invalid
+  Add URL to MongoDB
+  shorten address = use ID key
+
+  return JSON Response
+-
+
+
+bg=green
+layer=3
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>28</x>
+      <y>378</y>
+      <w>238</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Home - Generic look
+
+Display Pug Template
+# header
+# Use CASES
+# Creation Usage
+# Output
+# Usage
+bg=green
+layer=3</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>686</y>
+      <w>308</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>WebAddressSocket
+-
+  Logic 
+-
+
+  1.1: validate URL parameter
+  validate socket 
+  2.1: Return null if invalid
+ ##### a lot of code reuse
+ 
+ Add URL to MongoDB
+ 
+ shorten address = use ID key
+
+ return JSON Response
+-
+
+
+bg=green
+layer=3
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>490</y>
+      <w>98</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+
+bg=black</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>728</y>
+      <w>98</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;&gt;
+
+bg=black</panel_attributes>
+    <additional_attributes>10.0;180.0;50.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>686</y>
+      <w>336</w>
+      <h>364</h>
+    </coordinates>
+    <panel_attributes>ShortnedAddress
+-
+  Logic 
+-
+
+  1.1: validate ShortnedAddress 
+ 
+  find document by shortnedcode 
+  
+  for MongoDB get long URL
+  
+  3.1: make web request redirect
+  
+   
+-
+
+
+bg=green
+layer=3
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

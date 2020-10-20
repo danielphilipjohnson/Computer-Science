@@ -1,0 +1,42 @@
+extends layout
+block content
+  .user-profile
+    .user-stats
+      .profile-icons
+        i.fa.fa-pencil(aria-hidden='true')            
+        i.fa.fa-arrows-alt(aria-hidden='true')           
+        i.fa.fa-ellipsis-h(aria-hidden='true')            
+        h2=board.name          
+        span.text-muted #{"Pins " + board.count}
+        br
+        span.text-muted #{"likes " + board.likes}
+      .social-stats-container
+        .profile-pic.d-flex
+          .add-user
+            i.fa.fa-plus(aria-hidden='true')                
+          img.img-fluid(src='https://placeimg.com/80/80/any', alt='')
+  main
+    .categories.tab-pane.active.d-flex.flex-wrap.container     
+      each pin in board.pins  
+        .card
+          .card-block.main-content
+            img.img-fluid.pin-saved-img(src=pin, alt='')
+      // once added more remove
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/550/any', alt='')         
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/650/any', alt='')
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/750/any', alt='')        
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/550/any', alt='')
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/650/any', alt='')        
+      .card
+        .card-block.main-content
+          img.img-fluid.pin-saved-img(src='http://placeimg.com/477/750/any', alt='')

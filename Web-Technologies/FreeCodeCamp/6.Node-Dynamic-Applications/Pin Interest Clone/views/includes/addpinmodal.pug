@@ -1,0 +1,27 @@
+.modal.fade#addPinModal(tabindex="-1" role="dialog" aria-labelledby="addPinModal" aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+            .modal-header
+                h5(class="modal-title" id="addpin") Add Pin
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times; 
+            form#addPinForm(action="http://localhost:8080/users/pins/addpin" enctype="multipart/form-data", method="POST")
+                .modal-body
+                    .form-group.row
+                        .col-10
+                            <label for="pin">Choose file to upload</label>
+                            input(type="file" name="pin")
+                    .form-group.row
+                        label(for="pindescription" class="col-2 col-form-label pindescription") Description
+                        .col-10
+                           textarea.form-control.pindescription(type="text" value="" placeholder="" name="pindescription" id="pindescription")
+                    .form-group.row
+                        - var cats = ["Trending","Tech","Education","Design","DIY","Food","Interiors","Travel","Humour","Animals","Art","Cars","Celebrations & Events","Celebs","Design","Education","Entertainment","Fitness","Garden","Geek","History","Education","Entertainment","Fitness","Garden","Geek","History","Illustrations","Kids","Outdoors","Photos","Quotes","Science","Sport","Tattoos","Tech","Weddings"]
+                        .col-10
+                            select(class="pin-category-select" name="pin-category-select")
+                                each cat, index in  cats
+                                    option(value=cat)=cat
+
+                .modal-footer
+                    button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                    button(type="button" class="btn btn-primary" id="submit-pin") Save Pin

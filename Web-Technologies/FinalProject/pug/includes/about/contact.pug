@@ -1,0 +1,41 @@
+section#contact.contact
+  .container
+    .row
+      .col
+        .contact-header
+          h3.text-warning.mb-0 Contact Me
+          h2.education-header.mb-3 Have any Enquires
+          .sectionline
+    .row
+      .col-md-6.mx-md-auto
+        form#contact-form
+          .form-group.wow.fadeInUp.animated(style='visibility: visible; animation-name: fadeInUp;')
+            label.sr-only(for='name') Name
+            input#name.form-control(name='name' type='text' placeholder='Name')
+          .form-group.wow.fadeInUp.animated(style='visibility: visible; animation-name: fadeInUp; animation-delay: 0.1s;' data-wow-delay='.1s')
+            label.sr-only(for='email') Email
+            input#email.form-control(name='email' type='email' placeholder='E-mail')
+          .form-group.wow.fadeInUp.animated(style='visibility: visible; animation-name: fadeInUp; animation-delay: 0.2s;' data-wow-delay='.2s')
+            textarea#message.form-control(name='message' placeholder='Message' rows='7')
+          button.btn.btn-lg.btn-block.wow.fadeInUp.animated(style='visibility: visible; animation-name: fadeInUp; animation-delay: 0.3s;' type='submit' data-wow-delay='.3s') Send Message
+
+section.calltoaction.contactme
+  .container
+    .row
+      .col.contact-header
+        h3.text-warning.mb-4 Contact Details
+    .row
+      .col
+        p.contact-info
+          i(class="fa fa-envelope-square contact-icon")
+          | dfdsf@gmail.com
+        p.contact-info
+          i(class="fa fa-skype contact-icon")
+          | skypename
+      .col
+        p.contact-info 
+          i(class="fa fa-mobile contact-icon")
+          | +4470978687
+        p.contact-info 
+          i(class="fa fa-desktop contact-icon")
+          | www.ffddfkjfdh.com

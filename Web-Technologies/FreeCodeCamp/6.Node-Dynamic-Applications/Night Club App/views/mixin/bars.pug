@@ -1,0 +1,58 @@
+mixin bar(attending)
+    each bar, index in bars
+        if bar !== null
+            if bar.attending === attending
+                .card
+                    .card-header
+                        h5.card-title= bar.barName 
+                    if index % 4 === 0
+                        .card-block.main-content
+                            img.img-fluid(src='/src/img/1.jpg', alt='')
+                    else if index % 4 === 1
+                        .card-block.main-content
+                            img.img-fluid(src='/src/img/2.jpg', alt='')
+                    else if index % 4 === 2
+                        .card-block.main-content
+                            img.img-fluid(src='/src/img/3.jpg', alt='')
+                    else if index % 4 === 3
+                        .card-block.main-content
+                            img.img-fluid(src='/src/img/4.jpg', alt='')
+                    .card-block.attend-block-stats
+                        p.attend.text-muted
+
+                        address.attend
+                            strong.venue #{bar.barName} , 
+                            br
+                            span.address #{bar.address},
+                            br
+                            span.countryCode #{bar.state}, 
+                            br
+                            abbr(title="Phone")  P:
+                            span.phone #{bar.phoneNumber},
+                            i.fa.fa-trash(aria-hidden="true")
+                                input(type="hidden" id=bar.barName)
+                    .card-block.polls-social-bar
+                        .left
+                            - var collapseId = "attend" + index;
+                            - var collapseHref = "#attend" + index;
+                            i.fa.fa-plus(data-toggle="collapse" href=collapseHref aria-expanded="false" aria-controls=collapseId)
+                        .right
+                            .dropdown
+                                i#dropdownsharebutton.fa.fa-share-alt(aria-hidden='true', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')            
+                                .dropdown-menu.dropdown-menu-right(aria-labelledby='dropdownsharebutton')
+                                    .share-content
+                                        i.fa.fa-twitter
+                                        a.twitter-share-button(href="https://twitter.com/intent/tweet?text=who%20wants%20to%20attend%20'" + bar.barName + '"')
+                                            span Share on Twitter
+                    .collapse(id=collapseId)
+                        .card.card-block
+                            if bar.attending
+                                p I am attending this event 
+                                p I would like to unattend
+                                i.fa.fa-times(aria-hidden="true" data-id=bar.barName )
+                                    input(type="hidden" id=bar.barName)
+                            else 
+                                p I am not attending this event 
+                                p Would you like to attend this event
+                                i.fa.fa-check(aria-hidden='true')
+                                    input(type="hidden" id=bar.barName)

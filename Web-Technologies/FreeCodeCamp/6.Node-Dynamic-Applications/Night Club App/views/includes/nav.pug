@@ -1,0 +1,65 @@
+if errors
+  each error, i in errors
+    div(class="alert alert-danger") #{error.msg}
+h1 #{errors}
+nav.app-nav
+  .nav-logo(href='#')
+    h4 Nightlife     
+    p Things to do  
+  ul.nav-right
+    a.fa.fa-twitter.fa-social(href='https://twitter.com/undreamtmayhem')      
+    a.fa.fa-facebook.fa-social(href='https://www.facebook.com/UndreamtMayhem')       
+    a.fa.fa-google.fa-social(href='https://plus.google.com/117941782116734110521')        
+    a.fa.fa-instagram.fa-social(href='https://www.instagram.com/undreamtmayhem/')
+    a.fa.fa-snapchat-ghost.fa-social(href='https://www.snapchat.com/add/undreamt-mayhem')
+    
+    i.fa.fa-user(aria-hidden='true', data-toggle='modal', data-target='#userlogin')
+    #userlogin.modal.fade.login-modal(tabindex='-1', role='dialog', aria-labelledby='userlogin', aria-hidden='true')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            if user  
+              h5#exampleModalLabel.modal-title Log out
+            else
+              h5#exampleModalLabel.modal-title Login and Register          
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              i.fa.fa-times(aria-hidden='true')            
+          .modal-body
+            if !user  
+              form#loginForm
+                .form-group
+                  label(for='formGroupExampleInput') Username                   
+                  input#Username.form-control(name='username' type='text', placeholder='Username')               
+                .form-group
+                  label(for='password') Password                
+                  input#Password.form-control(name='password' type='password', placeholder='Password')             
+            else
+              h3 Would you like to logout
+          .modal-footer
+            button.btn.btn-primary(type='button', data-dismiss='modal') Close 
+            if user                 
+              button#login.btn.btn-primary(type='button', href="users/logout") logout
+            else
+              button#login.btn.btn-primary(type='button') Login
+              button#register.btn.btn-primary(type='button') Register             
+
+nav.navbar.secondary-nav.navbar-toggleable-md
+  button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+    i.fa.fa-bars(aria-hidden='true')    
+  #navbarNav.collapse.navbar-collapse
+    ul.secondary-nav-links
+      li.nav-item
+        a.nav-link(href='#') Restaurants 
+          span.sr-only (current)        
+      li.nav-item
+        a.nav-link(href='#') Bars      
+      li.nav-item
+        a.nav-link(href='#') Music &amp; Nightlife        
+      li.nav-item
+        a.nav-link(href='#') Movies       
+      li.nav-item
+        a.nav-link(href='#') Hotels       
+      li.nav-item
+        a.nav-link(href='#') Villas
+  if user 
+    input(type="hidden" class="UserIsLogged")

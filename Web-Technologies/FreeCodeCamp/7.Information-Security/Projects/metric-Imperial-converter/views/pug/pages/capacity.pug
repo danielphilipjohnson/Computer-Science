@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+
+block content
+    
+    
+        include ../mixins/basic-card.pug
+        +basicCard('Capacity', 
+            'fluid-ounce', 'mililitres', 
+            'pints', 'centilitre', 'gallons',
+            'litre')
+        h3 to be implemented

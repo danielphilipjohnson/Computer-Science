@@ -1,0 +1,47 @@
+{
+    "name": "fcc-metric-imperial-converter",
+    "version": "0.0.1",
+    "description": "Metric imperial converter",
+    "main": "myApp.js",
+    "scripts": {
+        "start": "SET NODE_ENV=dev && node myApp.js",
+        "test": "mocha --ui tdd --timeout 10000"
+    },
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "body-parser": "^1.19.0",
+        "express": "^4.14.0",
+        "fomantic-ui-css": "^2.7.5",
+        "gulp": "^4.0.2",
+        "helmet": "^3.18.0",
+        "pug": "^2.0.3",
+        "require-dot-file": "^0.4.0"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-http": "^2.0.1",
+        "gulp-help": "^1.6.1",
+        "express-validator": "^4",
+        "mocha": "^2.4.5",
+        "zombie": "^4.2.1"
+    },
+    "engines": {
+        "node": "4.4.5"
+    },
+    "keywords": [
+        "node",
+        "hyperdev",
+        "express",
+        "metric-imperial-converter"
+    ],
+    "license": "MIT"
+}
+
+// npm install --save-dev nyc
+// npm install sinon
+/*
+
+"scripts": {
+    "test": "nyc mocha --timeout=3000"
+  }
+*/

@@ -1,0 +1,266 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.app-nav {
+  @extend .navbar;
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:white;  
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px;  
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  
+}
+
+.nav-logo {
+  @extend .navbar-brand;
+  color: white;
+  font-size: 28px;
+  margin-left: 20px;
+  padding: 0px;
+}
+.navbar-nav {
+   .nav-item-search{
+    width: 100%;
+  }
+ }
+  
+ .nav-mobile {
+
+   font-size: 22px;
+   .fa {
+     color: white;
+     padding-right: 10px;
+   }
+ }
+  
+
+  
+
+.fa-thumb-tack, .fa-check {
+  font-size: 25px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+.search-nav {
+  margin: auto;
+  max-width: 60%;
+  min-width: 250px;
+  
+}
+.search-input {
+  border:none;
+}
+.search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+.search-input::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+.search-input:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+.search-input:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+.search-icon{
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+.search-input[type="text"] {
+  background-color: white;
+  color: black;
+}
+
+
+.search-collapse {
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 100px;
+  div {
+    margin: auto;
+    position: relative;
+    top: -21px;
+    width: 88%;
+  }
+}
+
+main {
+  padding: 65px 30px 50px 30px;
+  .title {
+    @extend .d-flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 0 15px 0;
+     h1 {
+       padding-bottom: 10px;
+     }
+     span {
+       @extend .text-muted;
+     }
+  }
+  .card-group{
+    padding-bottom: 10px;
+
+    .market{
+      @extend .card;
+      background-color: #f7f7f9;      
+      border: none;
+
+      .market-stats {
+        @extend .card-header;
+        @extend .d-flex;
+        background-color: transparent;        
+        border:none;
+        justify-content: space-evenly;
+        padding-bottom: 0px;
+
+      }
+      .market-value {
+        @extend .card-block;
+        @extend .d-flex;
+        justify-content: space-evenly;
+        padding: 3px 10px;
+
+        p {
+          span {
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+
+.market-type {
+  @extend .text-success;
+}
+
+
+.chart {
+  @extend .card;
+  text-align: center;
+  .card-block {
+    padding: 10px;
+  }
+  .chart-header {
+    @extend .card-header;
+    @extend .d-flex;
+    @extend .justify-content-between;
+    .fa-plus {
+      
+      span{
+        padding-left: 10px;
+      }
+    }
+    .date {
+      padding-left: 10px;
+      span {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+.stock-block {
+  border: none;
+}
+.stock-cards {
+  @extend .card;
+  margin-top: 10px;
+  .stock-header {
+    @extend .card-header;
+    background-color: transparent;    
+    border: none;
+    padding-bottom: 0px;
+  }
+}
+
+
+.answer-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding-top: 0px;
+
+
+}
+.answer-block {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 170px;
+  justify-content: space-evenly;
+  margin: 10px;
+  min-width: 212px;
+  padding: 10px;
+  width: 45%;
+  
+  p {
+    font-size: 25px;
+    
+    margin: 0px;
+    word-break: break-all;
+  }
+  .percent {
+    color: white;
+    font-size: 35px;
+    
+    
+  }
+  .fa-times {
+    font-size: 23px;
+  }
+
+}
+
+.red-block {
+  background-color: #f44336;
+}
+.pink-block {
+  background-color: #e91e63
+}
+.purple-block {
+  background-color:#9c27b0;
+}
+.deep-purple-block  {
+  background-color:#673ab7;
+}
+
+.indigo-block  {
+  background-color: #3f51b5;
+}
+.blue-block  {
+  background-color: #2196F3;
+}
+
+.cyan-block {
+  background-color: #2196F3;
+}
+.teal-block {
+  background-color: #009688;
+}
+
+footer {
+  background-color: #698bac;
+  color: white;
+  padding: 20px;
+
+}

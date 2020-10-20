@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>13</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>117</x>
+      <y>26</y>
+      <w>572</w>
+      <h>533</h>
+    </coordinates>
+    <panel_attributes>bg=white
+
+USECASES
+
+1.1 
+I can pass a string as a parameter, 
+and it will check to see whether that 
+string contains either a unix timestamp 
+or a natural language date 
+(example: January 1, 2016).
+1.2 
+	is a unix timestamp
+1.3 
+is a natural time 
+
+
+2.1
+Return both unix and natural time
+
+3.1
+if both validations fail return null</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

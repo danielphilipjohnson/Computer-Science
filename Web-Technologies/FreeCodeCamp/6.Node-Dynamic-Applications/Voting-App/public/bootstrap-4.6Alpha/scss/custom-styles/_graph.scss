@@ -1,0 +1,138 @@
+
+
+.card, .card-header, .card-footer {
+  border: none;
+
+
+}
+.polls {
+  margin-bottom: 100px;
+  .card {
+    .card-header {
+      padding:5px 10px 0px 10px;
+      background-color: inherit;
+      border-bottom:1px solid #eceeef;
+    }
+    .card-block {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    .polls-social-bar{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid #eceeef;
+      padding: 7px;
+      .left {
+        display: flex;
+        align-items:center;
+        border-right:1px solid #eceeef;
+        margin: 0 4px;
+      }
+      .right {
+        display: flex;
+        align-items:center;
+        border-left: 1px solid #eceeef;
+        .dropdown-menu {
+          margin-bottom: 30px;
+        }
+        .share-content {
+          .fa-twitter {
+            color: #1da1f2;
+          }
+        }
+      }
+
+    i {
+      padding-left: 10px;
+      padding-right: 10px;
+      color: #636c72;
+      // darkgrey
+    }
+    }
+  }
+}
+
+
+
+.answers {
+  .poll-form {
+    padding: 0 10px;
+  }
+  .post-bar {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: $gray-lightest;
+    .btn-post {
+      border: none;
+      background-color: #2196F3;
+      border-radius: 0px;
+      color: white;
+      margin: 5px 10px;
+      padding: 7px 13px;
+    }
+  }
+}
+
+.poll-question {
+  padding: 12px 10px;
+  font-size: 17px;
+}
+
+.answer-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px;
+
+
+
+}
+.answer-block {
+
+  width: 45%;
+  height: 100px;
+  margin: 10px;
+  min-width: 212px;
+  padding: 10px;
+  p {
+    margin: 0px;
+    font-size: 25px;
+  }
+  .percent {
+    color: white;
+    font-size: 35px;
+  }
+  .question {
+    font-size: 17px;
+    //margin: 0px;
+  }
+}
+
+.red-block {
+  background-color: #f44336;
+}
+.pink-block {
+  background-color: #e91e63
+}
+.purple-block {
+  background-color:#9c27b0;
+}
+.deep-purple-block  {
+  background-color:#673ab7;
+}
+
+.indigo-block  {
+  background-color: #3f51b5;
+}
+.blue-block  {
+  background-color: #2196F3;
+}
+
+.cyan-block {
+  background-color: #2196F3;
+}
+.teal-block {
+  background-color: #009688;
+}

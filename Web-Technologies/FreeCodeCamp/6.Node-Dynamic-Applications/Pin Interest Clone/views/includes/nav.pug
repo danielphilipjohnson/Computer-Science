@@ -1,0 +1,110 @@
+nav.app-nav
+  a.nav-logo(href='/')
+    i.fa.fa-pinterest(aria-hidden='true')
+  #navbarNav.nav-right
+    ul.navbar-nav
+      li.nav-item.nav-item-search.hidden-sm-down.nav-desktop
+        .input-group.search-nav
+          input.form-control.search-input(type='text', placeholder='Search')               
+          span.input-group-addon.search-icon
+            i.fa.fa-search(aria-hidden='true')            
+      li.nav-item.hidden-md-up.nav-mobile
+        i.fa.fa-search(aria-hidden='true', data-toggle='collapse', href='#collapseSearch', aria-expanded='false', aria-controls='collapseSearch')           
+      li.nav-item.hidden-sm-down.nav-desktop
+        a.nav-link(href='/') Home            
+      li.nav-item.hidden-sm-down.nav-desktop
+        a.nav-link(href='/explore') Explore          
+      li.nav-item.hidden-md-up.nav-mobile
+        a.nav-link(href='/explore')
+          i.nav-link.fa.fa-compass(aria-hidden='true')
+      // wont change if user logghed in 
+      if user
+        if user.twitter.username
+          - var userlink = "http://localhost:8080/users/profile/" + user.twitter.username         
+          //fix it to default
+          - var userpic= "dsfsdfsd"
+          li.nav-item.hidden-sm-down.nav-desktop
+            a.btn.btn-save.hidden-sm-down(href=userlink) Saved          
+          li.nav-item.hidden-md-up.nav-mobile
+            a.nav-link(href=userlink)
+              img(src=userpic, alt='profilepic')
+        if user.local.username        
+          - var userlink = "http://localhost:8080/users/profile/" + user.local.username         
+          - var userpic= user.local.profilepic
+          li.nav-item.hidden-sm-down.nav-desktop
+            a.btn.btn-save.hidden-sm-down(href=userlink) Saved            
+          li.nav-item.hidden-md-up.nav-mobile
+            a.nav-link(href=userlink)
+              img(src=userpic, alt='profilepic')                 
+        li.nav-item(data-toggle='collapse', href='#collapseCommenting', aria-expanded='false', aria-controls='collapseCommenting')
+          i.fa.fa-commenting
+            span.badge.notifications.badge-danger 4
+      else 
+        li.nav-item.hidden-sm-down.nav-desktop
+          button.btn.btn-save.hidden-sm-down(type='button', aria-hidden='true', data-toggle='modal', data-target='#userlogin') Login
+        li.nav-item.hidden-md-up.nav-mobile
+          span.nav-link(aria-hidden='true', data-toggle='modal', data-target='#userlogin')
+            img(src='https://dummyimage.com/50x50/efefef/0011ff.jpg&text=default?', alt='')
+
+div(class="collapse search-collapse hidden-md-up" id="collapseSearch")
+    div(class="input-group search-nav ")
+        input(class="form-control search-input" type="text" placeholder="Search")
+        span(class="input-group-addon search-icon")
+          i(class="fa fa-search" aria-hidden="true")
+  
+#collapseCommenting.collapse.comment-collapse
+  ul.nav.nav-tabs
+    li.nav-item
+      a.nav-link.active(data-toggle='tab', href='#notifications', role='tab') Notifications        
+    li.nav-item
+      a.nav-link(data-toggle='tab', href='#inbox', role='tab') Inbox
+  // Tab panes
+  .tab-content
+    #notifications.tab-pane.active(role='tabpanel')
+      a(href="http://localhost:8080/users/logout") logout
+      .notification
+        h4 2 days ago             
+        .media
+          img.d-flex(src='http://placeimg.com/50/50/any', alt='Generic placeholder image')                   
+          .media-body
+            h5 Trending searches                     
+            p  2 days ago      
+        .img-notification
+          img.d-flex(src='http://placeimg.com/75/250/any', alt='Generic placeholder image')                 
+          img.d-flex(src='http://placeimg.com/75/250/any', alt='Generic placeholder image')                    
+          img.d-flex(src='http://placeimg.com/75/250/any', alt='Generic placeholder image')    
+    #inbox.tab-pane(role='tabpanel') ...dsfsdfsdfsdfsdf
+  if user 
+    input(type="hidden" class="UserIsLogged")
+
+//include modal
+#userlogin.modal.fade.login-modal(tabindex='-1', role='dialog', aria-labelledby='userlogin', aria-hidden='true')
+  .modal-dialog(role='document')
+    .modal-content
+      .modal-header
+        if user  
+          h5#exampleModalLabel.modal-title Log out
+        else
+          h5#exampleModalLabel.modal-title Login and Register        
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          i.fa.fa-times(aria-hidden='true')
+      form#userform(method='POST', action='/')              
+        .modal-body
+          if !user  
+            form#loginForm
+              .form-group
+                label(for='formGroupExampleInput') Username                   
+                input#Username.form-control(name='username' type='text', placeholder='Username')                 
+              .form-group
+                label(for='password') Password               
+                input#Password.form-control(name='password' type='password', placeholder='Password')             
+          else
+            h3 Would you like to logout
+        .modal-footer
+          button.btn.btn-primary(type='button', data-dismiss='modal') Close  
+          if user                 
+            a#login.btn.btn-primary(type='button', href="users/logout") logout
+          else
+            button#login.btn.btn-primary(type='button') Login
+            button#register.btn.btn-primary(type='button') Register
+            <a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a>

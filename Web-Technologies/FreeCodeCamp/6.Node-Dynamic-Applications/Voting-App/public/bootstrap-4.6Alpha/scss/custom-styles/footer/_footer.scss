@@ -1,0 +1,29 @@
+footer {
+  position: fixed;
+  background-color: #673ab7;
+  bottom: 0px;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px;
+  //bootstrap dropwdown is 1000
+  a {
+    color: white;
+  }
+  nav {
+
+    ul {
+      width: 100%;
+
+      li {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        i {
+          font-size: 22px!important;
+          padding: 4px;
+        }
+      }
+    }
+  }
+}

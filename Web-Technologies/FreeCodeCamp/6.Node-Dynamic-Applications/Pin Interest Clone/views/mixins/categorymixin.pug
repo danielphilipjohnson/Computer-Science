@@ -1,0 +1,7 @@
+- var leftSide = ['Trending','Tech','Education','Design','DIY','Food','Interiors','Travel','Humour']
+- var rightSide = ['Animals','Art','Cars','Celebrations & Events','Celebs','Design','Education','Entertainment','Fitness','Garden','Geek','History','Education','Entertainment','Fitness','Garden','Geek','Illustrations','Kids','Outdoors','Photos','Quotes','Science','Sport','Tattoos','Tech','Weddings']
+mixin CategoryUL(categories)
+    ul.nav.flex-column.side-nav
+        each category in categories
+            li.nav-item
+                a.nav-link.active(href='http://localhost:8080/explore/'+category.toLowerCase())=category

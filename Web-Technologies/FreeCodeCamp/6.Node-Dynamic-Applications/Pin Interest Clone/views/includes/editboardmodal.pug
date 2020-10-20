@@ -1,0 +1,30 @@
+.modal.fade#editboardModal(tabindex="-1" role="dialog" aria-labelledby="editboardModal" aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+            .modal-header
+                h5(class="modal-title" id="editboard") Edit Board (add its name)
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true") &times; 
+            form#editboardForm(action="/users/profile/editboard", method="POST")
+                .modal-body     
+                    .form-group.row
+                        label(for="editboardname" class="col-2 col-form-label edit-board-name") (add its name)
+                        .col-10
+                            input.form-control.boardname(type="text" value="uyiyu" placeholder="Board Name" name="editboardname" id="editboardname")
+                    .form-group.row
+                        .col-10
+                            label.custom-control.custom-checkbox
+                            input(type="checkbox" class="edit-secret" name="editsecret")
+                            span.custom-control-indicator
+                            span.custom-control-description 
+                            | if board secret
+                    .form-group.row
+                        - var cats = ["Trending","Tech","Education","Design","DIY","Food","Interiors","Travel","Humour","Animals","Art","Cars","Celebrations & Events","Celebs","Design","Education","Entertainment","Fitness","Garden","Geek","History","Education","Entertainment","Fitness","Garden","Geek","History","Illustrations","Kids","Outdoors","Photos","Quotes","Science","Sport","Tattoos","Tech","Weddings"]
+                        .col-10
+                            select(class="edit-category-select" name="category-select")
+                                each cat, index in  cats
+                                    option(value=cat)=cat
+                .modal-footer
+                    button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                    button#deleteBoard(type="button" class="btn btn-secondary" ) Delete 
+                    button(type="button" class="btn btn-primary" id="submit-edit-board") Save changes

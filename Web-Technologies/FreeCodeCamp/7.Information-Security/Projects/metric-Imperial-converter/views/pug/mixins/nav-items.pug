@@ -1,0 +1,6 @@
+mixin list(...items)
+    each item in items
+        a(href="/"+item class='item')=item
+
+
++list('Length', 'Weight', 'Capacity', 'Metric', 'Imperial', 'API')

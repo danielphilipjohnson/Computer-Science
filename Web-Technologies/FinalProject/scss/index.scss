@@ -1,0 +1,20 @@
+@import "./components/_nav.scss";
+@import "./components/_carousel.scss";
+@import "./components/_courses.scss";
+@import "./components/_education.scss";
+@import "./components/_contact.scss";
+@import "./components/_calltoaction.scss";
+@import "./components/_chart.scss";
+@import "./components/_portfolio.scss";
+@import "./components/_footer.scss";
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.text-blue-header {
+    color: #03a9f4;
+}
+
+.text-yellow-header {
+    color: #ffc107;
+}

@@ -1,0 +1,25 @@
+.jumbotron {
+    background-color: #9575CD;
+    color: #fff;
+} 
+
+
+
+
+.jumbotron h1 {
+    font-weight: bolder;
+}
+
+.container.main .row {
+    padding: 2rem 0;
+}
+
+
+h2, h3 {
+    font-weight: bolder;
+}
+
+footer {
+    background-color: #D1C4E9;
+    padding: 1rem 0;
+}

@@ -1,0 +1,10 @@
+mixin basicCard(title, ...items)
+    .ui.container
+        h3.ui.center.aligned.header=title
+        .ui.grid
+            each item in items
+                .three.wide.column
+                    .ui.card
+                        .content
+                            .header 
+                                a(href="#")=item

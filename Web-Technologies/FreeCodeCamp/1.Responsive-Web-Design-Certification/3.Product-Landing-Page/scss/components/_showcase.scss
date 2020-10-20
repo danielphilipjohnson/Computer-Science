@@ -1,0 +1,77 @@
+/* Showcase */
+
+#showcase {
+    margin: 0;
+    padding: 0 0 4rem 0;
+    background-color: #fafafa;
+    width: 100%;
+    position: relative;
+    overflow-y: hidden;
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 1.65rem;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    h2 {
+        font-weight: 200;
+        color: #888;
+        margin: 1rem 0;
+        text-align: center;
+
+    }
+
+    h2.call-of-action {
+
+        color: #000;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1.1;
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    p {
+        color: #333;
+    }
+
+
+}
+
+
+@media screen and (max-width: 580px) {
+
+    #showcase h2 {
+        font-size: 1.5rem;
+    }
+
+    #showcase p.lead {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 780px) {
+
+    #showcase h2.call-of-action {
+        padding: 0 5rem;
+        text-align: center;
+    }
+
+    .gift-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 939px) {
+    #showcase .container {
+        margin-top: 20vh;
+        padding: 0 3rem;
+    }
+}

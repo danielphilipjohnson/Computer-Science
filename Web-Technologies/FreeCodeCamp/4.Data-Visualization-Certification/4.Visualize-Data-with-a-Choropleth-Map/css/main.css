@@ -1,0 +1,100 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: #F2994A;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6a51a3, #bcbddc);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #6a51a3, #bcbddc);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Roboto, sans-serif;
+}
+
+.card {
+    background-color: white;
+    border-bottom: 8px solid #3f007d;
+    border-top: 8px solid #3f007d;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.32), 0 3px 12px 0 rgba(0, 0, 0, 0.24);
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 95%;
+}
+
+.graph-title,
+.graph-subtitle,
+#details {
+    padding: 0px 0 3px 0;
+    text-align: center;
+}
+
+.graph-title {
+    color: #333;
+    font-weight: 700;
+}
+
+.graph-subtitle {
+    color: #555;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+#details {
+    font-size: 0.7em;
+    font-weight: 300;
+}
+
+#chart {
+    background-color: white;
+}
+
+div.tooltip {
+    background-color: black;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    color: #fff;
+    height: auto;
+    padding: 6px 9px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: auto;
+}
+
+#main {
+    width: 1000px;
+    display: flex;
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.counties {
+    fill: none;
+}
+
+.states {
+    fill: none;
+    stroke: #fff;
+    stroke-linejoin: round;
+}
+
+#description {
+    text-align: center;
+}
+
+#source {
+    align-self: center;
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+}

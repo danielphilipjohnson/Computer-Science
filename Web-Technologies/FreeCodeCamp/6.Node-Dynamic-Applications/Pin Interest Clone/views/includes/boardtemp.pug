@@ -1,0 +1,13 @@
+each board, index in boards
+    if(index == 0)
+        input(type="hidden" id="editboarduser" data-userid=board.authorId)
+    if(!board.secret)
+        - var secret = "false"
+        .card.board(data-category=board.category data-secret=secret data-boardname=board.name data-id=board._id)
+            .card-block.main-content
+                img.img-fluid.pin-img(src=board.pins[0], alt='')                   
+                .card-block
+                    .pin-text
+                        h5 #{board.name}                    
+                        p.text-muted #{board.count} pins
+                        p.text-muted #{board.likes} likes

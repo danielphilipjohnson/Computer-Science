@@ -1,0 +1,31 @@
+section.portfolio
+  .container
+    .content-section-heading
+      h3.text-yellow-header.mb-0 Portfolio
+      h2.mb-2 Recent Projects
+      .sectionline
+      p.lead.statement Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque exercitationem ab expedita architecto mollitia autem iste molestias corporis voluptas, alias minus ad tempora optio pariatur officiis, aliquid nobis nemo officia!
+    .row
+      .col-12
+        .btn-group.my-2
+            button.btn.btn-primary.portfolio-btn.is-checked(data-filter='.all') All
+            button.btn.portfolio-btn.btn-bootstrap3(data-filter='.bootstrap') Bootstrap 3
+            button.btn.portfolio-btn.btn-material(data-filter='.material') Material
+            button.btn.portfolio-btn.btn-bootstrap4(data-filter='.bootstrap4') Bootstrap 4
+    .row.wow.slideInLeft(data-wow-delay=".5s")
+      - var projectText = "Some quick example text to build on the card title and make up the bulk of the card&apos;s content."
+      - var projectName= "Ipsum Lorem"
+      - var projects = [{type: '.bootstrap', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'},       {type: '.material', name: projectName, text: projectText, logo: '../img/material.PNG'},        {type: '.bootstrap4', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'},        {type: '.bootstrap', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'}, {type: '.material', name: projectName, text: projectText, logo: '../img/material.PNG'},          {type: '.bootstrap4', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'},{type: '.bootstrap', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'},          {type: '.material', name: projectName, text: projectText, logo: '../img/material.PNG'},  {type: '.bootstrap4', name: projectName, text: projectText, logo: '../img/bootstrap_logo.svg'}]
+        each project, index in projects
+          .col-sm-6.col-md-4.p-3
+            .card.portfolio-card.css-framework(data-filter=project.type)
+              a(data-fancybox="gallery" href="../img/" + index +".jpg")
+                img.card-img-top(src='../img/' + index + '.jpg' alt='Card image cap')
+              .card-body
+                .row
+                  .col-sm-12.col-md-6
+                    .img-thumbnail.img-logo.mx-auto
+                      img.img-fluid(alt="woman avatar", src=project.logo)
+                  .col-sm-12.col-md-6
+                    h5.card-title=project.name
+                    p.card-text=project.text

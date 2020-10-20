@@ -1,0 +1,189 @@
+extends layout
+
+block content
+  - var twitusername = author.twitter.username
+  - var localusername = author.local.username
+  if author 
+    if author.local
+      - var username = author.local.username
+      - var userpic= author.local.profilepic
+    .user-profile
+      .user-stats
+        .profile-icons
+          i.fa.fa-cog(aria-hidden='true')         
+          i.fa.fa-download(aria-hidden='true')            
+          i.fa.fa-ellipsis-h(aria-hidden='true')       
+          #{!Object.keys(author.local).length}
+          if author.local.username
+            - var username = author.local.username
+            - var userpic= author.local.profilepic
+            h2= username
+          if author.twitter.username
+            - var username = author.twitter.username
+            - var userpic= author.twitter.profilepic
+            h2= username        
+        .social-stats-container
+          .social-stats
+            .popularity
+              .follower
+                p 0                      
+                span.text-muted followers                   
+              .following
+                p 0                       
+                span.text-muted following             
+            span.social-link
+              a(href='') Social link          
+          .profile-pic
+            if author.local.username
+              - var userpic= author.local.profilepic
+              img.img-fluid(src=userpic, alt='')
+            if author.twitter.username
+              - var userpic= author.twitter.profilepic
+              img.img-fluid(src=userpic, alt='')
+  main
+    != messages('message', locals)
+    if errors
+      each error, i in errors
+          div(class="alert alert-danger") #{error.msg}
+    .pin-tabs
+      ul.nav.nav-pills(role='tablist')
+        li.nav-item
+          a.nav-link.active(data-toggle='tab', href='#boards', role='tab') Boards           
+        li.nav-item
+          a.nav-link(data-toggle='tab', href='#pins', role='tab') Pins
+        li.nav-item
+          a.nav-link(data-toggle='tab', href='#likedpins', role='tab') Liked Pins
+    // Tab panes
+    .tab-content
+      #boards.tab-pane.active(role='tabpanel')
+        .categories.tab-pane.active.d-flex.flex-wrap.container
+          if user
+            if user.twitter.username
+              if (user.twitter.username == twitusername)
+                .card
+                    .card-block.main-content
+                      .blank-img
+                        i.fa.fa-plus-circle(aria-hidden='true', data-target="#addboardModal", data-toggle="modal")                 
+                    .card-block.blank-img-title
+                      .pin-text()
+                        h5 Create Board
+                include ./includes/editboardmodal.pug
+            else if user.local.username == localusername
+              .card
+                  .card-block.main-content
+                    .blank-img
+                      i.fa.fa-plus-circle(aria-hidden='true', data-target="#addboardModal", data-toggle="modal")                 
+                  .card-block.blank-img-title
+                    .pin-text()
+                      h5 Create Board
+              include ./includes/editboardmodal.pug
+          include ./includes/boardtemp.pug
+        if user     
+          if user.twitter.username
+            if (user.twitter.username == twitusername)          
+              .secret-pins
+                .header
+                  i.fa.fa-lock(aria-hidden='true')                   
+                  .text-content
+                    p Secret Boards                        
+                    p.text-muted Only you (and people you invite) can see these boards. Learn more                
+                .categories.tab-pane.active.d-flex.flex-wrap.container
+                  .card
+                    .card-block.main-content
+                      .blank-img
+                        i.fa.fa-plus-circle#secretmodal(aria-hidden='true')                       
+                    .card-block.blank-img-title
+                      .pin-text
+                        h5.text-muted Create Secret Board
+                  include ./includes/boardsecret.pug  
+          else if user.local.username == localusername
+            .secret-pins
+              .header
+                i.fa.fa-lock(aria-hidden='true')                  
+                .text-content
+                  p Secret Boards                        
+                  p.text-muted Only you (and people you invite) can see these boards. Learn more           
+              .categories.tab-pane.active.d-flex.flex-wrap.container
+                .card
+                  .card-block.main-content
+                    .blank-img
+                      i.fa.fa-plus-circle#secretmodal(aria-hidden='true')                         
+                  .card-block.blank-img-title
+                    .pin-text
+                      h5.text-muted Create Secret Board
+                include ./includes/boardsecret.pug  
+        .modal.fade#addboardModal(tabindex="-1" role="dialog" aria-labelledby="addboardModal" aria-hidden="true")
+          .modal-dialog(role="document")
+            .modal-content
+              .modal-header
+                h5(class="modal-title" id="exampleModalLabel") Add A Board
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                  span(aria-hidden="true") &times; 
+              if user
+                if user.twitter.username
+                  if (user.twitter.username == twitusername)
+                  - 
+                    var link = "/users/profile/addboard/" + twitusername
+                else if user.local.username == localusername
+                    - var link = "/users/profile/addboard/" + localusername
+              form#addboard(action=link method="POST")
+                .modal-body     
+                  .form-group.row
+                    label(for="boardname" class="col-2 col-form-label") Board Name
+                    .col-10
+                      input.form-control(type="text" value="" placeholder="Board Name" name="boardname" id="boardname")
+                  .form-group.row
+                    .col-10
+                      label.custom-control.custom-checkbox
+                        input(type="checkbox" class="secret" name="secret")
+                        span.custom-control-indicator
+                        span.custom-control-description 
+                        | Check this custom checkbox
+                  .form-group.row
+                  - var cats = ["Trending","Tech","Education","Design","DIY","Food","Interiors","Travel","Humour","Animals","Art","Cars","Celebrations & Events","Celebs","Design","Education","Entertainment","Fitness","Garden","Geek","History","Education","Entertainment","Fitness","Garden","Geek","History","Illustrations","Kids","Outdoors","Photos","Quotes","Science","Sport","Tattoos","Tech","Weddings"]
+                    .col-10
+                      select(class="category-select" name="category-select")
+                        each cat, index in  cats
+                          option(value=cat)=cat
+              .modal-footer
+                button(type="button" class="btn btn-secondary" data-dismiss="modal") Close
+                button(type="button" class="btn btn-primary" id="submit-add-board") Save changes
+      #pins.tab-pane(role='tabpanel')
+        .categories.tab-pane.active.d-flex.flex-wrap.container
+          if user 
+            if user.twitter.username
+              if (user.twitter.username == twitusername)
+                .card
+                  .card-block.main-content
+                    .blank-img
+                      i.fa.fa-plus-circle.openpin(aria-hidden='true')                   
+                  .card-block.blank-img-title
+                    .pin-text
+                      h5 Save Pin 
+            else if user.local.username == localusername
+              .card
+                  .card-block.main-content
+                    .blank-img
+                      i.fa.fa-plus-circle.openpin(aria-hidden='true')                   
+                  .card-block.blank-img-title
+                    .pin-text
+                      h5 Save Pin
+          if pins
+            each pin in pins
+              .card.pin
+                .card-block.main-content
+                  img.img-fluid.pin-saved-img(src=pin.imageurl, alt=pin.category, data-id=pin._id, data-username=pin.authorid)
+      #likedpins.tab-pane(role='tabpanel')
+        if likedpins   
+          each pin in likedpins
+            .card.pin
+              .card-block.main-content
+                img.img-fluid.pin-saved-img(src=pin.imageurl, alt=pin.category, data-id=pin._id, data-username=pin.authorid)
+    if user 
+            if user.twitter.username
+              if (user.twitter.username == twitusername)
+                include ./includes/deletepinmodal.pug
+            else if user.local.username == localusername
+              include ./includes/deletepinmodal.pug
+block append scripts
+  script(src='/js/boards.js')

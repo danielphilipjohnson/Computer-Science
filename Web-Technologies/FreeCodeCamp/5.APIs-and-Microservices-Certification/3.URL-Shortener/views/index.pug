@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Node API: URL Shortener Microservice
+
+  br
+  h3 User stories:
+
+  ul 
+    li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+    li When I visit that shortened URL, it will redirect me to my original link.
+
+  h4 Example creation usage:
+  ul 
+    li 
+      code https://myApp/new/https://www.google.com
+    li
+      code https://myApp/new/http://foo.com:80
+
+  h4 Example creation output
+  code { "original_url":"http://foo.com:80", "short_url":"https://myApp/8170" }
+  
+  br
+  h4 Usage:
+  code https://myApp/2871

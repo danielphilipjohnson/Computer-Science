@@ -1,0 +1,40 @@
+.calltoaction {
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    padding: 50px 0;
+    color: #fff;
+    text-align: center;
+    .calltoaction-btn>.btn {
+        background: rgb(255, 255, 255);
+        background: rgba(255, 255, 255, .8);
+        color: #111;
+        margin: 5px 0;
+    }
+}
+
+//rename? paralax
+.hire,
+.contactme {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*
+      fixed = parallax
+      scroll = normal
+    */
+    background-attachment: fixed;
+}
+
+.hire {
+    background-image: url('../../img/clouds.jpg');
+    min-height: 400px;
+}
+
+.contactme {
+    background-image: url('../../img/clouds-lake.jpg');
+    min-height: 400px;
+}

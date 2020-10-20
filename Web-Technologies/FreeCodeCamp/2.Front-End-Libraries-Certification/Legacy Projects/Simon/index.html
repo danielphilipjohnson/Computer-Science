@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+    <div class="simon">
+        <div class="top">
+            <div class="green color-button" id="green"></div>
+            <div class="red color-button" id="red"></div>
+        </div>
+        <div class="circle">
+            <div class="title">
+                <h1>Simon <span>&reg;</span></h1>
+            </div>
+            <div class="simon-controls">
+                <div>
+                    <h2 class="count led-off"> -- </h2>
+                    <h3 class="label">Count</h3>
+                </div>
+                <div>
+                    <button class="start"></button>
+                    <h3 class="label">Start</h3>
+                </div>
+                <div>
+                    <div class="led" id="led"></div>
+                    <button class="strict"></button>
+                    <h3 class="label">Strict</h3>
+                </div>
+            </div>
+            <div class="switch-container">
+                <h3 class="off">Off</h3>
+                <!-- Rounded switch -->
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider round"></span>
+                </label>
+                <h3 class="on">On</h3>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="yellow color-button" id="yellow"></div>
+            <div class="blue color-button" id="blue"></div>
+        </div>
+    </div>
+
+    <script src="./js/app.js"> </script>
+
+</body>
+
+</html>

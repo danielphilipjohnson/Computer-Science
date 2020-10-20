@@ -1,0 +1,53 @@
+/* Utility Classes */
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.lead {
+    font-size: 1.15rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Text colors */
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-light {
+    color: var(--light-color);
+}
+
+.bg-light {
+    background: var(--light-color);
+    color: #333;
+}
+
+
+.bg-dark {
+    background: var(--dark-bg);
+    color: rgb(134, 134, 139);
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+li {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.2rem;
+}
