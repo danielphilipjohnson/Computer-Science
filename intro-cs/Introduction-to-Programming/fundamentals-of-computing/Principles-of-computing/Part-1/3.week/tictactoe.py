@@ -4,7 +4,7 @@ Monte Carlo Tic-Tac-Toe Player
 import random
 import poc_ttt_gui
 import poc_ttt_provided as provided
-import poc_simpletest
+#import poc_simpletest
 
 # Constants for Monte Carlo simulator
 # You may change the values of these constants as desired, but
@@ -25,8 +25,8 @@ def mc_move(board,player,trials):
     
     """
     
-    score_board = [[0 for x in range(board.get_dim())] for y in range(board.get_dim())]
-    for trial in range(trials):
+    score_board = [[0 for _ in range(board.get_dim())] for _ in range(board.get_dim())]
+    for _ in range(trials):
         
                
         #takes a current board,
