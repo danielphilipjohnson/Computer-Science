@@ -1,0 +1,26 @@
+footer
+  - var socialIcons = [{name:'twitter', link: 'https://twitter.com/undreamtmayhem'},{name:'linkedin', link: 'https://www.linkedin.com/in/daniel-johnson-1b3b1415a/'}, {name:'instagram', link: 'https://www.instagram.com/undreamtmayhem/'}]
+  nav.navbar.navbar-dark.fixed-bottom.mb-2.p-0
+    .container
+      ul.navbar-nav.flex-row.docker.mx-auto
+        li.nav-item.nav-link
+          button.navbar-toggler.collapsed(aria-expanded='false' aria-controls='navbarResponsive' aria-label='Toggle navigation' type='button' data-target='#navbarResponsive' data-toggle='collapse')
+            span.navbar-toggler-icon
+        each icon in socialIcons
+          li.nav-item.nav-link.px-2.py-0
+            - var socialClass = "fa fa-social fa-" + icon.name
+            a(class=socialClass href=icon.link)
+      //
+    #navbarResponsive.taskbar.navbar-collapse.collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.nav-link.px-2
+            p.heart
+              | Designed By 
+              span.name Daniel 
+                span.fa.fa-heart.animated.pulse  
+                |  Johnson 
+              | in the UK 
+              span.fa.fa-location-arrow 
+            p
+              | Website Copyright &copy; 2018
+              

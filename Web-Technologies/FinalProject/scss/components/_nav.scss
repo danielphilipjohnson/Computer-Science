@@ -1,0 +1,35 @@
+.site-header {
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, .65);
+    border-bottom: 1px solid #fff;
+    a {
+        color: white;
+        transition: ease-in-out color .15s;
+        &:hover {
+            color: #999;
+            text-decoration: none;
+        }
+    }
+}
+
+.navbar-dark .navbar-toggler {
+    border: 0;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #5c6bc0;
+}
+
+@media screen and (max-width: 576px) {
+    .side.nav {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .side.nav {
+        -ms-justify-content: flex-end;
+        -moz-justify-content: flex-end;
+        justify-content: flex-end;
+    }
+}

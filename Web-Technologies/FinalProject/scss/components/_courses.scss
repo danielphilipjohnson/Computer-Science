@@ -1,0 +1,54 @@
+//move out eventually 
+main {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.profile {
+    background-color: #5c6bc0;
+    color: #fff;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.profile-avatar {
+    //box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px -1px, rgba(0, 0, 0, 0.62) 0px 2px 2px -2px, rgba(0, 0, 0, 0.04) 0px 1px 4px 0px;
+    img {
+        border: 1px solid #0288d1;
+        border-radius: 140px;
+        width: 225px;
+    }
+}
+
+// here
+.statement {
+    font-size: 1.05rem;
+    padding: 0 10px;
+    margin: 0;
+    i {
+        margin: 0 5px;
+    }
+}
+
+// here
+.sociallinks {
+    justify-content: center;
+    font-size: 1.3rem;
+    padding: 20px 0;
+    .fa {
+        color: #fff;
+        padding: 10px;
+    }
+}
+
+section {
+    padding: 4rem 0;
+}
+
+//here
+.section-header {
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 900;
+    padding: 10px;
+}

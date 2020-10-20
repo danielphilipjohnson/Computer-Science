@@ -1,0 +1,63 @@
+.contact {
+    background-color: #fff;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 2px 4px -1px, rgba(0, 0, 0, 0.62) 0px 2px 2px -2px, rgba(0, 0, 0, 0.04) 0px 1px 4px 0px;
+    padding: 50px 0 50px 0;
+    .btn {
+        text-align: center;
+    }
+}
+
+.contact-header {
+    text-align: center;
+}
+
+.contact-line,
+.sectionline {
+    background: rgb(135, 135, 135);
+    background: rgba(135, 135, 135, 0.5);
+    width: 100px;
+    height: 1px;
+    margin: 20px auto;
+}
+
+// here
+.contact-info {
+    font-size: 1.2rem;
+}
+
+.contact-icon {
+    background-color: #000;
+    color: #fff;
+    margin-right: 15px;
+    padding: 10px;
+}
+
+.contact-title {
+    font-weight: 800;
+}
+
+// here
+.form-control {
+    background: #fff;
+    border: 1px solid #D8E1E4;
+    font-size: 0.9rem;
+}
+
+textarea.form-control {
+    padding: 15px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.fa-mobile {
+    padding: 10px 18px;
+}
+
+.fa-envelope-square {
+    padding: 10px 14px;
+}
+
+.fa-skype.contact-icon {
+    padding: 10px 14px;
+}
