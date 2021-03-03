@@ -15,7 +15,7 @@
         "express-validator": "^3.2.1",
         "mongoose": "^4.11.3",
         "mongoose-unique-validator": "*",
-        "pug": "^2.0.0-rc.2",
+        "pug": "^3.0.1",
         "shortid": "*",
         "valid-url": "^1.0.9"
     }
