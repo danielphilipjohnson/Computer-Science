@@ -19,6 +19,6 @@
         "express-validator": "^4",
         "materialize-css": "^1.0.0-rc.2",
         "mongoose": "^4.11.3",
-        "pug": "^2.0.0-rc.2"
+        "pug": "^3.0.1"
     }
 }
